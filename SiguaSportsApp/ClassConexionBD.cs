@@ -20,7 +20,7 @@ namespace SiguaSportsApp
         public string sql;
         public SqlCommand cmd;
         
-
+        //ARREGLAR CONEXION
         string conexion = "Data Source = .; Initial Catalog = SiguaSports; " + "Integrated Security = true";
 
         public ClassConexionBD()
