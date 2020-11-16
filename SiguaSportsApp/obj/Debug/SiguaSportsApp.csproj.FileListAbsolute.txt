@@ -1,0 +1,141 @@
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software - Copy\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormAdministracion.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormConfirmacion.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoEgreso.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoNuevo.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadosHistorial.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormReportes.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormCambio.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormDevoluciones.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormRegistroBodega.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormInventarioBodega.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormAdministracion.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormConfirmacion.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoEgreso.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoNuevo.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadosHistorial.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormInventarioBodega.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormRegistroBodega.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormReportes.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormCambio.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormDevoluciones.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\Usuario\Desktop\SiguaSport\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormAdministracion.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormConfirmacion.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoEgreso.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoNuevo.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadosHistorial.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormInventarioBodega.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormRegistroBodega.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormReportes.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormCambio.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormDevoluciones.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\U\Clases\Desarrollo de Software\Main\GitHub\Siguasport\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormAdministracion.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormConfirmacion.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoEgreso.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoNuevo.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadosHistorial.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormInventarioBodega.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormRegistroBodega.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormReportes.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormCambio.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormDevoluciones.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CopyComplete
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormAdministracion.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormConfirmacion.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoEgreso.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoNuevo.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadosHistorial.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormInventarioBodega.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormRegistroBodega.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormReportes.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormCambio.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormDevoluciones.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CopyComplete
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormAdministracion.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormConfirmacion.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoEgreso.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoNuevo.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadosHistorial.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormInventarioBodega.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormRegistroBodega.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormReportes.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormCambio.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormDevoluciones.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CopyComplete
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\kevin\Desktop\Arreglos\SiguaSportsApp\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb

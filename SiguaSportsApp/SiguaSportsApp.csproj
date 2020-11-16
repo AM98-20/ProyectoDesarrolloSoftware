@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF5F6729-7239-4EB8-AE35-AA7CA7DF34C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SiguaSportsApp</RootNamespace>
+    <AssemblyName>SiguaSportsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Downloads\Design Dashboard Modern\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassConexionBD.cs" />
+    <Compile Include="ClassConfirmacion.cs" />
+    <Compile Include="ClassDatosTablas.cs" />
+    <Compile Include="ClassDatosTransaccion.cs" />
+    <Compile Include="ClassEmpleados.cs" />
+    <Compile Include="ClassNuevoEmpleado.cs" />
+    <Compile Include="ClassValidacion.cs" />
+    <Compile Include="FormAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdministracion.Designer.cs">
+      <DependentUpon>FormAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfirmacion.Designer.cs">
+      <DependentUpon>FormConfirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleadoEgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleadoEgreso.Designer.cs">
+      <DependentUpon>FormEmpleadoEgreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleadoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleadoNuevo.Designer.cs">
+      <DependentUpon>FormEmpleadoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleadosHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleadosHistorial.Designer.cs">
+      <DependentUpon>FormEmpleadosHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngreso.Designer.cs">
+      <DependentUpon>FormIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInventarioBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventarioBodega.Designer.cs">
+      <DependentUpon>FormInventarioBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroBodega.Designer.cs">
+      <DependentUpon>FormRegistroBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas.Designer.cs">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCambio.Designer.cs">
+      <DependentUpon>FormCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDevoluciones.Designer.cs">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAdministracion.resx">
+      <DependentUpon>FormAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirmacion.resx">
+      <DependentUpon>FormConfirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleadoEgreso.resx">
+      <DependentUpon>FormEmpleadoEgreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleadoNuevo.resx">
+      <DependentUpon>FormEmpleadoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleadosHistorial.resx">
+      <DependentUpon>FormEmpleadosHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngreso.resx">
+      <DependentUpon>FormIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInventarioBodega.resx">
+      <DependentUpon>FormInventarioBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroBodega.resx">
+      <DependentUpon>FormRegistroBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas.resx">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCambio.resx">
+      <DependentUpon>FormCambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDevoluciones.resx">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-printer-tool-with-printed-paper-outlined-symbol_icon-icons.com_57772.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\869bc446-c29f-4183-8a33-8393fdb17213.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return-on-investment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
