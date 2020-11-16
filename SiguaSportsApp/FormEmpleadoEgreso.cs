@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,10 +40,20 @@ namespace SiguaSportsApp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            int indice = dgvEgreso.CurrentCell.RowIndex;
+            string codigo = dgvEgreso.Rows[indice].Cells["columna_codigo"].Value.ToString();
+
+            conex.cmd = new SqlCommand("DELETE FROM Empleados WHERE cod_empleado = '"+codigo+"'", conex.sc);
             
-            FormAdministracion admin = new FormAdministracion();
-            admin.ShowDialog();
-            this.Close();
+            try
+            {
+                conex.AbrirConexion();
+                conex.cmd.ExecuteNonQuery();
+                conex.CerrarConexion();
+            }catch (Exception ex)
+            {
+                MessageBox.Show("ERROR " + ex);
+            }
         }
 
         private void btn_menu_Click(object sender, EventArgs e)

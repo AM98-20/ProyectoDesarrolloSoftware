@@ -33,11 +33,6 @@
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleadosHistorial));
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNaci = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.contenedor_menu = new System.Windows.Forms.Panel();
@@ -81,12 +76,6 @@
             this.dgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHistorial.BackgroundColor = System.Drawing.Color.White;
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Codigo,
-            this.FechaNaci,
-            this.Telefono,
-            this.Estado});
             this.expandir_menu.SetDecoration(this.dgvHistorial, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgvHistorial, BunifuAnimatorNS.DecorationType.None);
             this.dgvHistorial.Location = new System.Drawing.Point(324, 114);
@@ -97,41 +86,6 @@
             this.dgvHistorial.RowHeadersWidth = 51;
             this.dgvHistorial.Size = new System.Drawing.Size(1247, 574);
             this.dgvHistorial.TabIndex = 25;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.MinimumWidth = 6;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // FechaNaci
-            // 
-            this.FechaNaci.HeaderText = "Fecha de Nacimiento";
-            this.FechaNaci.MinimumWidth = 6;
-            this.FechaNaci.Name = "FechaNaci";
-            this.FechaNaci.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono(s)";
-            this.Telefono.MinimumWidth = 6;
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 6;
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
             // 
             // btnCancelar
             // 
@@ -623,11 +577,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgvHistorial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNaci;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel contenedor_menu;

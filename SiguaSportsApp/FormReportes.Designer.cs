@@ -33,13 +33,6 @@
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportes));
             this.dgvReporteFinanciero = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VentasBrutas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Compras_Brutas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Utilidad_Bruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Crecimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Porcentaje_Frente_Meses_Anteriores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Limpiar = new System.Windows.Forms.Button();
             this.bnt_Buscar = new System.Windows.Forms.Button();
             this.dtpFecha2 = new System.Windows.Forms.DateTimePicker();
@@ -50,10 +43,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.boton_max = new System.Windows.Forms.PictureBox();
             this.boton_min = new System.Windows.Forms.PictureBox();
             this.boton_cerrar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.contenedor_menu = new System.Windows.Forms.Panel();
             this.SideBar = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_Registro_bodega = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -76,10 +69,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_cerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             this.contenedor_menu.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,14 +93,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReporteFinanciero.BackgroundColor = System.Drawing.Color.White;
             this.dgvReporteFinanciero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReporteFinanciero.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Fecha,
-            this.Mes,
-            this.VentasBrutas,
-            this.Compras_Brutas,
-            this.Utilidad_Bruta,
-            this.Crecimiento,
-            this.Porcentaje_Frente_Meses_Anteriores});
             this.expandir_menu.SetDecoration(this.dgvReporteFinanciero, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgvReporteFinanciero, BunifuAnimatorNS.DecorationType.None);
             this.dgvReporteFinanciero.Location = new System.Drawing.Point(307, 210);
@@ -118,62 +103,6 @@
             this.dgvReporteFinanciero.RowHeadersWidth = 51;
             this.dgvReporteFinanciero.Size = new System.Drawing.Size(1491, 576);
             this.dgvReporteFinanciero.TabIndex = 39;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 125;
-            // 
-            // Mes
-            // 
-            this.Mes.HeaderText = "Mes";
-            this.Mes.MinimumWidth = 6;
-            this.Mes.Name = "Mes";
-            this.Mes.ReadOnly = true;
-            this.Mes.Width = 125;
-            // 
-            // VentasBrutas
-            // 
-            this.VentasBrutas.HeaderText = "Ventas Brutas";
-            this.VentasBrutas.MinimumWidth = 6;
-            this.VentasBrutas.Name = "VentasBrutas";
-            this.VentasBrutas.ReadOnly = true;
-            this.VentasBrutas.Width = 125;
-            // 
-            // Compras_Brutas
-            // 
-            this.Compras_Brutas.HeaderText = "Compras Brutas";
-            this.Compras_Brutas.MinimumWidth = 6;
-            this.Compras_Brutas.Name = "Compras_Brutas";
-            this.Compras_Brutas.ReadOnly = true;
-            this.Compras_Brutas.Width = 220;
-            // 
-            // Utilidad_Bruta
-            // 
-            this.Utilidad_Bruta.HeaderText = "Utilidad Brutas";
-            this.Utilidad_Bruta.MinimumWidth = 6;
-            this.Utilidad_Bruta.Name = "Utilidad_Bruta";
-            this.Utilidad_Bruta.ReadOnly = true;
-            this.Utilidad_Bruta.Width = 220;
-            // 
-            // Crecimiento
-            // 
-            this.Crecimiento.HeaderText = "Crecimiento";
-            this.Crecimiento.MinimumWidth = 6;
-            this.Crecimiento.Name = "Crecimiento";
-            this.Crecimiento.ReadOnly = true;
-            this.Crecimiento.Width = 220;
-            // 
-            // Porcentaje_Frente_Meses_Anteriores
-            // 
-            this.Porcentaje_Frente_Meses_Anteriores.HeaderText = "% Frente a Meses Anteriores";
-            this.Porcentaje_Frente_Meses_Anteriores.MinimumWidth = 6;
-            this.Porcentaje_Frente_Meses_Anteriores.Name = "Porcentaje_Frente_Meses_Anteriores";
-            this.Porcentaje_Frente_Meses_Anteriores.ReadOnly = true;
-            this.Porcentaje_Frente_Meses_Anteriores.Width = 280;
             // 
             // btn_Limpiar
             // 
@@ -310,21 +239,6 @@
             this.panel1.Size = new System.Drawing.Size(1600, 65);
             this.panel1.TabIndex = 41;
             // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.contraer_menu.SetDecoration(this.btnRestaurar, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.btnRestaurar, BunifuAnimatorNS.DecorationType.None);
-            this.btnRestaurar.Image = global::SiguaSportsApp.Properties.Resources.window_restore;
-            this.btnRestaurar.Location = new System.Drawing.Point(1471, 15);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(40, 37);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 52;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
             // boton_max
             // 
             this.boton_max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -369,6 +283,21 @@
             this.boton_cerrar.TabIndex = 49;
             this.boton_cerrar.TabStop = false;
             this.boton_cerrar.Click += new System.EventHandler(this.boton_cerrar_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.contraer_menu.SetDecoration(this.btnRestaurar, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btnRestaurar, BunifuAnimatorNS.DecorationType.None);
+            this.btnRestaurar.Image = global::SiguaSportsApp.Properties.Resources.window_restore;
+            this.btnRestaurar.Location = new System.Drawing.Point(1471, 15);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(40, 37);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 52;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // contenedor_menu
             // 
@@ -753,10 +682,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_cerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             this.contenedor_menu.ResumeLayout(false);
             this.SideBar.ResumeLayout(false);
             this.SideBar.PerformLayout();
@@ -782,13 +711,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VentasBrutas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Compras_Brutas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Utilidad_Bruta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Crecimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Porcentaje_Frente_Meses_Anteriores;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel contenedor_menu;

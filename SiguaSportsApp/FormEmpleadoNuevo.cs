@@ -20,7 +20,8 @@ namespace SiguaSportsApp
 
         private void FormEmpleadoNuevo_Load(object sender, EventArgs e)
         {
-            dtp_FechaNAc.MaxDate = DateTime.Now;
+            dtp_FechaNAc.MinDate = DateTime.Today.AddYears(-65);
+            dtp_FechaNAc.MaxDate = DateTime.Today.AddYears(-21);
         }
         ClassValidacion validacion = new ClassValidacion();
         ClassConexionBD con = new ClassConexionBD();
@@ -94,12 +95,12 @@ namespace SiguaSportsApp
                 letra5 = true;
             }
 
+            mtxttelefono.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             //arreglar
-
-            //arreglar
-            if (String.IsNullOrEmpty(mtxttelefono.Text))
+            if (validacion.Espacio_Blanco(ErrorProvider, mtxttelefono))
             {
-                ErrorProvider.SetError(mtxttelefono, "No se puede dejar en blanco");
+                if (validacion.Espacio_Blanco(ErrorProvider, mtxttelefono))
+                    ErrorProvider.SetError(mtxttelefono, "No se puede dejar en blanco");
             }
             else
             {
@@ -117,9 +118,9 @@ namespace SiguaSportsApp
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            letra1 = false; letra2 = false; letra3 = false; numero1 = false; numero2 = false;
+            letra1 = false; letra2 = false; letra3 = false; letra4 = false; letra5 = false; numero2 = false;
             validar();
-            if (letra1 && letra2 && letra3 && letra4 && letra5 && numero1 && numero2)
+            if (letra1 && letra2 && letra3 && letra4 && letra5 && numero2)
             {
                 if (cb_Genero.SelectedIndex != -1 && cb_Puesto.SelectedIndex != -1)
                 {
@@ -129,21 +130,45 @@ namespace SiguaSportsApp
                     string codEmp = txtNombre.Text.Substring(0, 3) + txtApellidos.Text.Substring(0,3);
                     double salario = 0.00;
 
-                    if (String.IsNullOrEmpty(txtCorreo.Text.ToString()))
+                    switch (indicePos)
                     {
-                        con.cmd = new SqlCommand("INSERT INTO Empleados(cod_empleado, nombres, apellidos, cod_puesto, cod_usuario, " +
-                            "salario, fecha_contratacion, fecha_nacimiento, cod_genero, correo, telefono) " +
-                            "values('" + codEmp + "','" + txtNombre.Text.ToString() + "','" + txtApellidos.Text.ToString() + "','" + indicePos + "'," +
-                            "'" + txt_Usuario.Text.ToString() + "','" + salario + "',GETDATE(),'" + dtp_FechaNAc.Value.ToShortDateString() + "','" + indiceGen + "'," +
-                            "'" + mtxttelefono.Text.ToString() + "')");
+                        case 1: salario = 18500.00;
+                            break;
+                        case 2: salario = 15350.00;
+                                break;
+                        case 3: salario = 12600.00;
+                            break;
+                        default: salario = 0.00;
+                            break;
                     }
-                    else
+
+                    con.cmd = new SqlCommand("INSERT INTO Usuarios(cod_usuario, contraseña, confirmacion) " +
+                        "values('"+txt_Usuario.Text.ToString()+"', '"+txt_Contrasena.Text.ToString()+"', '"+txt_Confirmacion.Text.ToString()+"')", con.sc);
+                    try
+                    {
+                        con.AbrirConexion();
+                        con.cmd.ExecuteNonQuery();
+                        con.CerrarConexion();
+                    }catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR " + ex);
+                    }
+
+                    if (String.IsNullOrEmpty(txtCorreo.Text))
                     {
                         con.cmd = new SqlCommand("INSERT INTO Empleados(cod_empleado, nombres, apellidos, cod_puesto, cod_usuario, " +
                             "salario, fecha_contratacion, fecha_nacimiento, cod_genero, telefono) " +
                             "values('" + codEmp + "','" + txtNombre.Text.ToString() + "','" + txtApellidos.Text.ToString() + "','" + indicePos + "'," +
                             "'" + txt_Usuario.Text.ToString() + "','" + salario + "',GETDATE(),'" + dtp_FechaNAc.Value.ToShortDateString() + "','" + indiceGen + "'," +
-                            "'" + txtCorreo.Text.ToString() + "','" + mtxttelefono.Text.ToString() + "')");
+                            "'" + mtxttelefono.Text.ToString() + "')", con.sc);
+                    }
+                    else
+                    {
+                        con.cmd = new SqlCommand("INSERT INTO Empleados(cod_empleado, nombres, apellidos, cod_puesto, cod_usuario, " +
+                            "salario, fecha_contratacion, fecha_nacimiento, cod_genero, correo, telefono) " +
+                            "values('" + codEmp + "', '" + txtNombre.Text.ToString() + "', '" + txtApellidos.Text.ToString() + "', '" + indicePos + "', " +
+                            "'" + txt_Usuario.Text.ToString() + "', '" + salario + "', GETDATE(), '" + dtp_FechaNAc.Value.ToShortDateString() + "', '" + indiceGen + "', " +
+                            "'" + txtCorreo.Text.ToString() + "', '" + mtxttelefono.Text.ToString() + "')", con.sc);
                     }
 
                     try

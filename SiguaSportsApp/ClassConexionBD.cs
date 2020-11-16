@@ -49,7 +49,7 @@ namespace SiguaSportsApp
         {
             bool verificacion = false;
 
-            sql = string.Format("SELECT E.cod_empleado Codigo, nombres Nombre, apellidos Apellido, " +
+            sql = string.Format("SELECT E.cod_empleado Codigo, CONCAT(nombres, ' ', apellidos) Nombre, " +
                 "E.cod_puesto Puesto, U.cod_usuario Usuario, U.contraseña Contraseña, E.cod_puesto [Codigo Puesto], " +
                 "E.telefono Telefono FROM Empleados E inner join Usuarios U on E.cod_usuario = U.cod_usuario " +
                 "where U.cod_usuario = '{0}' and U.contraseña = '{1}'", usuario, contra);
@@ -63,7 +63,6 @@ namespace SiguaSportsApp
                 if (lector.Read())
                 {
                     Nombre_empleado = lector["Nombre"].ToString();
-                    Apellidos_empleado = lector["Apellido"].ToString();
                     CodigoPuesto = int.Parse(lector["Codigo Puesto"].ToString());
                     Cod_empleado = lector["Codigo"].ToString();
                     Cod_usuario = lector["Usuario"].ToString();

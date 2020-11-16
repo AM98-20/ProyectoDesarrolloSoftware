@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleadoEgreso));
             this.dgvEgreso = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNaci = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -59,6 +55,10 @@
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.columna_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEgreso)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
@@ -82,10 +82,10 @@
             this.dgvEgreso.BackgroundColor = System.Drawing.Color.White;
             this.dgvEgreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEgreso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Codigo,
-            this.FechaNaci,
-            this.Telefono});
+            this.columna_nombre,
+            this.columna_codigo,
+            this.columna_fecha,
+            this.columna_telefono});
             this.expandir_menu.SetDecoration(this.dgvEgreso, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgvEgreso, BunifuAnimatorNS.DecorationType.None);
             this.dgvEgreso.Enabled = false;
@@ -97,34 +97,6 @@
             this.dgvEgreso.RowHeadersWidth = 51;
             this.dgvEgreso.Size = new System.Drawing.Size(1280, 535);
             this.dgvEgreso.TabIndex = 22;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.MinimumWidth = 6;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // FechaNaci
-            // 
-            this.FechaNaci.HeaderText = "Fecha de Nacimiento";
-            this.FechaNaci.MinimumWidth = 6;
-            this.FechaNaci.Name = "FechaNaci";
-            this.FechaNaci.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono(s)";
-            this.Telefono.MinimumWidth = 6;
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
             // 
             // btnEliminar
             // 
@@ -503,22 +475,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation2;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation6;
             // 
             // btn_minimizar
             // 
@@ -554,27 +526,55 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation1;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation5;
             // 
             // radio
             // 
             this.radio.ElipseRadius = 5;
             this.radio.TargetControl = this.SideBar;
+            // 
+            // columna_nombre
+            // 
+            this.columna_nombre.HeaderText = "Nombre";
+            this.columna_nombre.MinimumWidth = 6;
+            this.columna_nombre.Name = "columna_nombre";
+            this.columna_nombre.ReadOnly = true;
+            // 
+            // columna_codigo
+            // 
+            this.columna_codigo.HeaderText = "Codigo";
+            this.columna_codigo.MinimumWidth = 6;
+            this.columna_codigo.Name = "columna_codigo";
+            this.columna_codigo.ReadOnly = true;
+            // 
+            // columna_fecha
+            // 
+            this.columna_fecha.HeaderText = "Fecha de Contratación";
+            this.columna_fecha.MinimumWidth = 6;
+            this.columna_fecha.Name = "columna_fecha";
+            this.columna_fecha.ReadOnly = true;
+            // 
+            // columna_telefono
+            // 
+            this.columna_telefono.HeaderText = "Telefono";
+            this.columna_telefono.MinimumWidth = 6;
+            this.columna_telefono.Name = "columna_telefono";
+            this.columna_telefono.ReadOnly = true;
             // 
             // FormEmpleadoEgreso
             // 
@@ -619,10 +619,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgvEgreso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNaci;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel panel1;
@@ -645,5 +641,9 @@
         private System.Windows.Forms.PictureBox btn_restaurar;
         private System.Windows.Forms.PictureBox btn_minimizar;
         private System.Windows.Forms.PictureBox btn_maximizar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_telefono;
     }
 }

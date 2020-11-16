@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleadoNuevo));
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.cb_Genero = new System.Windows.Forms.ComboBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -75,8 +75,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_Puesto = new System.Windows.Forms.Label();
             this.cb_Puesto = new System.Windows.Forms.ComboBox();
-            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.dtp_FechaNAc = new System.Windows.Forms.DateTimePicker();
+            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.contenedor_menu.SuspendLayout();
             this.SideBar.SuspendLayout();
@@ -266,9 +266,9 @@
             this.contraer_menu.SetDecoration(this.mtxttelefono, BunifuAnimatorNS.DecorationType.None);
             this.mtxttelefono.Location = new System.Drawing.Point(569, 406);
             this.mtxttelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtxttelefono.Mask = "(999) 0000-0000";
+            this.mtxttelefono.Mask = "0000-0000";
             this.mtxttelefono.Name = "mtxttelefono";
-            this.mtxttelefono.Size = new System.Drawing.Size(109, 22);
+            this.mtxttelefono.Size = new System.Drawing.Size(79, 22);
             this.mtxttelefono.TabIndex = 38;
             // 
             // txtCorreo
@@ -608,22 +608,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation1;
             // 
             // btn_salir
             // 
@@ -694,6 +694,7 @@
             this.txt_Contrasena.Location = new System.Drawing.Point(1034, 267);
             this.txt_Contrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Contrasena.Name = "txt_Contrasena";
+            this.txt_Contrasena.PasswordChar = '*';
             this.txt_Contrasena.Size = new System.Drawing.Size(244, 22);
             this.txt_Contrasena.TabIndex = 51;
             // 
@@ -766,6 +767,7 @@
             this.txt_Confirmacion.Location = new System.Drawing.Point(1034, 326);
             this.txt_Confirmacion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Confirmacion.Name = "txt_Confirmacion";
+            this.txt_Confirmacion.PasswordChar = '*';
             this.txt_Confirmacion.Size = new System.Drawing.Size(244, 22);
             this.txt_Confirmacion.TabIndex = 53;
             // 
@@ -832,27 +834,6 @@
             this.cb_Puesto.Size = new System.Drawing.Size(227, 24);
             this.cb_Puesto.TabIndex = 57;
             // 
-            // expandir_menu
-            // 
-            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.expandir_menu.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation3;
-            // 
             // dtp_FechaNAc
             // 
             this.expandir_menu.SetDecoration(this.dtp_FechaNAc, BunifuAnimatorNS.DecorationType.None);
@@ -861,6 +842,27 @@
             this.dtp_FechaNAc.Name = "dtp_FechaNAc";
             this.dtp_FechaNAc.Size = new System.Drawing.Size(244, 22);
             this.dtp_FechaNAc.TabIndex = 58;
+            // 
+            // expandir_menu
+            // 
+            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.expandir_menu.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation2;
             // 
             // FormEmpleadoNuevo
             // 
