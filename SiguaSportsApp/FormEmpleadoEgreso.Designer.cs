@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation10 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleadoEgreso));
-            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
             this.dgvEgreso = new System.Windows.Forms.DataGridView();
-            this.columna_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
@@ -54,10 +50,10 @@
             this.btn_menu = new System.Windows.Forms.PictureBox();
             this.contraer_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
+            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEgreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
@@ -79,14 +75,8 @@
             this.dgvEgreso.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEgreso.BackgroundColor = System.Drawing.Color.White;
             this.dgvEgreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEgreso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columna_nombre,
-            this.columna_codigo,
-            this.columna_fecha,
-            this.columna_telefono});
             this.expandir_menu.SetDecoration(this.dgvEgreso, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgvEgreso, BunifuAnimatorNS.DecorationType.None);
-            this.dgvEgreso.Enabled = false;
             this.dgvEgreso.Location = new System.Drawing.Point(299, 70);
             this.dgvEgreso.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEgreso.Name = "dgvEgreso";
@@ -95,34 +85,6 @@
             this.dgvEgreso.RowHeadersWidth = 51;
             this.dgvEgreso.Size = new System.Drawing.Size(1254, 535);
             this.dgvEgreso.TabIndex = 22;
-            // 
-            // columna_nombre
-            // 
-            this.columna_nombre.HeaderText = "Nombre";
-            this.columna_nombre.MinimumWidth = 6;
-            this.columna_nombre.Name = "columna_nombre";
-            this.columna_nombre.ReadOnly = true;
-            // 
-            // columna_codigo
-            // 
-            this.columna_codigo.HeaderText = "Codigo";
-            this.columna_codigo.MinimumWidth = 6;
-            this.columna_codigo.Name = "columna_codigo";
-            this.columna_codigo.ReadOnly = true;
-            // 
-            // columna_fecha
-            // 
-            this.columna_fecha.HeaderText = "Fecha de Contratación";
-            this.columna_fecha.MinimumWidth = 6;
-            this.columna_fecha.Name = "columna_fecha";
-            this.columna_fecha.ReadOnly = true;
-            // 
-            // columna_telefono
-            // 
-            this.columna_telefono.HeaderText = "Telefono";
-            this.columna_telefono.MinimumWidth = 6;
-            this.columna_telefono.Name = "columna_telefono";
-            this.columna_telefono.ReadOnly = true;
             // 
             // btnEliminar
             // 
@@ -477,22 +439,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 0F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation7;
+            animation10.AnimateOnlyDifferences = true;
+            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
+            animation10.LeafCoeff = 0F;
+            animation10.MaxTime = 1F;
+            animation10.MinTime = 0F;
+            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
+            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
+            animation10.MosaicSize = 0;
+            animation10.Padding = new System.Windows.Forms.Padding(0);
+            animation10.RotateCoeff = 0F;
+            animation10.RotateLimit = 0F;
+            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
+            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
+            animation10.TimeCoeff = 0F;
+            animation10.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation10;
             // 
             // label2
             // 
@@ -507,32 +469,6 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "MENÚ";
             // 
-            // expandir_menu
-            // 
-            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.expandir_menu.Cursor = null;
-            animation8.AnimateOnlyDifferences = true;
-            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
-            animation8.LeafCoeff = 0F;
-            animation8.MaxTime = 1F;
-            animation8.MinTime = 0F;
-            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
-            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
-            animation8.MosaicSize = 0;
-            animation8.Padding = new System.Windows.Forms.Padding(0);
-            animation8.RotateCoeff = 0F;
-            animation8.RotateLimit = 0F;
-            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
-            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
-            animation8.TimeCoeff = 0F;
-            animation8.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation8;
-            // 
-            // radio
-            // 
-            this.radio.ElipseRadius = 5;
-            this.radio.TargetControl = this.SideBar;
-            // 
             // btn_restaurar
             // 
             this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -546,7 +482,7 @@
             this.btn_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_restaurar.TabIndex = 34;
             this.btn_restaurar.TabStop = false;
-            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click_1);
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
             // btn_minimizar
             // 
@@ -562,6 +498,32 @@
             this.btn_minimizar.TabIndex = 33;
             this.btn_minimizar.TabStop = false;
             this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click_1);
+            // 
+            // expandir_menu
+            // 
+            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.expandir_menu.Cursor = null;
+            animation9.AnimateOnlyDifferences = true;
+            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
+            animation9.LeafCoeff = 0F;
+            animation9.MaxTime = 1F;
+            animation9.MinTime = 0F;
+            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
+            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
+            animation9.MosaicSize = 0;
+            animation9.Padding = new System.Windows.Forms.Padding(0);
+            animation9.RotateCoeff = 0F;
+            animation9.RotateLimit = 0F;
+            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
+            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
+            animation9.TimeCoeff = 0F;
+            animation9.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation9;
+            // 
+            // radio
+            // 
+            this.radio.ElipseRadius = 5;
+            this.radio.TargetControl = this.SideBar;
             // 
             // FormEmpleadoEgreso
             // 
@@ -621,10 +583,6 @@
         private BunifuAnimatorNS.BunifuTransition expandir_menu;
         private BunifuAnimatorNS.BunifuTransition contraer_menu;
         private Bunifu.Framework.UI.BunifuElipse radio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_telefono;
         private System.Windows.Forms.PictureBox btn_maximizar;
         private System.Windows.Forms.PictureBox btn_salir;
         private System.Windows.Forms.Label label2;

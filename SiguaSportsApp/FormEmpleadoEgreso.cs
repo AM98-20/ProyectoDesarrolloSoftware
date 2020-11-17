@@ -41,7 +41,7 @@ namespace SiguaSportsApp
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int indice = dgvEgreso.CurrentCell.RowIndex;
-            string codigo = dgvEgreso.Rows[indice].Cells["columna_codigo"].Value.ToString();
+            string codigo = dgvEgreso.Rows[indice].Cells["Codigo"].Value.ToString();
 
             conex.cmd = new SqlCommand("DELETE FROM Empleados WHERE cod_empleado = '"+codigo+"'", conex.sc);
             
@@ -121,23 +121,21 @@ namespace SiguaSportsApp
             Application.Exit();
         }
 
+        private void btn_minimizar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
         private void btn_restaurar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
             btn_restaurar.Visible = false;
             btn_maximizar.Visible = true;
-        }
-
-        private void btn_minimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btn_maximizar_Click_1(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            btn_maximizar.Visible = false;
-            btn_restaurar.Visible = true;
         }
     }
 }
