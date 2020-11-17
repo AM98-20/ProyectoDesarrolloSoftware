@@ -20,6 +20,12 @@ namespace SiguaSportsApp
 
         private void FormCambio_Load(object sender, EventArgs e)
         {
+
+            if (datos.CodigoPuesto == 2 || datos.CodigoPuesto == 3)
+            {
+                btn_Administracion.Hide();
+            }
+
             txtDevolucion.Text = con.DevolucionCodigo();
             txtvendedor.Text = con.Nombre_empleado;
             btn_Buscar.Visible = true;
@@ -241,6 +247,7 @@ namespace SiguaSportsApp
             }
         }
 
+        ClassDatosTablas datos = new ClassDatosTablas();
         private void btn_maximizar_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
@@ -283,6 +290,7 @@ namespace SiguaSportsApp
 
         private void btn_Administracion_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             FormAdministracion admin = new FormAdministracion();
             admin.ShowDialog();
@@ -295,6 +303,11 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
+        }
+
+        private void dgvCambio_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

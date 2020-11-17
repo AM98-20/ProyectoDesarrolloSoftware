@@ -26,6 +26,14 @@ namespace SiguaSportsApp
                                          "INNER JOIN Devoluciones C ON A.num_devolucion = C.num_devolucion";
         private void FromDevoluciones_Load(object sender, EventArgs e)
         {
+            if (tran.CodigoPuesto == 3)
+            {
+                btn_Registro_bodega.Hide();
+                btn_reportes.Hide();
+            }
+
+
+
             conexion.CargarDatosTablas(dgvHistorial, query);
             txtDevolucion.Text = conexion.DevolucionCodigo();
             txtvendedor.Text = conexion.Nombre_empleado;
@@ -36,6 +44,7 @@ namespace SiguaSportsApp
             tran.Impuesto = 0.00;
             tran.TotalDevolucion = 0.00;
         }
+
 
         ClassValidacion validacion = new ClassValidacion();
         ClassDatosTransaccion tran = new ClassDatosTransaccion();
@@ -267,6 +276,7 @@ namespace SiguaSportsApp
                 }
             }
         }
+       
 
         private void boton_salir_Click(object sender, EventArgs e)
         {
@@ -296,6 +306,7 @@ namespace SiguaSportsApp
 
         private void btn_Inventario_bodega_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             FormInventarioBodega inv = new FormInventarioBodega();
             inv.ShowDialog();
@@ -304,6 +315,7 @@ namespace SiguaSportsApp
 
         private void btn_Registro_bodega_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             FormRegistroBodega reg = new FormRegistroBodega();
             reg.ShowDialog();
@@ -324,6 +336,21 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
+        }
+
+        private void contenedor_menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tpDevoluciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
