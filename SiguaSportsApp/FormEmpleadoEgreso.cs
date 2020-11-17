@@ -76,30 +76,6 @@ namespace SiguaSportsApp
             }
         }
 
-        private void btn_salir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_maximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            btn_maximizar.Visible = false;
-            btn_restaurar.Visible = true;
-        }
-
-        private void btn_minimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btn_restaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            btn_restaurar.Visible = false;
-            btn_maximizar.Visible = true;
-        }
-
         private void btn_Administracion_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -138,6 +114,30 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_restaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            btn_restaurar.Visible = false;
+            btn_maximizar.Visible = true;
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximizar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            btn_maximizar.Visible = false;
+            btn_restaurar.Visible = true;
         }
     }
 }

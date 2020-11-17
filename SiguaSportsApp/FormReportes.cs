@@ -74,31 +74,6 @@ namespace SiguaSportsApp
             }
         }
 
-        private void btn_salir_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void btn_restaurar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_minimizar_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btn_maximizar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_Limpiar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void boton_cerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
