@@ -54,6 +54,7 @@ namespace SiguaSportsApp
             {
                 MessageBox.Show("ERROR " + ex);
             }
+            tabla.CargarDatosTablas(dgvEgreso, query);
         }
 
         private void btn_menu_Click(object sender, EventArgs e)

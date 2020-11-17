@@ -25,7 +25,8 @@ namespace SiguaSportsApp
         ClassConexionBD conex = new ClassConexionBD();
         ClassDatosTablas tabla = new ClassDatosTablas();
 
-        string query = "SELECT * FROM EmpleadodHistoricos";
+        string query = "SELECT cod_empleado Codigo, nombre [Nombre Empleado], fecha_contratacion [Fecha Contratación], fecha_despido [Fecha Despido], " +
+            "fecha_modificacion [Fecha Modificación], salario Salario FROM EmpleadodHistoricos";
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
