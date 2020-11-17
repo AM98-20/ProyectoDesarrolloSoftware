@@ -21,7 +21,7 @@ namespace SiguaSportsApp
         {
             tabla.CargarDatosTablas(dgvHistorial, query);
         }
-        //Comentario de Github
+        
         ClassConexionBD conex = new ClassConexionBD();
         ClassDatosTablas tabla = new ClassDatosTablas();
 

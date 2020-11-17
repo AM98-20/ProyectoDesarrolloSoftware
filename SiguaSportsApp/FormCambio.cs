@@ -81,7 +81,7 @@ namespace SiguaSportsApp
                     con.AbrirConexion();
                     con.cmd.ExecuteNonQuery();
                     con.CerrarConexion();
-
+                    //Revision de Form de cambios
                     con.cmd = new SqlCommand("INSERT INTO DevolucionDetalle(num_devolucion, cod_producto, cantidad, motivo, cod_estado, cod_producto_cambio) " +
                         "values('" + txtDevolucion.Text.ToString() + "','@codProd','@cantidad','@motivo','2', '@codProd')", con.sc);
                     foreach (DataGridViewRow row in dgvCambio.Rows)
