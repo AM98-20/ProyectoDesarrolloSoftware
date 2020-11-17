@@ -183,3 +183,25 @@ C:\Users\kevin\source\repos\AM98-20\ProyectoDesarrolloSoftware\SiguaSportsApp\ob
 C:\Users\kevin\source\repos\AM98-20\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CopyComplete
 C:\Users\kevin\source\repos\AM98-20\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
 C:\Users\kevin\source\repos\AM98-20\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe.config
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\bin\Debug\SiguaSportsApp.exe
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\bin\Debug\SiguaSportsApp.pdb
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.csprojAssemblyReference.cache
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormAdministracion.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormConfirmacion.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoEgreso.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadoNuevo.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormEmpleadosHistorial.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormIngreso.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormInventarioBodega.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormRegistroBodega.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormReportes.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormVentas.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormCambio.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.FormDevoluciones.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.Properties.Resources.resources
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.GenerateResource.cache
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CoreCompileInputs.cache
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.csproj.CopyComplete
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.exe
+C:\Users\Angel Chuy\Source\Repos\ProyectoDesarrolloSoftware\SiguaSportsApp\obj\Debug\SiguaSportsApp.pdb

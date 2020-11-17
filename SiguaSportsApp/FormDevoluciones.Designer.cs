@@ -124,7 +124,7 @@
             this.contraer_menu.SetDecoration(this.tcDevoluciones, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.tcDevoluciones, BunifuAnimatorNS.DecorationType.None);
             this.tcDevoluciones.Location = new System.Drawing.Point(225, 58);
-            this.tcDevoluciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tcDevoluciones.Margin = new System.Windows.Forms.Padding(2);
             this.tcDevoluciones.Name = "tcDevoluciones";
             this.tcDevoluciones.SelectedIndex = 0;
             this.tcDevoluciones.Size = new System.Drawing.Size(975, 615);
@@ -148,9 +148,9 @@
             this.expandir_menu.SetDecoration(this.tpDevoluciones, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.tpDevoluciones, BunifuAnimatorNS.DecorationType.None);
             this.tpDevoluciones.Location = new System.Drawing.Point(4, 22);
-            this.tpDevoluciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpDevoluciones.Margin = new System.Windows.Forms.Padding(2);
             this.tpDevoluciones.Name = "tpDevoluciones";
-            this.tpDevoluciones.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpDevoluciones.Padding = new System.Windows.Forms.Padding(2);
             this.tpDevoluciones.Size = new System.Drawing.Size(967, 589);
             this.tpDevoluciones.TabIndex = 0;
             this.tpDevoluciones.Text = "Devoluciones";
@@ -186,7 +186,7 @@
             this.expandir_menu.SetDecoration(this.btn_Agregar, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Agregar, BunifuAnimatorNS.DecorationType.None);
             this.btn_Agregar.Location = new System.Drawing.Point(416, 68);
-            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(66, 20);
             this.btn_Agregar.TabIndex = 71;
@@ -200,7 +200,7 @@
             this.expandir_menu.SetDecoration(this.btn_Buscar, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Buscar, BunifuAnimatorNS.DecorationType.None);
             this.btn_Buscar.Location = new System.Drawing.Point(416, 67);
-            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Size = new System.Drawing.Size(66, 20);
             this.btn_Buscar.TabIndex = 70;
@@ -213,7 +213,7 @@
             this.expandir_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
             this.mtb_Factura.Location = new System.Drawing.Point(124, 68);
-            this.mtb_Factura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtb_Factura.Margin = new System.Windows.Forms.Padding(2);
             this.mtb_Factura.Mask = "000-000-00-0000000";
             this.mtb_Factura.Name = "mtb_Factura";
             this.mtb_Factura.Size = new System.Drawing.Size(76, 20);
@@ -521,9 +521,9 @@
             this.expandir_menu.SetDecoration(this.tpHistorial, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.tpHistorial, BunifuAnimatorNS.DecorationType.None);
             this.tpHistorial.Location = new System.Drawing.Point(4, 22);
-            this.tpHistorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.tpHistorial.Name = "tpHistorial";
-            this.tpHistorial.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpHistorial.Padding = new System.Windows.Forms.Padding(2);
             this.tpHistorial.Size = new System.Drawing.Size(967, 589);
             this.tpHistorial.TabIndex = 1;
             this.tpHistorial.Text = "Historial";
@@ -647,6 +647,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1040, 53);
             this.panel9.TabIndex = 1;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // boton_min
             // 
@@ -768,7 +769,7 @@
             this.btn_logueo.IconZoom = 85D;
             this.btn_logueo.IsTab = false;
             this.btn_logueo.Location = new System.Drawing.Point(6, 532);
-            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_logueo.Name = "btn_logueo";
             this.btn_logueo.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_logueo.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -806,7 +807,7 @@
             this.btn_Cambio.IconZoom = 85D;
             this.btn_Cambio.IsTab = false;
             this.btn_Cambio.Location = new System.Drawing.Point(3, 133);
-            this.btn_Cambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cambio.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cambio.Name = "btn_Cambio";
             this.btn_Cambio.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Cambio.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -844,7 +845,7 @@
             this.btn_reportes.IconZoom = 85D;
             this.btn_reportes.IsTab = false;
             this.btn_reportes.Location = new System.Drawing.Point(3, 341);
-            this.btn_reportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_reportes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_reportes.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -882,7 +883,7 @@
             this.btn_Registro_bodega.IconZoom = 85D;
             this.btn_Registro_bodega.IsTab = false;
             this.btn_Registro_bodega.Location = new System.Drawing.Point(3, 275);
-            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Registro_bodega.Name = "btn_Registro_bodega";
             this.btn_Registro_bodega.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -920,7 +921,7 @@
             this.btn_Inventario_bodega.IconZoom = 85D;
             this.btn_Inventario_bodega.IsTab = false;
             this.btn_Inventario_bodega.Location = new System.Drawing.Point(3, 205);
-            this.btn_Inventario_bodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Inventario_bodega.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Inventario_bodega.Name = "btn_Inventario_bodega";
             this.btn_Inventario_bodega.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Inventario_bodega.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -958,7 +959,7 @@
             this.btn_Ventas.IconZoom = 85D;
             this.btn_Ventas.IsTab = false;
             this.btn_Ventas.Location = new System.Drawing.Point(6, 64);
-            this.btn_Ventas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Ventas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Ventas.Name = "btn_Ventas";
             this.btn_Ventas.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Ventas.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -994,7 +995,7 @@
             this.linea_sidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linea_sidebar.LineThickness = 1;
             this.linea_sidebar.Location = new System.Drawing.Point(3, 40);
-            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.linea_sidebar.Name = "linea_sidebar";
             this.linea_sidebar.Size = new System.Drawing.Size(198, 10);
             this.linea_sidebar.TabIndex = 1;
@@ -1135,7 +1136,7 @@
             this.contraer_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDevoluciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FromDevoluciones";
