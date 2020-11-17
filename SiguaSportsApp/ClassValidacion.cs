@@ -9,7 +9,7 @@ using System.Xml.Schema;
 namespace SiguaSportsApp
 {
 
-    //prueba
+    //prueba complementaria
     class ClassValidacion
     {
         public bool Espacio_Blanco(ErrorProvider ubicacionError, TextBox txt)

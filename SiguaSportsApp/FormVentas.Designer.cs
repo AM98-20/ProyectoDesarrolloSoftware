@@ -90,7 +90,6 @@ namespace SiguaSportsApp
             this.lblprecio = new System.Windows.Forms.Label();
             this.txtprecio = new System.Windows.Forms.TextBox();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.panel2.SuspendLayout();
@@ -530,7 +529,6 @@ namespace SiguaSportsApp
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuCustomLabel2);
             this.panel1.Controls.Add(this.boton_salir);
             this.panel1.Controls.Add(this.btn_minimizar);
             this.panel1.Controls.Add(this.btn_maximizar);
@@ -661,7 +659,7 @@ namespace SiguaSportsApp
             this.btn_logueo.IconZoom = 85D;
             this.btn_logueo.IsTab = false;
             this.btn_logueo.Location = new System.Drawing.Point(2, 545);
-            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_logueo.Name = "btn_logueo";
             this.btn_logueo.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_logueo.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -698,7 +696,7 @@ namespace SiguaSportsApp
             this.btn_Cambio.IconZoom = 85D;
             this.btn_Cambio.IsTab = false;
             this.btn_Cambio.Location = new System.Drawing.Point(4, 184);
-            this.btn_Cambio.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cambio.Name = "btn_Cambio";
             this.btn_Cambio.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Cambio.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -736,7 +734,7 @@ namespace SiguaSportsApp
             this.btn_Administracion.IconZoom = 85D;
             this.btn_Administracion.IsTab = false;
             this.btn_Administracion.Location = new System.Drawing.Point(4, 119);
-            this.btn_Administracion.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Administracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Administracion.Name = "btn_Administracion";
             this.btn_Administracion.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Administracion.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -774,7 +772,7 @@ namespace SiguaSportsApp
             this.btn_Devoluciones.IconZoom = 85D;
             this.btn_Devoluciones.IsTab = false;
             this.btn_Devoluciones.Location = new System.Drawing.Point(4, 51);
-            this.btn_Devoluciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Devoluciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Devoluciones.Name = "btn_Devoluciones";
             this.btn_Devoluciones.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Devoluciones.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -823,7 +821,7 @@ namespace SiguaSportsApp
             this.linea_sidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linea_sidebar.LineThickness = 1;
             this.linea_sidebar.Location = new System.Drawing.Point(3, 40);
-            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4);
+            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linea_sidebar.Name = "linea_sidebar";
             this.linea_sidebar.Size = new System.Drawing.Size(198, 10);
             this.linea_sidebar.TabIndex = 1;
@@ -900,7 +898,7 @@ namespace SiguaSportsApp
             this.expandir_menu.SetDecoration(this.btn_AgregarProd, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_AgregarProd, BunifuAnimatorNS.DecorationType.None);
             this.btn_AgregarProd.Location = new System.Drawing.Point(910, 161);
-            this.btn_AgregarProd.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AgregarProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_AgregarProd.Name = "btn_AgregarProd";
             this.btn_AgregarProd.Size = new System.Drawing.Size(75, 24);
             this.btn_AgregarProd.TabIndex = 38;
@@ -955,18 +953,6 @@ namespace SiguaSportsApp
             animation1.TransparencyCoeff = 0F;
             this.expandir_menu.DefaultAnimation = animation1;
             // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.expandir_menu.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
-            this.contraer_menu.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(473, 12);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(109, 26);
-            this.bunifuCustomLabel2.TabIndex = 42;
-            this.bunifuCustomLabel2.Text = "Ventas";
-            // 
             // FormVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1009,7 +995,6 @@ namespace SiguaSportsApp
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
@@ -1082,6 +1067,5 @@ namespace SiguaSportsApp
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_total;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
     }
 }

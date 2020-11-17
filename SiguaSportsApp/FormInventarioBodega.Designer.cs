@@ -56,8 +56,6 @@
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btn_Devoluciones = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
@@ -78,7 +76,7 @@
             this.expandir_menu.SetDecoration(this.btnBuscar, BunifuAnimatorNS.DecorationType.None);
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Location = new System.Drawing.Point(1071, 111);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 30);
             this.btnBuscar.TabIndex = 53;
@@ -96,7 +94,7 @@
             this.expandir_menu.SetDecoration(this.dgvProductos, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgvProductos, BunifuAnimatorNS.DecorationType.None);
             this.dgvProductos.Location = new System.Drawing.Point(227, 158);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
@@ -129,7 +127,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bunifuCustomLabel2);
             this.panel2.Controls.Add(this.btn_maximizar);
             this.panel2.Controls.Add(this.boton_restaurar);
             this.expandir_menu.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
@@ -186,7 +183,6 @@
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.SideBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SideBar.BackgroundImage")));
             this.SideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SideBar.Controls.Add(this.btn_Devoluciones);
             this.SideBar.Controls.Add(this.btn_logueo);
             this.SideBar.Controls.Add(this.btn_reportes);
             this.SideBar.Controls.Add(this.btn_Administracion);
@@ -231,7 +227,7 @@
             this.btn_logueo.IconZoom = 85D;
             this.btn_logueo.IsTab = false;
             this.btn_logueo.Location = new System.Drawing.Point(6, 532);
-            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_logueo.Name = "btn_logueo";
             this.btn_logueo.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_logueo.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -268,8 +264,8 @@
             this.btn_reportes.IconVisible = true;
             this.btn_reportes.IconZoom = 85D;
             this.btn_reportes.IsTab = false;
-            this.btn_reportes.Location = new System.Drawing.Point(0, 166);
-            this.btn_reportes.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_reportes.Location = new System.Drawing.Point(6, 186);
+            this.btn_reportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_reportes.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -307,7 +303,7 @@
             this.btn_Administracion.IconZoom = 85D;
             this.btn_Administracion.IsTab = false;
             this.btn_Administracion.Location = new System.Drawing.Point(6, 58);
-            this.btn_Administracion.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Administracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Administracion.Name = "btn_Administracion";
             this.btn_Administracion.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Administracion.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -344,8 +340,8 @@
             this.btn_Registro_bodega.IconVisible = true;
             this.btn_Registro_bodega.IconZoom = 85D;
             this.btn_Registro_bodega.IsTab = false;
-            this.btn_Registro_bodega.Location = new System.Drawing.Point(0, 216);
-            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Registro_bodega.Location = new System.Drawing.Point(6, 120);
+            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Registro_bodega.Name = "btn_Registro_bodega";
             this.btn_Registro_bodega.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -380,7 +376,7 @@
             this.linea_sidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linea_sidebar.LineThickness = 1;
             this.linea_sidebar.Location = new System.Drawing.Point(3, 40);
-            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4);
+            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linea_sidebar.Name = "linea_sidebar";
             this.linea_sidebar.Size = new System.Drawing.Size(198, 10);
             this.linea_sidebar.TabIndex = 1;
@@ -515,56 +511,6 @@
             this.radio.ElipseRadius = 5;
             this.radio.TargetControl = this.SideBar;
             // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.contraer_menu.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.bunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(452, 15);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(266, 26);
-            this.bunifuCustomLabel2.TabIndex = 61;
-            this.bunifuCustomLabel2.Text = "Inventario Bodega";
-            // 
-            // btn_Devoluciones
-            // 
-            this.btn_Devoluciones.Activecolor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Devoluciones.BorderRadius = 0;
-            this.btn_Devoluciones.ButtonText = "              DEVOLUCIONES";
-            this.btn_Devoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contraer_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Devoluciones.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Devoluciones.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.Iconimage = global::SiguaSportsApp.Properties.Resources.return_on_investment;
-            this.btn_Devoluciones.Iconimage_right = null;
-            this.btn_Devoluciones.Iconimage_right_Selected = null;
-            this.btn_Devoluciones.Iconimage_Selected = null;
-            this.btn_Devoluciones.IconMarginLeft = 0;
-            this.btn_Devoluciones.IconMarginRight = 0;
-            this.btn_Devoluciones.IconRightVisible = true;
-            this.btn_Devoluciones.IconRightZoom = 0D;
-            this.btn_Devoluciones.IconVisible = true;
-            this.btn_Devoluciones.IconZoom = 85D;
-            this.btn_Devoluciones.IsTab = false;
-            this.btn_Devoluciones.Location = new System.Drawing.Point(-6, 108);
-            this.btn_Devoluciones.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Devoluciones.Name = "btn_Devoluciones";
-            this.btn_Devoluciones.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.OnHovercolor = System.Drawing.Color.Gainsboro;
-            this.btn_Devoluciones.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btn_Devoluciones.selected = false;
-            this.btn_Devoluciones.Size = new System.Drawing.Size(224, 42);
-            this.btn_Devoluciones.TabIndex = 12;
-            this.btn_Devoluciones.Text = "              DEVOLUCIONES";
-            this.btn_Devoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Devoluciones.Textcolor = System.Drawing.Color.White;
-            this.btn_Devoluciones.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Devoluciones.Click += new System.EventHandler(this.btn_Devoluciones_Click);
-            // 
             // FormInventarioBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,14 +532,13 @@
             this.contraer_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormInventarioBodega";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormInventarioBodega";
             this.Load += new System.EventHandler(this.FormInventarioBodega_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_restaurar)).EndInit();
             this.contenedor_menu.ResumeLayout(false);
@@ -634,7 +579,5 @@
         private System.Windows.Forms.PictureBox btn_restaurar;
         private System.Windows.Forms.PictureBox btn_minimizar;
         private System.Windows.Forms.PictureBox boton_restaurar;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Devoluciones;
     }
 }
