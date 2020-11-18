@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInventarioBodega));
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.boton_restaurar = new System.Windows.Forms.PictureBox();
             this.contenedor_menu = new System.Windows.Forms.Panel();
             this.SideBar = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_Devoluciones = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_logueo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_reportes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Administracion = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,8 +58,6 @@
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btn_Devoluciones = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
@@ -141,13 +141,26 @@
             this.panel2.TabIndex = 54;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(487, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 24);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Inventario Bodega";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // btn_maximizar
             // 
             this.btn_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.btn_maximizar, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_maximizar, BunifuAnimatorNS.DecorationType.None);
             this.btn_maximizar.Image = global::SiguaSportsApp.Properties.Resources.maximize__2_;
-            this.btn_maximizar.Location = new System.Drawing.Point(960, 11);
+            this.btn_maximizar.Location = new System.Drawing.Point(915, 8);
             this.btn_maximizar.Name = "btn_maximizar";
             this.btn_maximizar.Size = new System.Drawing.Size(30, 30);
             this.btn_maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -161,7 +174,7 @@
             this.contraer_menu.SetDecoration(this.boton_restaurar, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.boton_restaurar, BunifuAnimatorNS.DecorationType.None);
             this.boton_restaurar.Image = global::SiguaSportsApp.Properties.Resources.window_restore;
-            this.boton_restaurar.Location = new System.Drawing.Point(960, 11);
+            this.boton_restaurar.Location = new System.Drawing.Point(962, 11);
             this.boton_restaurar.Name = "boton_restaurar";
             this.boton_restaurar.Size = new System.Drawing.Size(30, 30);
             this.boton_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,6 +219,44 @@
             this.SideBar.Quality = 10;
             this.SideBar.Size = new System.Drawing.Size(204, 584);
             this.SideBar.TabIndex = 0;
+            // 
+            // btn_Devoluciones
+            // 
+            this.btn_Devoluciones.Activecolor = System.Drawing.Color.Transparent;
+            this.btn_Devoluciones.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Devoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Devoluciones.BorderRadius = 0;
+            this.btn_Devoluciones.ButtonText = "              DEVOLUCIONES";
+            this.btn_Devoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contraer_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.btn_Devoluciones.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Devoluciones.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Devoluciones.Iconimage = global::SiguaSportsApp.Properties.Resources.return_on_investment;
+            this.btn_Devoluciones.Iconimage_right = null;
+            this.btn_Devoluciones.Iconimage_right_Selected = null;
+            this.btn_Devoluciones.Iconimage_Selected = null;
+            this.btn_Devoluciones.IconMarginLeft = 0;
+            this.btn_Devoluciones.IconMarginRight = 0;
+            this.btn_Devoluciones.IconRightVisible = true;
+            this.btn_Devoluciones.IconRightZoom = 0D;
+            this.btn_Devoluciones.IconVisible = true;
+            this.btn_Devoluciones.IconZoom = 85D;
+            this.btn_Devoluciones.IsTab = false;
+            this.btn_Devoluciones.Location = new System.Drawing.Point(2, 221);
+            this.btn_Devoluciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Devoluciones.Name = "btn_Devoluciones";
+            this.btn_Devoluciones.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_Devoluciones.OnHovercolor = System.Drawing.Color.Gainsboro;
+            this.btn_Devoluciones.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btn_Devoluciones.selected = false;
+            this.btn_Devoluciones.Size = new System.Drawing.Size(224, 42);
+            this.btn_Devoluciones.TabIndex = 61;
+            this.btn_Devoluciones.Text = "              DEVOLUCIONES";
+            this.btn_Devoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Devoluciones.Textcolor = System.Drawing.Color.White;
+            this.btn_Devoluciones.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Devoluciones.Click += new System.EventHandler(this.btn_Devoluciones_Click);
             // 
             // btn_logueo
             // 
@@ -406,22 +457,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation5;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation1;
             // 
             // btn_menu
             // 
@@ -494,78 +545,27 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation6;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation2;
             // 
             // radio
             // 
             this.radio.ElipseRadius = 5;
             this.radio.TargetControl = this.SideBar;
-            // 
-            // btn_Devoluciones
-            // 
-            this.btn_Devoluciones.Activecolor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Devoluciones.BorderRadius = 0;
-            this.btn_Devoluciones.ButtonText = "              DEVOLUCIONES";
-            this.btn_Devoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contraer_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
-            this.btn_Devoluciones.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Devoluciones.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.Iconimage = global::SiguaSportsApp.Properties.Resources.return_on_investment;
-            this.btn_Devoluciones.Iconimage_right = null;
-            this.btn_Devoluciones.Iconimage_right_Selected = null;
-            this.btn_Devoluciones.Iconimage_Selected = null;
-            this.btn_Devoluciones.IconMarginLeft = 0;
-            this.btn_Devoluciones.IconMarginRight = 0;
-            this.btn_Devoluciones.IconRightVisible = true;
-            this.btn_Devoluciones.IconRightZoom = 0D;
-            this.btn_Devoluciones.IconVisible = true;
-            this.btn_Devoluciones.IconZoom = 85D;
-            this.btn_Devoluciones.IsTab = false;
-            this.btn_Devoluciones.Location = new System.Drawing.Point(2, 221);
-            this.btn_Devoluciones.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Devoluciones.Name = "btn_Devoluciones";
-            this.btn_Devoluciones.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_Devoluciones.OnHovercolor = System.Drawing.Color.Gainsboro;
-            this.btn_Devoluciones.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btn_Devoluciones.selected = false;
-            this.btn_Devoluciones.Size = new System.Drawing.Size(224, 42);
-            this.btn_Devoluciones.TabIndex = 61;
-            this.btn_Devoluciones.Text = "              DEVOLUCIONES";
-            this.btn_Devoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Devoluciones.Textcolor = System.Drawing.Color.White;
-            this.btn_Devoluciones.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Devoluciones.Click += new System.EventHandler(this.btn_Devoluciones_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(487, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 24);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Inventario Bodega";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FormInventarioBodega
             // 

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportes));
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             this.dgvReporteFinanciero = new System.Windows.Forms.DataGridView();
             this.bnt_Buscar = new System.Windows.Forms.Button();
             this.dtpFecha2 = new System.Windows.Forms.DateTimePicker();
@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.boton_max = new System.Windows.Forms.PictureBox();
             this.boton_min = new System.Windows.Forms.PictureBox();
             this.boton_cerrar = new System.Windows.Forms.PictureBox();
@@ -64,7 +65,6 @@
             this.boton_restaurar = new System.Windows.Forms.PictureBox();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteFinanciero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -215,6 +215,18 @@
             this.panel1.Size = new System.Drawing.Size(1190, 53);
             this.panel1.TabIndex = 41;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(572, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 24);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Reportes";
+            // 
             // boton_max
             // 
             this.boton_max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -331,7 +343,7 @@
             this.btn_Registro_bodega.IconZoom = 85D;
             this.btn_Registro_bodega.IsTab = false;
             this.btn_Registro_bodega.Location = new System.Drawing.Point(6, 122);
-            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Registro_bodega.Name = "btn_Registro_bodega";
             this.btn_Registro_bodega.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -370,7 +382,7 @@
             this.btn_logueo.IconZoom = 85D;
             this.btn_logueo.IsTab = false;
             this.btn_logueo.Location = new System.Drawing.Point(6, 533);
-            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_logueo.Name = "btn_logueo";
             this.btn_logueo.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_logueo.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -408,7 +420,7 @@
             this.btn_Inventario_bodega.IconZoom = 85D;
             this.btn_Inventario_bodega.IsTab = false;
             this.btn_Inventario_bodega.Location = new System.Drawing.Point(6, 51);
-            this.btn_Inventario_bodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Inventario_bodega.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Inventario_bodega.Name = "btn_Inventario_bodega";
             this.btn_Inventario_bodega.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Inventario_bodega.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -444,7 +456,7 @@
             this.linea_sidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linea_sidebar.LineThickness = 1;
             this.linea_sidebar.Location = new System.Drawing.Point(3, 40);
-            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.linea_sidebar.Name = "linea_sidebar";
             this.linea_sidebar.Size = new System.Drawing.Size(198, 10);
             this.linea_sidebar.TabIndex = 1;
@@ -468,22 +480,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation2;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation4;
             // 
             // btn_menu
             // 
@@ -580,39 +592,27 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation3;
             // 
             // radio
             // 
             this.radio.ElipseRadius = 5;
             this.radio.TargetControl = this.SideBar;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(572, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 24);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Reportes";
             // 
             // FormReportes
             // 
@@ -642,7 +642,7 @@
             this.contraer_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReportes";

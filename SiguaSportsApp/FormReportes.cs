@@ -100,9 +100,8 @@ namespace SiguaSportsApp
 
         private void btn_Inventario_bodega_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormInventarioBodega inv = new FormInventarioBodega();
-            inv.ShowDialog();
+            FormInventarioBodega inven_bode = new FormInventarioBodega();
+            inven_bode.ShowDialog();
             this.Close();
         }
 
@@ -127,6 +126,11 @@ namespace SiguaSportsApp
             WindowState = FormWindowState.Normal;
             btnRestaurar.Visible = false;
             btn_maximizar.Visible = true;
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
