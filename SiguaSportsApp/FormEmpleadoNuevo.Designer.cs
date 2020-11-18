@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleadoNuevo));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.cb_Genero = new System.Windows.Forms.ComboBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -47,6 +47,7 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.contenedor_menu = new System.Windows.Forms.Panel();
             this.SideBar = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -77,7 +78,6 @@
             this.cb_Puesto = new System.Windows.Forms.ComboBox();
             this.dtp_FechaNAc = new System.Windows.Forms.DateTimePicker();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
@@ -92,12 +92,12 @@
             // 
             // cb_Genero
             // 
-            this.cb_Genero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_Genero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cb_Genero.BackColor = System.Drawing.Color.White;
             this.contraer_menu.SetDecoration(this.cb_Genero, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.cb_Genero, BunifuAnimatorNS.DecorationType.None);
             this.cb_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Genero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Genero.FormattingEnabled = true;
             this.cb_Genero.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_Genero.Items.AddRange(new object[] {
@@ -111,8 +111,8 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtApellidos, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtApellidos, BunifuAnimatorNS.DecorationType.None);
             this.txtApellidos.Location = new System.Drawing.Point(426, 166);
@@ -122,8 +122,8 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtNombre, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtNombre, BunifuAnimatorNS.DecorationType.None);
             this.txtNombre.Location = new System.Drawing.Point(426, 115);
@@ -161,8 +161,8 @@
             // 
             // lblFechaNacimiento
             // 
-            this.lblFechaNacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFechaNacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.lblFechaNacimiento, BunifuAnimatorNS.DecorationType.None);
@@ -176,8 +176,8 @@
             // 
             // lblTelefono
             // 
-            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.lblTelefono, BunifuAnimatorNS.DecorationType.None);
@@ -191,8 +191,8 @@
             // 
             // lblGenero
             // 
-            this.lblGenero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGenero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblGenero.AutoSize = true;
             this.lblGenero.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.lblGenero, BunifuAnimatorNS.DecorationType.None);
@@ -206,8 +206,8 @@
             // 
             // lblApellidos
             // 
-            this.lblApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.lblApellidos, BunifuAnimatorNS.DecorationType.None);
@@ -221,8 +221,8 @@
             // 
             // lblNombre
             // 
-            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.lblNombre, BunifuAnimatorNS.DecorationType.None);
@@ -236,8 +236,8 @@
             // 
             // lblCorreo
             // 
-            this.lblCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.lblCorreo, BunifuAnimatorNS.DecorationType.None);
@@ -251,25 +251,26 @@
             // 
             // mtxttelefono
             // 
-            this.mtxttelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mtxttelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.expandir_menu.SetDecoration(this.mtxttelefono, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.mtxttelefono, BunifuAnimatorNS.DecorationType.None);
             this.mtxttelefono.Location = new System.Drawing.Point(427, 330);
-            this.mtxttelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mtxttelefono.Mask = "(999) 0000-0000";
+            this.mtxttelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.mtxttelefono.Mask = "0000-0000";
             this.mtxttelefono.Name = "mtxttelefono";
             this.mtxttelefono.Size = new System.Drawing.Size(83, 20);
             this.mtxttelefono.TabIndex = 38;
+            this.mtxttelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtCorreo, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtCorreo, BunifuAnimatorNS.DecorationType.None);
             this.txtCorreo.Location = new System.Drawing.Point(427, 274);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(183, 20);
             this.txtCorreo.TabIndex = 39;
@@ -280,8 +281,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btn_maximizar);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btn_restaurar);
             this.expandir_menu.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -289,6 +291,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1040, 53);
             this.panel1.TabIndex = 40;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(508, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 24);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Empleado Nuevo";
             // 
             // btn_maximizar
             // 
@@ -348,7 +363,7 @@
             this.btn_Registro_bodega.BackColor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Registro_bodega.BorderRadius = 0;
-            this.btn_Registro_bodega.ButtonText = "              REGISTRO - BODEGA";
+            this.btn_Registro_bodega.ButtonText = "            REGISTRO ";
             this.btn_Registro_bodega.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expandir_menu.SetDecoration(this.btn_Registro_bodega, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Registro_bodega, BunifuAnimatorNS.DecorationType.None);
@@ -366,7 +381,7 @@
             this.btn_Registro_bodega.IconZoom = 85D;
             this.btn_Registro_bodega.IsTab = false;
             this.btn_Registro_bodega.Location = new System.Drawing.Point(6, 197);
-            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Registro_bodega.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Registro_bodega.Name = "btn_Registro_bodega";
             this.btn_Registro_bodega.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -374,7 +389,7 @@
             this.btn_Registro_bodega.selected = false;
             this.btn_Registro_bodega.Size = new System.Drawing.Size(240, 42);
             this.btn_Registro_bodega.TabIndex = 10;
-            this.btn_Registro_bodega.Text = "              REGISTRO - BODEGA";
+            this.btn_Registro_bodega.Text = "            REGISTRO ";
             this.btn_Registro_bodega.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Registro_bodega.Textcolor = System.Drawing.Color.White;
             this.btn_Registro_bodega.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -386,7 +401,7 @@
             this.btn_Administracion.BackColor = System.Drawing.Color.Transparent;
             this.btn_Administracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Administracion.BorderRadius = 0;
-            this.btn_Administracion.ButtonText = "              ADMINISTRACIÓN";
+            this.btn_Administracion.ButtonText = "           ADMINISTRACIÓN";
             this.btn_Administracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expandir_menu.SetDecoration(this.btn_Administracion, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Administracion, BunifuAnimatorNS.DecorationType.None);
@@ -404,7 +419,7 @@
             this.btn_Administracion.IconZoom = 85D;
             this.btn_Administracion.IsTab = false;
             this.btn_Administracion.Location = new System.Drawing.Point(6, 62);
-            this.btn_Administracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Administracion.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Administracion.Name = "btn_Administracion";
             this.btn_Administracion.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Administracion.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -412,7 +427,7 @@
             this.btn_Administracion.selected = false;
             this.btn_Administracion.Size = new System.Drawing.Size(221, 42);
             this.btn_Administracion.TabIndex = 9;
-            this.btn_Administracion.Text = "              ADMINISTRACIÓN";
+            this.btn_Administracion.Text = "           ADMINISTRACIÓN";
             this.btn_Administracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Administracion.Textcolor = System.Drawing.Color.White;
             this.btn_Administracion.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,7 +439,7 @@
             this.btn_reportes.BackColor = System.Drawing.Color.Transparent;
             this.btn_reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_reportes.BorderRadius = 0;
-            this.btn_reportes.ButtonText = "              REPORTES";
+            this.btn_reportes.ButtonText = "            REPORTES";
             this.btn_reportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expandir_menu.SetDecoration(this.btn_reportes, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_reportes, BunifuAnimatorNS.DecorationType.None);
@@ -442,7 +457,7 @@
             this.btn_reportes.IconZoom = 85D;
             this.btn_reportes.IsTab = false;
             this.btn_reportes.Location = new System.Drawing.Point(6, 263);
-            this.btn_reportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_reportes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_reportes.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -450,7 +465,7 @@
             this.btn_reportes.selected = false;
             this.btn_reportes.Size = new System.Drawing.Size(221, 42);
             this.btn_reportes.TabIndex = 7;
-            this.btn_reportes.Text = "              REPORTES";
+            this.btn_reportes.Text = "            REPORTES";
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_reportes.Textcolor = System.Drawing.Color.White;
             this.btn_reportes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -463,7 +478,7 @@
             this.btn_logueo.BackColor = System.Drawing.Color.Transparent;
             this.btn_logueo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_logueo.BorderRadius = 0;
-            this.btn_logueo.ButtonText = "              CERRAR SESIÓN";
+            this.btn_logueo.ButtonText = "             CERRAR SESIÓN";
             this.btn_logueo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expandir_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
@@ -481,7 +496,7 @@
             this.btn_logueo.IconZoom = 85D;
             this.btn_logueo.IsTab = false;
             this.btn_logueo.Location = new System.Drawing.Point(6, 533);
-            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_logueo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_logueo.Name = "btn_logueo";
             this.btn_logueo.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_logueo.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -489,7 +504,7 @@
             this.btn_logueo.selected = false;
             this.btn_logueo.Size = new System.Drawing.Size(206, 42);
             this.btn_logueo.TabIndex = 6;
-            this.btn_logueo.Text = "              CERRAR SESIÓN";
+            this.btn_logueo.Text = "             CERRAR SESIÓN";
             this.btn_logueo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_logueo.Textcolor = System.Drawing.Color.White;
             this.btn_logueo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -501,7 +516,7 @@
             this.btn_Inventario_bodega.BackColor = System.Drawing.Color.Transparent;
             this.btn_Inventario_bodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Inventario_bodega.BorderRadius = 0;
-            this.btn_Inventario_bodega.ButtonText = "              INVENTARIO-BODEGA";
+            this.btn_Inventario_bodega.ButtonText = "            INVENTARIO";
             this.btn_Inventario_bodega.Cursor = System.Windows.Forms.Cursors.Hand;
             this.expandir_menu.SetDecoration(this.btn_Inventario_bodega, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Inventario_bodega, BunifuAnimatorNS.DecorationType.None);
@@ -519,7 +534,7 @@
             this.btn_Inventario_bodega.IconZoom = 85D;
             this.btn_Inventario_bodega.IsTab = false;
             this.btn_Inventario_bodega.Location = new System.Drawing.Point(6, 127);
-            this.btn_Inventario_bodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Inventario_bodega.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Inventario_bodega.Name = "btn_Inventario_bodega";
             this.btn_Inventario_bodega.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_Inventario_bodega.OnHovercolor = System.Drawing.Color.Gainsboro;
@@ -527,7 +542,7 @@
             this.btn_Inventario_bodega.selected = false;
             this.btn_Inventario_bodega.Size = new System.Drawing.Size(248, 42);
             this.btn_Inventario_bodega.TabIndex = 5;
-            this.btn_Inventario_bodega.Text = "              INVENTARIO-BODEGA";
+            this.btn_Inventario_bodega.Text = "            INVENTARIO";
             this.btn_Inventario_bodega.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventario_bodega.Textcolor = System.Drawing.Color.White;
             this.btn_Inventario_bodega.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -555,7 +570,7 @@
             this.linea_sidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linea_sidebar.LineThickness = 1;
             this.linea_sidebar.Location = new System.Drawing.Point(3, 40);
-            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linea_sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.linea_sidebar.Name = "linea_sidebar";
             this.linea_sidebar.Size = new System.Drawing.Size(198, 10);
             this.linea_sidebar.TabIndex = 1;
@@ -609,22 +624,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation4;
             // 
             // btn_salir
             // 
@@ -646,7 +661,7 @@
             this.contraer_menu.SetDecoration(this.btn_restaurar, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_restaurar, BunifuAnimatorNS.DecorationType.None);
             this.btn_restaurar.Image = global::SiguaSportsApp.Properties.Resources.window_restore;
-            this.btn_restaurar.Location = new System.Drawing.Point(964, 11);
+            this.btn_restaurar.Location = new System.Drawing.Point(964, 12);
             this.btn_restaurar.Name = "btn_restaurar";
             this.btn_restaurar.Size = new System.Drawing.Size(30, 30);
             this.btn_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -670,7 +685,7 @@
             // 
             // txt_Contrasena
             // 
-            this.txt_Contrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Contrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.txt_Contrasena, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txt_Contrasena, BunifuAnimatorNS.DecorationType.None);
@@ -682,7 +697,7 @@
             // 
             // txt_Usuario
             // 
-            this.txt_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.txt_Usuario, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txt_Usuario, BunifuAnimatorNS.DecorationType.None);
@@ -693,7 +708,7 @@
             // 
             // lbl_Contrasena
             // 
-            this.lbl_Contrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbl_Contrasena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Contrasena.AutoSize = true;
             this.lbl_Contrasena.BackColor = System.Drawing.Color.Transparent;
@@ -708,7 +723,7 @@
             // 
             // lbl_Usuario
             // 
-            this.lbl_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbl_Usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Usuario.AutoSize = true;
             this.lbl_Usuario.BackColor = System.Drawing.Color.Transparent;
@@ -723,7 +738,7 @@
             // 
             // lbl_Confirmacion
             // 
-            this.lbl_Confirmacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbl_Confirmacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Confirmacion.AutoSize = true;
             this.lbl_Confirmacion.BackColor = System.Drawing.Color.Transparent;
@@ -738,7 +753,7 @@
             // 
             // txt_Confirmacion
             // 
-            this.txt_Confirmacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Confirmacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.txt_Confirmacion, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txt_Confirmacion, BunifuAnimatorNS.DecorationType.None);
@@ -750,7 +765,8 @@
             // 
             // lblDAtos
             // 
-            this.lblDAtos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDAtos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDAtos.AutoSize = true;
             this.lblDAtos.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.lblDAtos, BunifuAnimatorNS.DecorationType.None);
@@ -764,7 +780,8 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.expandir_menu.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
@@ -778,7 +795,7 @@
             // 
             // lbl_Puesto
             // 
-            this.lbl_Puesto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbl_Puesto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Puesto.AutoSize = true;
             this.lbl_Puesto.BackColor = System.Drawing.Color.Transparent;
@@ -793,10 +810,11 @@
             // 
             // cb_Puesto
             // 
+            this.cb_Puesto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.cb_Puesto, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.cb_Puesto, BunifuAnimatorNS.DecorationType.None);
             this.cb_Puesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Puesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Puesto.FormattingEnabled = true;
             this.cb_Puesto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_Puesto.Items.AddRange(new object[] {
@@ -804,17 +822,19 @@
             "Bodega",
             "Ventas"});
             this.cb_Puesto.Location = new System.Drawing.Point(776, 318);
-            this.cb_Puesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Puesto.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Puesto.Name = "cb_Puesto";
             this.cb_Puesto.Size = new System.Drawing.Size(171, 21);
             this.cb_Puesto.TabIndex = 57;
             // 
             // dtp_FechaNAc
             // 
+            this.dtp_FechaNAc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.expandir_menu.SetDecoration(this.dtp_FechaNAc, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dtp_FechaNAc, BunifuAnimatorNS.DecorationType.None);
             this.dtp_FechaNAc.Location = new System.Drawing.Point(426, 215);
-            this.dtp_FechaNAc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_FechaNAc.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_FechaNAc.Name = "dtp_FechaNAc";
             this.dtp_FechaNAc.Size = new System.Drawing.Size(184, 20);
             this.dtp_FechaNAc.TabIndex = 58;
@@ -823,34 +843,22 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(508, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 24);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "Empleado Nuevo";
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation3;
             // 
             // FormEmpleadoNuevo
             // 
@@ -888,12 +896,11 @@
             this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.lblApellidos);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.btn_restaurar);
             this.expandir_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEmpleadoNuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmpleadoNuevo";

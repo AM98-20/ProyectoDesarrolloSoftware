@@ -32,7 +32,7 @@ namespace SiguaSportsApp
             txtDevolucion.Text = con.DevolucionCodigo();
             txtvendedor.Text = con.Nombre_empleado;
             btn_Buscar.Visible = true;
-            btn_Agregar.Visible = false;
+            btn_Agregar.Visible = true;
             tran.Subtotal = 0.00;
             tran.Descuento = 0.00;
             tran.Impuesto = 0.00;

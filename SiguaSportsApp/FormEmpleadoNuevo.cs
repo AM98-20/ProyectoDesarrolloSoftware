@@ -159,7 +159,7 @@ namespace SiguaSportsApp
                         con.cmd = new SqlCommand("INSERT INTO Empleados(cod_empleado, nombres, apellidos, cod_puesto, cod_usuario, " +
                             "salario, fecha_contratacion, fecha_nacimiento, cod_genero, telefono) " +
                             "values('" + codEmp + "','" + txtNombre.Text.ToString() + "','" + txtApellidos.Text.ToString() + "','" + indicePos + "'," +
-                            "'" + txt_Usuario.Text.ToString() + "','" + salario + "',GETDATE(),'" + dtp_FechaNAc.Value.ToShortDateString() + "','" + indiceGen + "'," +
+                            "'" + txt_Usuario.Text.ToString() + "','" + salario + "',GETDATE(),'" + dtp_FechaNAc.Value.ToString("yyy/MM/dd") + "','" + indiceGen + "'," +
                             "'" + mtxttelefono.Text.ToString() + "')", con.sc);
                     }
                     else
@@ -167,7 +167,7 @@ namespace SiguaSportsApp
                         con.cmd = new SqlCommand("INSERT INTO Empleados(cod_empleado, nombres, apellidos, cod_puesto, cod_usuario, " +
                             "salario, fecha_contratacion, fecha_nacimiento, cod_genero, correo, telefono) " +
                             "values('" + codEmp + "', '" + txtNombre.Text.ToString() + "', '" + txtApellidos.Text.ToString() + "', '" + indicePos + "', " +
-                            "'" + txt_Usuario.Text.ToString() + "', '" + salario + "', GETDATE(), '" + dtp_FechaNAc.Value.ToShortDateString() + "', '" + indiceGen + "', " +
+                            "'" + txt_Usuario.Text.ToString() + "', '" + salario + "', GETDATE(), '" + dtp_FechaNAc.Value.ToString("yyy/MM/dd") + "', '" + indiceGen + "', " +
                             "'" + txtCorreo.Text.ToString() + "', '" + mtxttelefono.Text.ToString() + "')", con.sc);
                     }
 

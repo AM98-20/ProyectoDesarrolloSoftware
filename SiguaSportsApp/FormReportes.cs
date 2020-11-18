@@ -125,7 +125,7 @@ namespace SiguaSportsApp
         {
             WindowState = FormWindowState.Normal;
             btnRestaurar.Visible = false;
-            btn_maximizar.Visible = true;
+            boton_max.Visible = true;
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
