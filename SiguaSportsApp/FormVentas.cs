@@ -201,7 +201,7 @@ namespace SiguaSportsApp
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Desea finalizar la compra?", "Finalizar Compra", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            if (result== DialogResult.Yes)
             {
                 try
                 {
@@ -210,7 +210,8 @@ namespace SiguaSportsApp
                     con.AbrirConexion();
                     con.cmd.ExecuteNonQuery();
                     con.CerrarConexion();
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("ERROR " + ex, "ERROR");
                 }
@@ -264,6 +265,16 @@ namespace SiguaSportsApp
         private void boton_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

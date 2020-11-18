@@ -18,8 +18,17 @@ namespace SiguaSportsApp
             InitializeComponent();            
         }
 
+        ClassDatosTablas datos = new ClassDatosTablas();
+
         private void FormCambio_Load(object sender, EventArgs e)
         {
+
+            if (datos.CodigoPuesto == 2 || datos.CodigoPuesto == 3)
+            {
+                btn_Administracion.Hide();
+            }
+
+
             txtDevolucion.Text = con.DevolucionCodigo();
             txtvendedor.Text = con.Nombre_empleado;
             btn_Buscar.Visible = true;
@@ -268,8 +277,8 @@ namespace SiguaSportsApp
         private void btn_Ventas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormCambio cam = new FormCambio();
-            cam.ShowDialog();
+            FormVentas ventas= new FormVentas();
+            ventas.ShowDialog();
             this.Close();
         }
 
@@ -295,6 +304,11 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

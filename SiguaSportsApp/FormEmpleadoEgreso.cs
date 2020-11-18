@@ -40,17 +40,19 @@ namespace SiguaSportsApp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int indice = dgvEgreso.CurrentCell.RowIndex;
-            string codigo = dgvEgreso.Rows[indice].Cells["Codigo"].Value.ToString();
-
-            conex.cmd = new SqlCommand("DELETE FROM Empleados WHERE cod_empleado = '"+codigo+"'", conex.sc);
-            
             try
             {
+                int indice = dgvEgreso.CurrentCell.RowIndex;
+                string codigo = dgvEgreso.Rows[indice].Cells["Codigo"].Value.ToString();
+
+                conex.cmd = new SqlCommand("DELETE FROM Empleados WHERE cod_empleado = '" + codigo + "'", conex.sc);
+
+
                 conex.AbrirConexion();
                 conex.cmd.ExecuteNonQuery();
                 conex.CerrarConexion();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("ERROR " + ex);
             }

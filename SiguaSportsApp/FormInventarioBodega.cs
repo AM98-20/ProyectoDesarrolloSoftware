@@ -20,6 +20,17 @@ namespace SiguaSportsApp
         }
         private void FormInventarioBodega_Load(object sender, EventArgs e)
         {
+
+            if (datos.CodigoPuesto == 3)
+            {
+                btn_reportes.Hide();
+                btn_Registro_bodega.Hide();
+            }
+            if(datos.CodigoPuesto==2)
+            {
+                btn_Devoluciones.Hide();
+            }
+
             string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', precioVenta, ' ', precioCompra, ' ', color,  ' ', marca) Descripcion, " +
                 "c.descripcion Categoria, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
                 "inner join Categorias c on p.cod_categoria = c.cod_categoria";
@@ -134,6 +145,25 @@ namespace SiguaSportsApp
             WindowState = FormWindowState.Normal;
             btn_restaurar.Visible = false;
             btn_maximizar.Visible = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Devoluciones_Click(object sender, EventArgs e)
+        {           
+            
+            this.Hide();
+            FormDevoluciones dev = new FormDevoluciones();
+            dev.ShowDialog();
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

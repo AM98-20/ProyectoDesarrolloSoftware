@@ -95,6 +95,7 @@
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.tcDevoluciones.SuspendLayout();
             this.tpDevoluciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevoluciones)).BeginInit();
@@ -636,6 +637,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.label4);
             this.panel9.Controls.Add(this.boton_min);
             this.panel9.Controls.Add(this.boton_salir);
             this.panel9.Controls.Add(this.btn_maximizar);
@@ -1119,6 +1121,18 @@
             // 
             this.ErrorProvider.ContainerControl = this;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.expandir_menu.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(532, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 24);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Devoluciones";
+            // 
             // FormDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1154,6 +1168,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boton_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
@@ -1236,5 +1251,6 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.PictureBox boton_min;
         private System.Windows.Forms.PictureBox boton_salir;
+        private System.Windows.Forms.Label label4;
     }
 }
