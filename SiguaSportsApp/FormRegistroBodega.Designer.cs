@@ -80,6 +80,7 @@ namespace SiguaSportsApp
             this.lblNombreProveedor = new System.Windows.Forms.Label();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_salir = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
@@ -99,7 +100,6 @@ namespace SiguaSportsApp
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             this.tcRegistro.SuspendLayout();
             this.tpProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -191,7 +191,7 @@ namespace SiguaSportsApp
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(66, 18);
             this.lblCategoria.TabIndex = 57;
-            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.Text = "Categoría";
             // 
             // cb_Categoria
             // 
@@ -211,7 +211,7 @@ namespace SiguaSportsApp
             this.cb_Categoria.Name = "cb_Categoria";
             this.cb_Categoria.Size = new System.Drawing.Size(132, 21);
             this.cb_Categoria.TabIndex = 56;
-            this.cb_Categoria.Text = "Seleccionar Categoria";
+            this.cb_Categoria.Text = "Seleccionar Categoría";
             // 
             // txtProveedorProd
             // 
@@ -776,6 +776,18 @@ namespace SiguaSportsApp
             this.panel2.Size = new System.Drawing.Size(1040, 53);
             this.panel2.TabIndex = 23;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(478, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 24);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Registro Bodega";
+            // 
             // btn_minimizar
             // 
             this.btn_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -866,7 +878,7 @@ namespace SiguaSportsApp
             this.SideBar.Location = new System.Drawing.Point(10, 0);
             this.SideBar.Name = "SideBar";
             this.SideBar.Quality = 10;
-            this.SideBar.Size = new System.Drawing.Size(204, 584);
+            this.SideBar.Size = new System.Drawing.Size(212, 584);
             this.SideBar.TabIndex = 2;
             // 
             // btn_Administracion
@@ -1148,18 +1160,6 @@ namespace SiguaSportsApp
             // 
             this.radio.ElipseRadius = 5;
             this.radio.TargetControl = this;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(478, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 24);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Registro Bodega";
             // 
             // FormRegistroBodega
             // 

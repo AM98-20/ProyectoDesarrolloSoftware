@@ -310,5 +310,10 @@ namespace SiguaSportsApp
         {
 
         }
+
+        private void lblCodProd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

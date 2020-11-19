@@ -143,6 +143,8 @@ namespace SiguaSportsApp
             WindowState = FormWindowState.Normal;
             boton_restaurar.Visible = false;
             btn_maximizar.Visible = true;
+            
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -206,6 +208,7 @@ namespace SiguaSportsApp
                 "c.descripcion Categoria, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
                 "inner join Categorias c on p.cod_categoria = c.cod_categoria";
             datos.CargarDatosTablas(dgvProductos, query);
+            txtBuscar.Text = " ";
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleadoNuevo));
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.cb_Genero = new System.Windows.Forms.ComboBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -47,8 +47,9 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.contenedor_menu = new System.Windows.Forms.Panel();
             this.SideBar = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_Registro_bodega = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -64,7 +65,6 @@
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.contraer_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.btn_salir = new System.Windows.Forms.PictureBox();
-            this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.txt_Contrasena = new System.Windows.Forms.TextBox();
             this.txt_Usuario = new System.Windows.Forms.TextBox();
@@ -81,12 +81,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             this.contenedor_menu.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,7 +187,7 @@
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(75, 20);
             this.lblTelefono.TabIndex = 25;
-            this.lblTelefono.Text = "Telefono:";
+            this.lblTelefono.Text = "Teléfono:";
             // 
             // lblGenero
             // 
@@ -202,7 +202,7 @@
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(71, 20);
             this.lblGenero.TabIndex = 24;
-            this.lblGenero.Text = "Genero: ";
+            this.lblGenero.Text = "Género: ";
             // 
             // lblApellidos
             // 
@@ -247,7 +247,7 @@
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(144, 20);
             this.lblCorreo.TabIndex = 26;
-            this.lblCorreo.Text = "Correo Electronico:";
+            this.lblCorreo.Text = "Correo Electrónico:";
             // 
             // mtxttelefono
             // 
@@ -292,19 +292,6 @@
             this.panel1.Size = new System.Drawing.Size(1040, 53);
             this.panel1.TabIndex = 40;
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(508, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 24);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "Empleado Nuevo";
-            // 
             // btn_maximizar
             // 
             this.btn_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -318,6 +305,33 @@
             this.btn_maximizar.TabIndex = 46;
             this.btn_maximizar.TabStop = false;
             this.btn_maximizar.Click += new System.EventHandler(this.btn_maximizar_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.expandir_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(508, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 24);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Empleado Nuevo";
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.contraer_menu.SetDecoration(this.btn_restaurar, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_restaurar, BunifuAnimatorNS.DecorationType.None);
+            this.btn_restaurar.Image = global::SiguaSportsApp.Properties.Resources.window_restore;
+            this.btn_restaurar.Location = new System.Drawing.Point(964, 12);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(30, 30);
+            this.btn_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_restaurar.TabIndex = 45;
+            this.btn_restaurar.TabStop = false;
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
             // contenedor_menu
             // 
@@ -624,22 +638,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation1;
             // 
             // btn_salir
             // 
@@ -654,20 +668,6 @@
             this.btn_salir.TabIndex = 44;
             this.btn_salir.TabStop = false;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // btn_restaurar
-            // 
-            this.btn_restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.contraer_menu.SetDecoration(this.btn_restaurar, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.btn_restaurar, BunifuAnimatorNS.DecorationType.None);
-            this.btn_restaurar.Image = global::SiguaSportsApp.Properties.Resources.window_restore;
-            this.btn_restaurar.Location = new System.Drawing.Point(964, 12);
-            this.btn_restaurar.Name = "btn_restaurar";
-            this.btn_restaurar.Size = new System.Drawing.Size(30, 30);
-            this.btn_restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_restaurar.TabIndex = 45;
-            this.btn_restaurar.TabStop = false;
-            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
             // btn_minimizar
             // 
@@ -749,7 +749,7 @@
             this.lbl_Confirmacion.Name = "lbl_Confirmacion";
             this.lbl_Confirmacion.Size = new System.Drawing.Size(106, 20);
             this.lbl_Confirmacion.TabIndex = 52;
-            this.lbl_Confirmacion.Text = "Confirmacion:";
+            this.lbl_Confirmacion.Text = "Confirmación:";
             // 
             // txt_Confirmacion
             // 
@@ -843,22 +843,22 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation3;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation2;
             // 
             // FormEmpleadoNuevo
             // 
@@ -909,13 +909,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
             this.contenedor_menu.ResumeLayout(false);
             this.SideBar.ResumeLayout(false);
             this.SideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
