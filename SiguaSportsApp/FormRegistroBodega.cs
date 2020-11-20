@@ -18,7 +18,9 @@ namespace SiguaSportsApp
             InitializeComponent();
         }
         private void FormRegistroBodega_Load(object sender, EventArgs e)
-        {           
+        {
+            // TODO: This line of code loads data into the 'siguaSportsDataSet.Proveedores' table. You can move, or remove it, as needed.
+            this.proveedoresTableAdapter.Fill(this.siguaSportsDataSet.Proveedores);
             datos.CargarDatosTablas(dgvProductos, query);
             datos.CargarDatosTablas(dgvProveedores, query1);
         }
@@ -273,7 +275,6 @@ namespace SiguaSportsApp
                         txtmarca.Enabled = true;
                         txtColor.Enabled = true;
                         txtPrecioVenta.Enabled = true;
-                        txtProveedorProd.Enabled = true;
 
                         validar();
                         validar2();
@@ -281,7 +282,7 @@ namespace SiguaSportsApp
                         {
                             letra1 = false; letra2 = false;  letra3 = false; letra4 = false; numero1 = false; numero2 = false; numero3 = false; numero4 = false; numero5 = false; dinero1 = false; dinero2 = false;
 
-                            con.sql = string.Format("if exists(select nombre from Proveedores where nombre = '" + txtProveedorProd.Text.ToString() + "') begin select 'Existe' Mensaje end else begin select 'No Existe' Mensaje end");
+                            con.sql = string.Format("if exists(select nombre from Proveedores where nombre = '**') begin select 'Existe' Mensaje end else begin select 'No Existe' Mensaje end");
                             con.cmd = new SqlCommand(con.sql, con.sc);
                             try
                             {
@@ -300,7 +301,7 @@ namespace SiguaSportsApp
                             {
                                 try
                                 {
-                                    con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '" + txtProveedorProd.Text.ToString() + "'");
+                                    con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '**'");
                                     con.cmd = new SqlCommand(con.sql, con.sc);
                                     con.AbrirConexion();
                                     SqlDataReader lector = con.cmd.ExecuteReader();
@@ -542,6 +543,19 @@ namespace SiguaSportsApp
             {
                 MessageBox.Show("Acceso denegado. Solo los administradores pueden acceder.", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.proveedoresTableAdapter.Fill(this.siguaSportsDataSet.Proveedores);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

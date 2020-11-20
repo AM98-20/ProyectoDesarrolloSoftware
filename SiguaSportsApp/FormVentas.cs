@@ -259,22 +259,20 @@ namespace SiguaSportsApp
                 txtcodigoproducto.Text = "";
                 txtcantidad.Text = "";
                 dgvventas.Rows.Clear();
+                FormVentas ven = new FormVentas();
+                ven.ShowDialog();
+            }
+            else
+            {
+                txtcantidad.Text = "";
+                txtcodigoproducto.Text = "";
+                dgvventas.Rows.Clear();
             }
         }
 
         private void boton_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
