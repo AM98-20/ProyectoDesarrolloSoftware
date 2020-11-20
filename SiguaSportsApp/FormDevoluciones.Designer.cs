@@ -44,10 +44,6 @@
             this.lblCodProd = new System.Windows.Forms.Label();
             this.txtMotivo = new System.Windows.Forms.TextBox();
             this.dgvDevoluciones = new System.Windows.Forms.DataGridView();
-            this.columna_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_catidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtp_Fecha = new System.Windows.Forms.DateTimePicker();
             this.lblfecha = new System.Windows.Forms.Label();
@@ -72,6 +68,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.boton_min = new System.Windows.Forms.PictureBox();
             this.boton_salir = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
@@ -95,6 +92,10 @@
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.columna_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_catidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcDevoluciones.SuspendLayout();
             this.tpDevoluciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevoluciones)).BeginInit();
@@ -210,8 +211,8 @@
             // 
             // mtb_Factura
             // 
-            this.expandir_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
             this.mtb_Factura.Location = new System.Drawing.Point(124, 68);
             this.mtb_Factura.Margin = new System.Windows.Forms.Padding(2);
             this.mtb_Factura.Mask = "000-000-00-0000000";
@@ -255,7 +256,7 @@
             this.lblCodProd.Name = "lblCodProd";
             this.lblCodProd.Size = new System.Drawing.Size(107, 18);
             this.lblCodProd.TabIndex = 67;
-            this.lblCodProd.Text = "Codigo Producto";
+            this.lblCodProd.Text = "Código Producto";
             // 
             // txtMotivo
             // 
@@ -275,6 +276,7 @@
             this.dgvDevoluciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDevoluciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDevoluciones.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDevoluciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -284,6 +286,7 @@
             this.columna_motivo});
             this.expandir_menu.SetDecoration(this.dgvDevoluciones, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgvDevoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.dgvDevoluciones.Enabled = false;
             this.dgvDevoluciones.Location = new System.Drawing.Point(5, 197);
             this.dgvDevoluciones.Name = "dgvDevoluciones";
             this.dgvDevoluciones.ReadOnly = true;
@@ -291,38 +294,6 @@
             this.dgvDevoluciones.RowHeadersWidth = 51;
             this.dgvDevoluciones.Size = new System.Drawing.Size(957, 284);
             this.dgvDevoluciones.TabIndex = 60;
-            // 
-            // columna_producto
-            // 
-            this.columna_producto.HeaderText = "Producto";
-            this.columna_producto.MinimumWidth = 6;
-            this.columna_producto.Name = "columna_producto";
-            this.columna_producto.ReadOnly = true;
-            this.columna_producto.Width = 125;
-            // 
-            // columna_Descripcion
-            // 
-            this.columna_Descripcion.HeaderText = "Descripcion";
-            this.columna_Descripcion.MinimumWidth = 6;
-            this.columna_Descripcion.Name = "columna_Descripcion";
-            this.columna_Descripcion.ReadOnly = true;
-            this.columna_Descripcion.Width = 275;
-            // 
-            // columna_catidad
-            // 
-            this.columna_catidad.HeaderText = "Cantidad";
-            this.columna_catidad.MinimumWidth = 6;
-            this.columna_catidad.Name = "columna_catidad";
-            this.columna_catidad.ReadOnly = true;
-            this.columna_catidad.Width = 125;
-            // 
-            // columna_motivo
-            // 
-            this.columna_motivo.HeaderText = "Motivo";
-            this.columna_motivo.MinimumWidth = 6;
-            this.columna_motivo.Name = "columna_motivo";
-            this.columna_motivo.ReadOnly = true;
-            this.columna_motivo.Width = 280;
             // 
             // panel2
             // 
@@ -636,6 +607,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.label4);
             this.panel9.Controls.Add(this.boton_min);
             this.panel9.Controls.Add(this.boton_salir);
             this.panel9.Controls.Add(this.btn_maximizar);
@@ -648,6 +620,19 @@
             this.panel9.Size = new System.Drawing.Size(1040, 53);
             this.panel9.TabIndex = 1;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.expandir_menu.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(532, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 24);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Devoluciones";
             // 
             // boton_min
             // 
@@ -751,10 +736,10 @@
             this.btn_logueo.BackColor = System.Drawing.Color.Transparent;
             this.btn_logueo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_logueo.BorderRadius = 0;
-            this.btn_logueo.ButtonText = "               CERRAR SESIÓN";
+            this.btn_logueo.ButtonText = "            CERRAR SESIÓN";
             this.btn_logueo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.expandir_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
             this.btn_logueo.DisabledColor = System.Drawing.Color.Gray;
             this.btn_logueo.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_logueo.Iconimage = global::SiguaSportsApp.Properties.Resources.logout__1_;
@@ -777,7 +762,7 @@
             this.btn_logueo.selected = false;
             this.btn_logueo.Size = new System.Drawing.Size(217, 42);
             this.btn_logueo.TabIndex = 10;
-            this.btn_logueo.Text = "               CERRAR SESIÓN";
+            this.btn_logueo.Text = "            CERRAR SESIÓN";
             this.btn_logueo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_logueo.Textcolor = System.Drawing.Color.White;
             this.btn_logueo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -791,8 +776,8 @@
             this.btn_Cambio.BorderRadius = 0;
             this.btn_Cambio.ButtonText = "               CAMBIO";
             this.btn_Cambio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.expandir_menu.SetDecoration(this.btn_Cambio, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Cambio, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_Cambio, BunifuAnimatorNS.DecorationType.None);
             this.btn_Cambio.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Cambio.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Cambio.Iconimage = global::SiguaSportsApp.Properties.Resources.change;
@@ -829,8 +814,8 @@
             this.btn_reportes.BorderRadius = 0;
             this.btn_reportes.ButtonText = "               REPORTES";
             this.btn_reportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.expandir_menu.SetDecoration(this.btn_reportes, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_reportes, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_reportes, BunifuAnimatorNS.DecorationType.None);
             this.btn_reportes.DisabledColor = System.Drawing.Color.Gray;
             this.btn_reportes.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_reportes.Iconimage = global::SiguaSportsApp.Properties.Resources.report;
@@ -865,10 +850,10 @@
             this.btn_Registro_bodega.BackColor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Registro_bodega.BorderRadius = 0;
-            this.btn_Registro_bodega.ButtonText = "               REGISTRO - BODEGA";
+            this.btn_Registro_bodega.ButtonText = "               REGISTRO";
             this.btn_Registro_bodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.expandir_menu.SetDecoration(this.btn_Registro_bodega, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Registro_bodega, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_Registro_bodega, BunifuAnimatorNS.DecorationType.None);
             this.btn_Registro_bodega.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Registro_bodega.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.Iconimage = global::SiguaSportsApp.Properties.Resources.files;
@@ -891,7 +876,7 @@
             this.btn_Registro_bodega.selected = false;
             this.btn_Registro_bodega.Size = new System.Drawing.Size(241, 42);
             this.btn_Registro_bodega.TabIndex = 7;
-            this.btn_Registro_bodega.Text = "               REGISTRO - BODEGA";
+            this.btn_Registro_bodega.Text = "               REGISTRO";
             this.btn_Registro_bodega.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Registro_bodega.Textcolor = System.Drawing.Color.White;
             this.btn_Registro_bodega.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -903,10 +888,10 @@
             this.btn_Inventario_bodega.BackColor = System.Drawing.Color.Transparent;
             this.btn_Inventario_bodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Inventario_bodega.BorderRadius = 0;
-            this.btn_Inventario_bodega.ButtonText = "               INVENTARIO-BODEGA";
+            this.btn_Inventario_bodega.ButtonText = "               INVENTARIO";
             this.btn_Inventario_bodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.expandir_menu.SetDecoration(this.btn_Inventario_bodega, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Inventario_bodega, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_Inventario_bodega, BunifuAnimatorNS.DecorationType.None);
             this.btn_Inventario_bodega.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Inventario_bodega.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Inventario_bodega.Iconimage = global::SiguaSportsApp.Properties.Resources.shelf;
@@ -929,7 +914,7 @@
             this.btn_Inventario_bodega.selected = false;
             this.btn_Inventario_bodega.Size = new System.Drawing.Size(241, 42);
             this.btn_Inventario_bodega.TabIndex = 6;
-            this.btn_Inventario_bodega.Text = "               INVENTARIO-BODEGA";
+            this.btn_Inventario_bodega.Text = "               INVENTARIO";
             this.btn_Inventario_bodega.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Inventario_bodega.Textcolor = System.Drawing.Color.White;
             this.btn_Inventario_bodega.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -943,8 +928,8 @@
             this.btn_Ventas.BorderRadius = 0;
             this.btn_Ventas.ButtonText = "               VENTAS";
             this.btn_Ventas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.expandir_menu.SetDecoration(this.btn_Ventas, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btn_Ventas, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_Ventas, BunifuAnimatorNS.DecorationType.None);
             this.btn_Ventas.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Ventas.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Ventas.Iconimage = global::SiguaSportsApp.Properties.Resources.sales;
@@ -990,8 +975,8 @@
             // linea_sidebar
             // 
             this.linea_sidebar.BackColor = System.Drawing.Color.Transparent;
-            this.expandir_menu.SetDecoration(this.linea_sidebar, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.linea_sidebar, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.linea_sidebar, BunifuAnimatorNS.DecorationType.None);
             this.linea_sidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.linea_sidebar.LineThickness = 1;
             this.linea_sidebar.Location = new System.Drawing.Point(3, 40);
@@ -1119,6 +1104,34 @@
             // 
             this.ErrorProvider.ContainerControl = this;
             // 
+            // columna_producto
+            // 
+            this.columna_producto.HeaderText = "Producto";
+            this.columna_producto.MinimumWidth = 6;
+            this.columna_producto.Name = "columna_producto";
+            this.columna_producto.ReadOnly = true;
+            // 
+            // columna_Descripcion
+            // 
+            this.columna_Descripcion.HeaderText = "Descripción";
+            this.columna_Descripcion.MinimumWidth = 6;
+            this.columna_Descripcion.Name = "columna_Descripcion";
+            this.columna_Descripcion.ReadOnly = true;
+            // 
+            // columna_catidad
+            // 
+            this.columna_catidad.HeaderText = "Cantidad";
+            this.columna_catidad.MinimumWidth = 6;
+            this.columna_catidad.Name = "columna_catidad";
+            this.columna_catidad.ReadOnly = true;
+            // 
+            // columna_motivo
+            // 
+            this.columna_motivo.HeaderText = "Motivo";
+            this.columna_motivo.MinimumWidth = 6;
+            this.columna_motivo.Name = "columna_motivo";
+            this.columna_motivo.ReadOnly = true;
+            // 
             // FormDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1154,6 +1167,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boton_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
@@ -1228,13 +1242,14 @@
         private System.Windows.Forms.Button btn_Buscar;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
         private System.Windows.Forms.Button btn_Agregar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_catidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columna_motivo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.PictureBox boton_min;
         private System.Windows.Forms.PictureBox boton_salir;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_catidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_motivo;
     }
 }

@@ -26,6 +26,12 @@ namespace SiguaSportsApp
                                          "INNER JOIN Devoluciones C ON A.num_devolucion = C.num_devolucion";
         private void FromDevoluciones_Load(object sender, EventArgs e)
         {
+            if (tran.CodigoPuesto == 3)
+            {
+                btn_Registro_bodega.Hide();
+                btn_reportes.Hide();
+            }
+
             conexion.CargarDatosTablas(dgvHistorial, query);
             txtDevolucion.Text = conexion.DevolucionCodigo();
             txtvendedor.Text = conexion.Nombre_empleado;

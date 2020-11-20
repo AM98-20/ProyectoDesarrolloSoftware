@@ -80,8 +80,8 @@ namespace SiguaSportsApp
                         this.Hide();
                         if (codigo == 3)
                         {
-                            FormVentas venta = new FormVentas();
-                            venta.ShowDialog();
+                            FormVentas ventas = new FormVentas();
+                            ventas.ShowDialog();
                         }
                         else if (codigo == 1)
                         {

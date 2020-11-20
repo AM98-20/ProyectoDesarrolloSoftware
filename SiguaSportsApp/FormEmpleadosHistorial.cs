@@ -72,6 +72,7 @@ namespace SiguaSportsApp
             }
         }
 
+
         private void btn_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -134,6 +135,30 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
+        }
+
+        private void boton_cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void boton_restaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            boton_restaurar.Visible = false;
+            boton_maximaizar.Visible = true;
+        }
+
+        private void boton_minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void boton_maximaizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            boton_maximaizar.Visible = false;
+            boton_restaurar.Visible = true;
         }
     }
 }

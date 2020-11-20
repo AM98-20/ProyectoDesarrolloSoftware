@@ -149,8 +149,8 @@ namespace SiguaSportsApp
         private void btn_Ventas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormVentas ven = new FormVentas();
-            ven.ShowDialog();
+            FormVentas venticas = new FormVentas();
+            venticas.ShowDialog();
             this.Close();
         }
     }
