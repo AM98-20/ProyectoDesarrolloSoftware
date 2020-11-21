@@ -59,6 +59,7 @@ namespace SiguaSportsApp
             else
             {
                 factura = true;
+                mtb_Factura.TextMaskFormat = MaskFormat.IncludeLiterals;
             }
         }
 

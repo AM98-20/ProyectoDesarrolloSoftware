@@ -32,7 +32,6 @@ namespace SiguaSportsApp
         private bool letra3 = false;
         private bool letra4 = false;
         private bool letra5 = false;
-        private bool numero1 = false;
         private bool numero2 = false;
 
         public void validar()

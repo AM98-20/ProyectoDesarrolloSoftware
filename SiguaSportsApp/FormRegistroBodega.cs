@@ -220,14 +220,17 @@ namespace SiguaSportsApp
                 correo = true;
             }
 
-            if (validacion.Espacio_Blanco(ErrorProvider, txtTelefonoContacto))
+            mtb_TelefonoCon.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
+            if (validacion.Espacio_Blanco(ErrorProvider, mtb_TelefonoCon))
             {
-                if (validacion.Espacio_Blanco(ErrorProvider, txtTelefonoContacto))
-                    ErrorProvider.SetError(txtTelefonoContacto, "No se puede dejar en blanco.");
+                if (validacion.Espacio_Blanco(ErrorProvider, mtb_TelefonoCon))
+                    ErrorProvider.SetError(mtb_TelefonoCon, "No se puede dejar en blanco.");
             }
             else
             {
                 numero6 = true;
+                mtb_TelefonoCon.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
             }
 
             if (validacion.Espacio_Blanco(ErrorProvider, txtNombreContacto) || validacion.Solo_Letras(ErrorProvider, txtNombreContacto))
@@ -435,14 +438,21 @@ namespace SiguaSportsApp
                     con.sql = string.Format("insert into Proveedores(cod_proveedor, nombre, direccion, " +
                         "telefono, correo, nombre_contacto, telefono_contacto) " +
                         "values('"+txtCodProveedor.Text.ToString()+"','"+txtNombreProveedor.Text.ToString()+"'," +
-                        "'"+txtDireccionProveedor.Text.ToString()+"','"+txtTelefonoProveedor.Text.ToString()+"'," +
+                        "'"+txtDireccionProveedor.Text.ToString()+"','"+mtb_TelefonoPro.Text.ToString()+"'," +
                         "'"+txtCorreoProveedor.Text.ToString()+"','"+txtNombreContacto.Text.ToString()+"'," +
-                        "'"+txtTelefonoContacto.Text.ToString()+"')");
+                        "'"+ mtb_TelefonoCon.Text.ToString()+"')");
                     con.AbrirConexion();
                     con.cmd = new SqlCommand(con.sql, con.sc);
                     con.cmd.ExecuteNonQuery();
                     con.CerrarConexion();
                     datos.CargarDatosTablas(dgvProveedores, query1);
+
+                    txtCodProveedor.Text = "";
+                    txtNombreProveedor.Text = "";
+                    txtDireccionProveedor.Text = "";
+                    txtCorreoProveedor.Text = "";
+                    txtNombreContacto.Text = "";
+
                 }
                 else
                 {
@@ -501,10 +511,10 @@ namespace SiguaSportsApp
             txtCodProveedor.Text = "";
             txtNombreProveedor.Text = "";
             txtCorreoProveedor.Text = "";
-            txtTelefonoProveedor.Text = "";
+            mtb_TelefonoPro.Text = "";
             txtDireccionProveedor.Text = "";
             txtNombreContacto.Text = "";
-            txtTelefonoContacto.Text = "";
+            mtb_TelefonoCon.Text = "";
         }
 
         private void btn_reportes_Click(object sender, EventArgs e)

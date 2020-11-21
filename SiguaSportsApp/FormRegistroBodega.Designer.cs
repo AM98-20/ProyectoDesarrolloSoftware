@@ -31,9 +31,9 @@ namespace SiguaSportsApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation9 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistroBodega));
-            BunifuAnimatorNS.Animation animation10 = new BunifuAnimatorNS.Animation();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tcRegistro = new System.Windows.Forms.TabControl();
             this.tpProductos = new System.Windows.Forms.TabPage();
@@ -69,9 +69,7 @@ namespace SiguaSportsApp
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.txtCorreoProveedor = new System.Windows.Forms.TextBox();
             this.lblCorreoProveedor = new System.Windows.Forms.Label();
-            this.txtTelefonoProveedor = new System.Windows.Forms.TextBox();
             this.lblTelefonoProveedor = new System.Windows.Forms.Label();
-            this.txtTelefonoContacto = new System.Windows.Forms.TextBox();
             this.lblTelefonoContacto = new System.Windows.Forms.Label();
             this.txtDireccionProveedor = new System.Windows.Forms.TextBox();
             this.lblDireccionProveedor = new System.Windows.Forms.Label();
@@ -101,11 +99,12 @@ namespace SiguaSportsApp
             this.btn_menu = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
-            this.fillToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.proveedoresTableAdapter = new SiguaSportsApp.SiguaSportsDataSetTableAdapters.ProveedoresTableAdapter();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtb_TelefonoPro = new System.Windows.Forms.MaskedTextBox();
+            this.mtb_TelefonoCon = new System.Windows.Forms.MaskedTextBox();
             this.tcRegistro.SuspendLayout();
             this.tpProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
@@ -125,7 +124,6 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
-            this.fillToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -202,7 +200,6 @@ namespace SiguaSportsApp
             this.cb_Proveedor.Name = "cb_Proveedor";
             this.cb_Proveedor.Size = new System.Drawing.Size(231, 24);
             this.cb_Proveedor.TabIndex = 59;
-            this.cb_Proveedor.Text = "Seleccione una opción";
             // 
             // proveedoresBindingSource
             // 
@@ -548,14 +545,15 @@ namespace SiguaSportsApp
             // 
             // tpProveedores
             // 
+            this.tpProveedores.Controls.Add(this.mtb_TelefonoCon);
+            this.tpProveedores.Controls.Add(this.mtb_TelefonoPro);
+            this.tpProveedores.Controls.Add(this.maskedTextBox1);
             this.tpProveedores.Controls.Add(this.btnCancelar);
             this.tpProveedores.Controls.Add(this.btnAgregarProveedor);
             this.tpProveedores.Controls.Add(this.dgvProveedores);
             this.tpProveedores.Controls.Add(this.txtCorreoProveedor);
             this.tpProveedores.Controls.Add(this.lblCorreoProveedor);
-            this.tpProveedores.Controls.Add(this.txtTelefonoProveedor);
             this.tpProveedores.Controls.Add(this.lblTelefonoProveedor);
-            this.tpProveedores.Controls.Add(this.txtTelefonoContacto);
             this.tpProveedores.Controls.Add(this.lblTelefonoContacto);
             this.tpProveedores.Controls.Add(this.txtDireccionProveedor);
             this.tpProveedores.Controls.Add(this.lblDireccionProveedor);
@@ -652,18 +650,6 @@ namespace SiguaSportsApp
             this.lblCorreoProveedor.TabIndex = 65;
             this.lblCorreoProveedor.Text = "Correo";
             // 
-            // txtTelefonoProveedor
-            // 
-            this.txtTelefonoProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.contraer_menu.SetDecoration(this.txtTelefonoProveedor, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.txtTelefonoProveedor, BunifuAnimatorNS.DecorationType.None);
-            this.txtTelefonoProveedor.Location = new System.Drawing.Point(517, 9);
-            this.txtTelefonoProveedor.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefonoProveedor.Name = "txtTelefonoProveedor";
-            this.txtTelefonoProveedor.Size = new System.Drawing.Size(196, 22);
-            this.txtTelefonoProveedor.TabIndex = 4;
-            // 
             // lblTelefonoProveedor
             // 
             this.lblTelefonoProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -678,19 +664,6 @@ namespace SiguaSportsApp
             this.lblTelefonoProveedor.Size = new System.Drawing.Size(85, 24);
             this.lblTelefonoProveedor.TabIndex = 63;
             this.lblTelefonoProveedor.Text = "Teléfono";
-            // 
-            // txtTelefonoContacto
-            // 
-            this.txtTelefonoContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.contraer_menu.SetDecoration(this.txtTelefonoContacto, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.txtTelefonoContacto, BunifuAnimatorNS.DecorationType.None);
-            this.txtTelefonoContacto.Location = new System.Drawing.Point(981, 55);
-            this.txtTelefonoContacto.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefonoContacto.Name = "txtTelefonoContacto";
-            this.txtTelefonoContacto.Size = new System.Drawing.Size(245, 22);
-            this.txtTelefonoContacto.TabIndex = 7;
-            this.txtTelefonoContacto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblTelefonoContacto
             // 
@@ -1149,22 +1122,22 @@ namespace SiguaSportsApp
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation9.AnimateOnlyDifferences = true;
-            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
-            animation9.LeafCoeff = 0F;
-            animation9.MaxTime = 1F;
-            animation9.MinTime = 0F;
-            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
-            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
-            animation9.MosaicSize = 0;
-            animation9.Padding = new System.Windows.Forms.Padding(0);
-            animation9.RotateCoeff = 0F;
-            animation9.RotateLimit = 0F;
-            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
-            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
-            animation9.TimeCoeff = 0F;
-            animation9.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation9;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation2;
             // 
             // btn_menu
             // 
@@ -1207,47 +1180,26 @@ namespace SiguaSportsApp
             this.btn_restaurar.TabIndex = 28;
             this.btn_restaurar.TabStop = false;
             // 
-            // fillToolStrip
-            // 
-            this.contraer_menu.SetDecoration(this.fillToolStrip, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.fillToolStrip, BunifuAnimatorNS.DecorationType.None);
-            this.fillToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillToolStripButton});
-            this.fillToolStrip.Location = new System.Drawing.Point(296, 65);
-            this.fillToolStrip.Name = "fillToolStrip";
-            this.fillToolStrip.Size = new System.Drawing.Size(1331, 27);
-            this.fillToolStrip.TabIndex = 29;
-            this.fillToolStrip.Text = "fillToolStrip";
-            // 
-            // fillToolStripButton
-            // 
-            this.fillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillToolStripButton.Name = "fillToolStripButton";
-            this.fillToolStripButton.Size = new System.Drawing.Size(32, 24);
-            this.fillToolStripButton.Text = "Fill";
-            this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
-            // 
             // expandir_menu
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation10.AnimateOnlyDifferences = true;
-            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
-            animation10.LeafCoeff = 0F;
-            animation10.MaxTime = 1F;
-            animation10.MinTime = 0F;
-            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
-            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
-            animation10.MosaicSize = 0;
-            animation10.Padding = new System.Windows.Forms.Padding(0);
-            animation10.RotateCoeff = 0F;
-            animation10.RotateLimit = 0F;
-            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
-            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
-            animation10.TimeCoeff = 0F;
-            animation10.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation10;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation1;
             // 
             // radio
             // 
@@ -1258,13 +1210,41 @@ namespace SiguaSportsApp
             // 
             this.proveedoresTableAdapter.ClearBeforeFill = true;
             // 
+            // maskedTextBox1
+            // 
+            this.expandir_menu.SetDecoration(this.maskedTextBox1, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.maskedTextBox1, BunifuAnimatorNS.DecorationType.None);
+            this.maskedTextBox1.Location = new System.Drawing.Point(1025, 630);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox1.TabIndex = 68;
+            // 
+            // mtb_TelefonoPro
+            // 
+            this.expandir_menu.SetDecoration(this.mtb_TelefonoPro, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.mtb_TelefonoPro, BunifuAnimatorNS.DecorationType.None);
+            this.mtb_TelefonoPro.Location = new System.Drawing.Point(517, 9);
+            this.mtb_TelefonoPro.Mask = "0000-0000";
+            this.mtb_TelefonoPro.Name = "mtb_TelefonoPro";
+            this.mtb_TelefonoPro.Size = new System.Drawing.Size(140, 22);
+            this.mtb_TelefonoPro.TabIndex = 69;
+            // 
+            // mtb_TelefonoCon
+            // 
+            this.expandir_menu.SetDecoration(this.mtb_TelefonoCon, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.mtb_TelefonoCon, BunifuAnimatorNS.DecorationType.None);
+            this.mtb_TelefonoCon.Location = new System.Drawing.Point(981, 55);
+            this.mtb_TelefonoCon.Mask = "0000-0000";
+            this.mtb_TelefonoCon.Name = "mtb_TelefonoCon";
+            this.mtb_TelefonoCon.Size = new System.Drawing.Size(144, 22);
+            this.mtb_TelefonoCon.TabIndex = 70;
+            // 
             // FormRegistroBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1627, 798);
-            this.Controls.Add(this.fillToolStrip);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_menu);
             this.Controls.Add(this.contenedor_menu);
@@ -1303,8 +1283,6 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
-            this.fillToolStrip.ResumeLayout(false);
-            this.fillToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1335,9 +1313,7 @@ namespace SiguaSportsApp
         private System.Windows.Forms.DataGridView dgvProveedores;
         private System.Windows.Forms.TextBox txtCorreoProveedor;
         private System.Windows.Forms.Label lblCorreoProveedor;
-        private System.Windows.Forms.TextBox txtTelefonoProveedor;
         private System.Windows.Forms.Label lblTelefonoProveedor;
-        private System.Windows.Forms.TextBox txtTelefonoContacto;
         private System.Windows.Forms.Label lblTelefonoContacto;
         private System.Windows.Forms.TextBox txtDireccionProveedor;
         private System.Windows.Forms.Label lblDireccionProveedor;
@@ -1381,7 +1357,8 @@ namespace SiguaSportsApp
         private SiguaSportsDataSet siguaSportsDataSet;
         private System.Windows.Forms.BindingSource proveedoresBindingSource;
         private SiguaSportsDataSetTableAdapters.ProveedoresTableAdapter proveedoresTableAdapter;
-        private System.Windows.Forms.ToolStrip fillToolStrip;
-        private System.Windows.Forms.ToolStripButton fillToolStripButton;
+        private System.Windows.Forms.MaskedTextBox mtb_TelefonoCon;
+        private System.Windows.Forms.MaskedTextBox mtb_TelefonoPro;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

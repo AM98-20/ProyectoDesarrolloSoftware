@@ -20,30 +20,35 @@ namespace SiguaSportsApp
 
         private void FormReportes_Load(object sender, EventArgs e)
         {
-
+            dtpFecha1.MaxDate = DateTime.Today.AddDays(-1);
+            dtpFecha2.MaxDate = DateTime.Today;
         }
         ClassConexionBD con = new ClassConexionBD();
 
         private void bnt_Buscar_Click(object sender, EventArgs e)
         {
             //revisar
-            con.da = new SqlDataAdapter("WITH ReporteFinanciero AS" +
-                "(SELECT [Mes] = MONTH(fecha_Venta),[Ventas Brutas] = SUM(vd.precioVenta * vd.cantidad)," +
-                "[Compras Brutas] = SUM(cd.precioCompra * cd.cantidad)," +
-                "[Ventas Brutas Mes Pasado] = LAG(SUM(vd.precioVenta * vd.cantidad)) " +
-                "OVER (ORDER BY MONTH(fecha_Venta)) FROM Ventas v " +
-                "inner join VentaDetalle vd on v.num_factura = vd.num_factura " +
-                "inner join CompraDetalle cd on vd. cod_prducto = cd.cod_compra " +
-                "where fecha_Venta between '"+dtpFecha1.Value.ToShortDateString()+ "' and '"+dtpFecha1.Value.ToShortDateString()+"' " +
+            con.da = new SqlDataAdapter("WITH ReporteFinanciero AS (SELECT " +
+                "[Mes]						= MONTH(fecha_Venta)," +
+                "[Ventas Brutas]			= SUM(vd.precioVenta * vd.cantidad), " +
+                "[Ventas Brutas Mes Pasado]	= LAG(SUM(vd.precioVenta * vd.cantidad)) OVER (ORDER BY MONTH(fecha_Venta)) " +
+                "FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura " +
+                "where fecha_Venta between '"+dtpFecha1.Value.ToShortDateString()+"' and '"+dtpFecha2.Value.ToShortDateString()+"' " +
                 "GROUP BY MONTH(fecha_Venta)) " +
-                "SELECT [Mes],[Ventas Brutas],[Ventas Brutas Mes Pasado]," +
-                "[Crecimiento Mensual] = 100.0 * ([Ventas Brutas] - [Ventas Brutas Mes Pasado])/ [Ventas Brutas Mes Pasado]," +
-                "[Compras Brutas],[Utilidad Bruta] = ([Ventas Brutas] - [Compras Brutas])FROM [ReporteFinanciero] ORDER BY [Mes]", con.sc);
-            con.AbrirConexion();
-            con.dt = new DataTable();
-            con.da.Fill(con.dt);
-            dgvReporteFinanciero.DataSource = con.dt;
-            con.CerrarConexion();
+                "SELECT [Mes],[Ventas Brutas],[Ventas Brutas Mes Pasado],[Crecimiento Mensual] = 100.0 * ([Ventas Brutas] - [Ventas Brutas Mes Pasado])/ [Ventas Brutas Mes Pasado]FROM [ReporteFinanciero] " +
+                "ORDER BY [Mes]", con.sc);
+            try
+            {
+                con.AbrirConexion();
+                con.dt = new DataTable();
+                con.da.Fill(con.dt);
+                dgvReporteFinanciero.DataSource = con.dt;
+                con.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex);
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
