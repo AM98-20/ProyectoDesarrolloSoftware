@@ -47,7 +47,6 @@ namespace SiguaSportsApp
 
                 conex.cmd = new SqlCommand("DELETE FROM Empleados WHERE cod_empleado = '" + codigo + "'", conex.sc);
 
-
                 conex.AbrirConexion();
                 conex.cmd.ExecuteNonQuery();
                 conex.CerrarConexion();

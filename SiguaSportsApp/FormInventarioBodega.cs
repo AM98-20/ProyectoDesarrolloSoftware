@@ -18,9 +18,11 @@ namespace SiguaSportsApp
         {
             InitializeComponent();
         }
+        string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', precioVenta, ' ', precioCompra, ' ', color,  ' ', marca) Descripcion, " +
+                "c.descripcion Categoria, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
+                "inner join Categorias c on p.cod_categoria = c.cod_categoria";
         private void FormInventarioBodega_Load(object sender, EventArgs e)
         {
-
             if (datos.CodigoPuesto == 3)
             {
                 btn_reportes.Hide();
@@ -29,11 +31,7 @@ namespace SiguaSportsApp
             if(datos.CodigoPuesto==2)
             {
                 btn_Devoluciones.Hide();
-            }
-
-            string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', precioVenta, ' ', precioCompra, ' ', color,  ' ', marca) Descripcion, " +
-                "c.descripcion Categoria, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
-                "inner join Categorias c on p.cod_categoria = c.cod_categoria";
+            }            
             datos.CargarDatosTablas(dgvProductos, query);
         }
 
@@ -79,12 +77,12 @@ namespace SiguaSportsApp
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
-            
+            WindowState = FormWindowState.Minimized;
         }
 
         private void btn_maximizar_Click(object sender, EventArgs e)
@@ -142,28 +140,15 @@ namespace SiguaSportsApp
         {
             WindowState = FormWindowState.Normal;
             boton_restaurar.Visible = false;
-            btn_maximizar.Visible = true;
-            
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            btn_maximizar.Visible = true;        
         }
 
         private void btn_Devoluciones_Click(object sender, EventArgs e)
-        {           
-            
+        {                      
             this.Hide();
             FormDevoluciones dev = new FormDevoluciones();
             dev.ShowDialog();
             this.Close();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void boton_cerrar_Click(object sender, EventArgs e)
@@ -179,7 +164,7 @@ namespace SiguaSportsApp
         private void boton_buscar_Click(object sender, EventArgs e)
         {
 
-            string parametro = txtBuscar.Text;
+            string parametro = txtBuscar.Text.ToString();
 
             try
             {
@@ -187,7 +172,7 @@ namespace SiguaSportsApp
                                       " FROM Productos P " +
                                       " INNER JOIN Categorias C ON P.cod_categoria = C.cod_categoria " +
                                       " INNER JOIN Proveedores PV ON P.cod_proveedor = PV.cod_proveedor " +
-                                      " WHERE P.cod_producto = '" + parametro + "' ", con.sc);
+                                      " WHERE P.cod_producto Like '%" + parametro + "%' ", con.sc);
 
                 con.dt = new DataTable();
                 con.da.Fill(con.dt);
@@ -197,16 +182,11 @@ namespace SiguaSportsApp
             {
 
                 MessageBox.Show("Error al cargar datos" + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-           
+            }           
         }
 
         private void btn_restaurar_dos_Click(object sender, EventArgs e)
         {
-            string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', precioVenta, ' ', precioCompra, ' ', color,  ' ', marca) Descripcion, " +
-                "c.descripcion Categoria, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
-                "inner join Categorias c on p.cod_categoria = c.cod_categoria";
             datos.CargarDatosTablas(dgvProductos, query);
             txtBuscar.Text = " ";
         }

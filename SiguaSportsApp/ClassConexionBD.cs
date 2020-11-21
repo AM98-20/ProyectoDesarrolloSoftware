@@ -156,14 +156,17 @@ namespace SiguaSportsApp
         public string BuscarDev( string Factura)
         {
             string mensaje = "";
+
+            cmd = new SqlCommand("if exists(SELECT num_factura FROM Ventas where num_factura = '" + Factura + "') begin Select 'Existe' Mensaje end else begin Select 'No existe' Mensaje end", sc);
             AbrirConexion();
-            cmd = new SqlCommand("if exists(SELECT num_factura FROM Ventas where num_factura = '"+Factura+"') begin Select 'Existe' Mensaje end else begin Select 'No existe' Mensaje end", sc);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                mensaje = reader["Codigo"].ToString();
+                mensaje = reader["Mensaje"].ToString();
             }
+
             CerrarConexion();
+
             return mensaje;
         }
     }

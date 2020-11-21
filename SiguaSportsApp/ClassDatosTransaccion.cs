@@ -46,7 +46,7 @@ namespace SiguaSportsApp
 
         public void CalculoDescuento()
         {
-            if (subtotal > 850)
+            if (subtotal > 2000.00)
             {
                 descuento = subtotal * 0.05;
                 porcentajeDes = 5;

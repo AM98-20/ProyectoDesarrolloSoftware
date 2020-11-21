@@ -45,9 +45,26 @@ namespace SiguaSportsApp
 
         ClassValidacion validacion = new ClassValidacion();
         ClassDatosTransaccion tran = new ClassDatosTransaccion();
+        ClassConexionBD con = new ClassConexionBD();
 
         bool letra1 = false;
         bool letra2 = false;
+        bool factura = false;
+
+        public void validar1()
+        {
+            mtb_Factura.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            //arreglar
+            if (validacion.Espacio_Blanco(ErrorProvider, mtb_Factura))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider, mtb_Factura))
+                    ErrorProvider.SetError(mtb_Factura, "No se puede dejar en blanco");
+            }
+            else
+            {
+                factura = true;
+            }
+        }
 
         public void validar()
         {
@@ -129,54 +146,59 @@ namespace SiguaSportsApp
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            string Mensaje = conexion.BuscarDev(mtb_Factura.Text.ToString());
-            int Dias = 0;
+            factura = false;
+            validar1();            
+            if (factura)
+            {                
+                string Mensaje = conexion.BuscarDev(mtb_Factura.Text.ToString());
+                int Dias = 0;
 
-            if (Mensaje == "Existe")
-            {
-                try
+                if (Mensaje == "Existe")
                 {
-                    conexion.cmd = new SqlCommand("select DATEDIFF(DAY, fecha_Venta, GETDATE()) Dias " +
-                        "from Ventas where num_factura = '" + mtb_Factura.Text.ToString() + "'", conexion.sc);
-                    conexion.AbrirConexion();
-                    SqlDataReader read = conexion.cmd.ExecuteReader();
-                    if (read.Read())
+                    try
                     {
-                        Dias = int.Parse(read["Dias"].ToString());
+                        conexion.cmd = new SqlCommand("select DATEDIFF(DAY, fecha_Venta, GETDATE()) Dias " +
+                            "from Ventas where num_factura = '" + mtb_Factura.Text.ToString() + "'", conexion.sc);
+                        conexion.AbrirConexion();
+                        SqlDataReader read = conexion.cmd.ExecuteReader();
+                        if (read.Read())
+                        {
+                            Dias = int.Parse(read["Dias"].ToString());
+                        }
+                        conexion.CerrarConexion();
                     }
-                    conexion.CerrarConexion();
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("ERROR " + ex);
-                }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR " + ex);
+                    }
 
-                if (Dias > 3)
-                {
-                    txtCodProd.ReadOnly = false;
-                    txtMotivo.ReadOnly = false;
-                    txtCantidad.ReadOnly = false;
-                    btn_Buscar.Visible = false;
-                    btn_Agregar.Visible = true;
-                    mtb_Factura.ReadOnly = true;
+                    if (Dias < 3)
+                    {
+                        txtCantidad.Enabled = true;
+                        txtCodProd.Enabled = true;
+                        txtMotivo.Enabled = true;
+                        btn_Buscar.Visible = false;
+                        btn_Agregar.Visible = true;
+                        mtb_Factura.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("La fecha de venta excedio la fecha limite de devolucion.", "Limite excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("La fecha de venta excedio la fecha limite de devolucion.", "Limite excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Error, no se encontro la factura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    MessageBox.Show("Error, no se encontro la factura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }                               
+            }            
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
+            letra2 = false; letra1 = false;
             validar();
             if (letra1 && letra2)
-            {
-                letra2 = false; letra1 = false;
+            {                
                 try
                 {
                     conexion.cmd = new SqlCommand("if exists(Select cod_prducto from VentaDetalle " +
