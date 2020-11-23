@@ -30,6 +30,26 @@ namespace SiguaSportsApp
             }
         }
 
+        public void CargarDatosCombo(ComboBox combo, string query)
+        {
+            cmd = new SqlCommand(query, sc);            
+            try
+            {
+                AbrirConexion();
+                SqlDataReader dr = cmd.ExecuteReader();
+                IList<string> modelList = new List<string>();
+                while (dr.Read())
+                {
+                    combo.Items.Add(dr[0].ToString());
+                }
+                CerrarConexion();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("ERROR: "+ ex);
+            }            
+        }
+
         public void EliminarEmpleado(DataGridView dgv, string codigo)
         {
             AbrirConexion();

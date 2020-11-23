@@ -23,6 +23,8 @@ namespace SiguaSportsApp
             this.proveedoresTableAdapter.Fill(this.siguaSportsDataSet.Proveedores);
             datos.CargarDatosTablas(dgvProductos, query);
             datos.CargarDatosTablas(dgvProveedores, query1);
+            datos.CargarDatosCombo(cb_ProveedoresPRB, qCombo);
+            datos.CargarDatosCombo(cb_Categoria, qCombo1);
         }
 
         string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', color,  ' ', marca) Descripcion, " +
@@ -31,6 +33,8 @@ namespace SiguaSportsApp
             "inner join Categorias c on p.cod_categoria = c.cod_categoria";
         string query1 = "Select cod_proveedor Codigo, nombre Nombre, direccion Direccion, telefono Telefono, correo Correo, " +
             "nombre_contacto [Nombre Contacto], telefono_contacto [Telefono Contacto] from Proveedores";
+        string qCombo = "SELECT nombre FROM Proveedores";
+        string qCombo1 = "SELECT descripcion FROM Categorias";
 
         ClassDatosTablas datos = new ClassDatosTablas();
         ClassValidacion validacion = new ClassValidacion();
@@ -247,160 +251,6 @@ namespace SiguaSportsApp
             }
         }
 
-        private void btnAgregarProducto_Click(object sender, EventArgs e)
-        {
-            string nMensaje = "";
-            validar();
-            if (letra1)
-            {
-                letra1 = false;
-                try
-                {
-                    con.AbrirConexion();
-                    con.sql = string.Format("if exists(select cod_producto from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') begin select 'Ya existe el producto. Desea actualizar la cantidad en existencia?' Mensaje end else begin select 'Nuevo producto' Mensaje end");
-                    con.cmd = new SqlCommand(con.sql, con.sc);
-                    SqlDataReader mensaje = con.cmd.ExecuteReader();
-                    if (mensaje.Read())
-                    {
-                        nMensaje = mensaje["Mensaje"].ToString();
-                    }
-                    con.CerrarConexion();
-                }catch(Exception ex)
-                {
-                    MessageBox.Show("ERROR "+ex);
-                }
-
-                if (nMensaje == "Nuevo producto")
-                {
-                    try
-                    {
-                        txtnombre.Enabled = true;
-                        txtmarca.Enabled = true;
-                        txtColor.Enabled = true;
-                        txtPrecioVenta.Enabled = true;
-
-                        validar();
-                        validar2();
-                        if (letra1 && letra2 && letra3 && letra4 && numero1 && numero2 && numero3 && numero4 && numero5 && dinero1 && dinero2)
-                        {
-                            letra1 = false; letra2 = false;  letra3 = false; letra4 = false; numero1 = false; numero2 = false; numero3 = false; numero4 = false; numero5 = false; dinero1 = false; dinero2 = false;
-
-                            con.sql = string.Format("if exists(select nombre from Proveedores where nombre = '**') begin select 'Existe' Mensaje end else begin select 'No Existe' Mensaje end");
-                            con.cmd = new SqlCommand(con.sql, con.sc);
-                            try
-                            {
-                                con.AbrirConexion();                               
-                                SqlDataReader mensajePro = con.cmd.ExecuteReader();
-                                if (mensajePro.Read())
-                                {
-                                    nMensaje = mensajePro["Mensaje"].ToString();
-                                }
-                                con.CerrarConexion();
-                            }catch(Exception ex)
-                            {
-                                MessageBox.Show("ERROR " + ex);
-                            }
-                            if (nMensaje == "Existe")
-                            {
-                                try
-                                {
-                                    con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '**'");
-                                    con.cmd = new SqlCommand(con.sql, con.sc);
-                                    con.AbrirConexion();
-                                    SqlDataReader lector = con.cmd.ExecuteReader();
-                                    if (lector.Read())
-                                    {
-                                        proveedor = lector["cod_proveedor"].ToString();
-                                    }
-                                    con.CerrarConexion();
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("ERROR " + ex);
-                                }
-                                
-                                con.sql = string.Format("select cod_categoria from Categorias where descripcion = '" + cb_Categoria.SelectedItem.ToString() + "'");
-                                con.cmd = new SqlCommand(con.sql, con.sc);
-                                try
-                                {
-                                    con.AbrirConexion();
-                                    SqlDataReader lector1 = con.cmd.ExecuteReader();
-                                    if (lector1.Read())
-                                    {
-                                        categoria = lector1["cod_categoria"].ToString();
-                                    }
-                                    con.CerrarConexion();
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("ERROR " + ex);
-                                }
-
-                                con.cmd = new SqlCommand("INSERT INTO Productos(cod_producto, nombre, precioVenta, " +
-                                "precioCompra, color, marca, estado, existencia, cod_categoria, cod_proveedor) " +
-                                "values('" + txtcodigoproducto.Text.ToString() + "', '" + txtnombre.Text.ToString() + "', " +
-                                "'" + txtPrecioVenta.Text.ToString() + "','" + txtprecio.Text.ToString() + "','" + txtColor.Text.ToString() + "'," +
-                                "'" + txtmarca.Text.ToString() + "','" + txtcantidad.Text.ToString() + "'," +
-                                "'" + categoria + "','" + proveedor + "')", con.sc);
-                                try
-                                {
-                                    con.AbrirConexion();
-                                    con.cmd.ExecuteNonQuery();
-                                    con.CerrarConexion();
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("ERROR " + ex);
-                                }
-                                MessageBox.Show("Datos Ingresados.", "Insertado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                datos.CargarDatosTablas(dgvProductos, query);
-                            }
-                        }                       
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show("ERROR. "+ ex);
-                    }
-                }
-                else if(nMensaje == "Ya existe el producto. Desea actualizar la cantidad en existencia?")
-                {
-                    DialogResult result = MessageBox.Show("Ya existe el producto. Desea actualizar la cantidad en existencia?", "Producto Existente",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if(result == DialogResult.Yes)
-                    {
-                        validar();
-                        if (letra1 && numero1 && numero2 && numero3 && dinero2)
-                        {
-                            try
-                            {
-                                con.cmd = new SqlCommand("UPDATE Productos set existencia = (Select existencia from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') + '" + txtcantidad.Text.ToString() + "' where cod_producto = '" + txtcodigoproducto.Text.ToString() + "'", con.sc);
-                                con.AbrirConexion();
-                                con.cmd.ExecuteNonQuery();
-                                con.CerrarConexion();
-                                datos.CargarDatosTablas(dgvProductos, query);
-                            }
-                            catch(Exception ex)
-                            {
-                                MessageBox.Show("ERROR " + ex);
-                            }
-                        }
-                    }                    
-                }
-            }
-            else
-            {
-                MessageBox.Show("ERROR");
-            }
-            txtcodigoproducto.Text = "";
-            txtnombre.Text = "";
-            txtmarca.Text = "";
-            txtColor.Text = "";
-            txtcantidad.Text = "";
-            txtprecio.Text = "";
-            txtPrecioVenta.Text = "";
-            cb_Categoria.SelectedIndex = -1;
-        }
-
         private void btnCancelarProducto_Click(object sender, EventArgs e)
         {
             txtcodigoproducto.Text = "";
@@ -555,17 +405,138 @@ namespace SiguaSportsApp
             }
         }
 
-        private void fillToolStripButton_Click(object sender, EventArgs e)
+        private void btnAgregarProducto_Click_1(object sender, EventArgs e)
         {
-            try
+            string nMensaje = "";
+            validar();
+            if (letra1)
             {
-                this.proveedoresTableAdapter.Fill(this.siguaSportsDataSet.Proveedores);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+                letra1 = false;
+                try
+                {
+                    con.AbrirConexion();
+                    con.sql = string.Format("if exists(select cod_producto from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') begin select 'Ya existe el producto. Desea actualizar la cantidad en existencia?' Mensaje end else begin select 'Nuevo producto' Mensaje end");
+                    con.cmd = new SqlCommand(con.sql, con.sc);
+                    SqlDataReader mensaje = con.cmd.ExecuteReader();
+                    if (mensaje.Read())
+                    {
+                        nMensaje = mensaje["Mensaje"].ToString();
+                    }
+                    con.CerrarConexion();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR " + ex);
+                }
 
+                if (nMensaje == "Nuevo producto")
+                {
+                    txtnombre.Enabled = true;
+                    txtmarca.Enabled = true;
+                    txtColor.Enabled = true;
+                    txtPrecioVenta.Enabled = true;
+
+                    validar();
+                    validar2();
+                    if (letra1 && letra2 && letra3 && letra4 && numero1 && numero2 && numero3 && numero4 && numero5 && dinero1 && dinero2)
+                    {
+                        letra1 = false; letra2 = false; letra3 = false; letra4 = false; numero1 = false; numero2 = false; numero3 = false; numero4 = false; numero5 = false; dinero1 = false; dinero2 = false;
+
+                        con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '"+cb_ProveedoresPRB.SelectedItem.ToString()+"'");
+                        con.cmd = new SqlCommand(con.sql, con.sc);
+
+                        try
+                        {
+
+                            con.AbrirConexion();
+                            SqlDataReader lector = con.cmd.ExecuteReader();
+                            if (lector.Read())
+                            {
+                                proveedor = lector["cod_proveedor"].ToString();
+                            }
+                            con.CerrarConexion();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ERROR " + ex);
+                        }
+
+                        con.sql = string.Format("select cod_categoria from Categorias where descripcion = '" + cb_Categoria.SelectedItem.ToString() + "'");
+                        con.cmd = new SqlCommand(con.sql, con.sc);
+                        try
+                        {
+                            con.AbrirConexion();
+                            SqlDataReader lector1 = con.cmd.ExecuteReader();
+                            if (lector1.Read())
+                            {
+                                categoria = lector1["cod_categoria"].ToString();
+                            }
+                            con.CerrarConexion();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ERROR " + ex);
+                        }
+
+                        con.cmd = new SqlCommand("INSERT INTO Productos(cod_producto, nombre, precioVenta, " +
+                        "precioCompra, color, marca, estado, existencia, cod_categoria, cod_proveedor) " +
+                        "values('" + txtcodigoproducto.Text.ToString() + "', '" + txtnombre.Text.ToString() + "', " +
+                        "'" + txtPrecioVenta.Text.ToString() + "','" + txtprecio.Text.ToString() + "','" + txtColor.Text.ToString() + "'," +
+                        "'" + txtmarca.Text.ToString() + "','" + txtcantidad.Text.ToString() + "'," +
+                        "'" + categoria + "','" + proveedor + "')", con.sc);
+                        try
+                        {
+                            con.AbrirConexion();
+                            con.cmd.ExecuteNonQuery();
+                            con.CerrarConexion();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ERROR " + ex);
+                        }
+                        MessageBox.Show("Datos Ingresados.", "Insertado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        datos.CargarDatosTablas(dgvProductos, query);
+
+                    }
+                    
+                }
+                else 
+                {
+                    DialogResult result = MessageBox.Show(nMensaje, "Producto Existente",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        validar();
+                        if (letra1 && numero1 && numero2 && numero3 && dinero2)
+                        {
+                            try
+                            {
+                                con.cmd = new SqlCommand("UPDATE Productos set existencia = (Select existencia from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') + '" + txtcantidad.Text.ToString() + "' where cod_producto = '" + txtcodigoproducto.Text.ToString() + "'", con.sc);
+                                con.AbrirConexion();
+                                con.cmd.ExecuteNonQuery();
+                                con.CerrarConexion();
+                                datos.CargarDatosTablas(dgvProductos, query);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("ERROR " + ex);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("ERROR");
+            }
+            txtcodigoproducto.Text = "";
+            txtnombre.Text = "";
+            txtmarca.Text = "";
+            txtColor.Text = "";
+            txtcantidad.Text = "";
+            txtprecio.Text = "";
+            txtPrecioVenta.Text = "";
+            cb_Categoria.SelectedIndex = -1;
         }
     }
 }
