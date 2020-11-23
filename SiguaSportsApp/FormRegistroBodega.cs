@@ -251,6 +251,39 @@ namespace SiguaSportsApp
             }
         }
 
+        public void Insertar()
+        {
+            //INSERT a tabla de compras y detalles
+
+            //Compra
+            con.cmd = new SqlCommand("INSERT INTO Compras(cod_compra, fecha_compra, descuentoPorcentaje, impuestoPorcentaje, cod_empleado, cod_proveedor) " +
+                "values('" + txtFacturaCompra.Text.ToString() + "','" + dtp_Compra.Value.ToShortDateString() + "','0.00'," +
+                "'0.15','" + con.Cod_empleado + "','" + proveedor + "')", con.sc);
+            try
+            {
+                con.AbrirConexion();
+                con.cmd.ExecuteNonQuery();
+                con.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex);
+            }
+            //Detalle
+            con.cmd = new SqlCommand("INSERT INTO CompraDetalle(cod_compra,cod_producto, cantidad, precioCompra) " +
+                "values('" + txtFacturaCompra.Text.ToString() + "','" + txtcodigoproducto.Text.ToString() + "','" + txtcantidad.Text.ToString() + "','" + txtprecio.Text.ToString() + "')", con.sc);
+            try
+            {
+                con.AbrirConexion();
+                con.cmd.ExecuteNonQuery();
+                con.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex);
+            }
+        }
+
         private void btnCancelarProducto_Click(object sender, EventArgs e)
         {
             txtcodigoproducto.Text = "";
@@ -440,65 +473,77 @@ namespace SiguaSportsApp
                     validar2();
                     if (letra1 && letra2 && letra3 && letra4 && numero1 && numero2 && numero3 && numero4 && numero5 && dinero1 && dinero2)
                     {
-                        letra1 = false; letra2 = false; letra3 = false; letra4 = false; numero1 = false; numero2 = false; numero3 = false; numero4 = false; numero5 = false; dinero1 = false; dinero2 = false;
-
-                        con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '"+cb_ProveedoresPRB.SelectedItem.ToString()+"'");
-                        con.cmd = new SqlCommand(con.sql, con.sc);
-
-                        try
+                        if (cb_Categoria.SelectedIndex != -1 && cb_ProveedoresPRB.SelectedIndex != -1)
                         {
 
-                            con.AbrirConexion();
-                            SqlDataReader lector = con.cmd.ExecuteReader();
-                            if (lector.Read())
+                            letra1 = false; letra2 = false; letra3 = false; letra4 = false; numero1 = false; numero2 = false; numero3 = false; numero4 = false; numero5 = false; dinero1 = false; dinero2 = false;
+
+                            con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '" + cb_ProveedoresPRB.SelectedItem.ToString() + "'");
+                            con.cmd = new SqlCommand(con.sql, con.sc);
+
+                            try
                             {
-                                proveedor = lector["cod_proveedor"].ToString();
-                            }
-                            con.CerrarConexion();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("ERROR " + ex);
-                        }
 
-                        con.sql = string.Format("select cod_categoria from Categorias where descripcion = '" + cb_Categoria.SelectedItem.ToString() + "'");
-                        con.cmd = new SqlCommand(con.sql, con.sc);
-                        try
-                        {
-                            con.AbrirConexion();
-                            SqlDataReader lector1 = con.cmd.ExecuteReader();
-                            if (lector1.Read())
+                                con.AbrirConexion();
+                                SqlDataReader lector = con.cmd.ExecuteReader();
+                                if (lector.Read())
+                                {
+                                    proveedor = lector["cod_proveedor"].ToString();
+                                }
+                                con.CerrarConexion();
+                            }
+                            catch (Exception ex)
                             {
-                                categoria = lector1["cod_categoria"].ToString();
+                                MessageBox.Show("ERROR " + ex);
                             }
-                            con.CerrarConexion();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("ERROR " + ex);
-                        }
 
-                        con.cmd = new SqlCommand("INSERT INTO Productos(cod_producto, nombre, precioVenta, " +
-                        "precioCompra, color, marca, estado, existencia, cod_categoria, cod_proveedor) " +
-                        "values('" + txtcodigoproducto.Text.ToString() + "', '" + txtnombre.Text.ToString() + "', " +
-                        "'" + txtPrecioVenta.Text.ToString() + "','" + txtprecio.Text.ToString() + "','" + txtColor.Text.ToString() + "'," +
-                        "'" + txtmarca.Text.ToString() + "','" + txtcantidad.Text.ToString() + "'," +
-                        "'" + categoria + "','" + proveedor + "')", con.sc);
-                        try
-                        {
-                            con.AbrirConexion();
-                            con.cmd.ExecuteNonQuery();
-                            con.CerrarConexion();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("ERROR " + ex);
-                        }
-                        MessageBox.Show("Datos Ingresados.", "Insertado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        datos.CargarDatosTablas(dgvProductos, query);
+                            con.sql = string.Format("select cod_categoria from Categorias where descripcion = '" + cb_Categoria.SelectedItem.ToString() + "'");
+                            con.cmd = new SqlCommand(con.sql, con.sc);
+                            try
+                            {
+                                con.AbrirConexion();
+                                SqlDataReader lector1 = con.cmd.ExecuteReader();
+                                if (lector1.Read())
+                                {
+                                    categoria = lector1["cod_categoria"].ToString();
+                                }
+                                con.CerrarConexion();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("ERROR " + ex);
+                            }
 
-                    }
-                    
+                            //INSERT tabla de Productos
+                            con.cmd = new SqlCommand("INSERT INTO Productos(cod_producto, nombre, precioVenta, " +
+                            "precioCompra, color, marca, estado, existencia, cod_categoria, cod_proveedor) " +
+                            "values('" + txtcodigoproducto.Text.ToString() + "', '" + txtnombre.Text.ToString() + "', " +
+                            "'" + txtPrecioVenta.Text.ToString() + "','" + txtprecio.Text.ToString() + "','" + txtColor.Text.ToString() + "'," +
+                            "'" + txtmarca.Text.ToString() + "','" + txtcantidad.Text.ToString() + "'," +
+                            "'" + categoria + "','" + proveedor + "')", con.sc);
+                            try
+                            {
+                                con.AbrirConexion();
+                                con.cmd.ExecuteNonQuery();
+                                con.CerrarConexion();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("ERROR " + ex);
+                            }
+                            MessageBox.Show("Datos Ingresados.", "Insertado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            datos.CargarDatosTablas(dgvProductos, query);
+
+                            Insertar();
+                        }
+                        else
+                        {
+                            if (cb_ProveedoresPRB.SelectedIndex != -1)
+                                ErrorProvider.SetError(cb_Categoria, "Seleccione una opcion.");
+                            if (cb_Categoria.SelectedIndex != -1)
+                                ErrorProvider.SetError(cb_ProveedoresPRB, "Seleccione una opcion.");
+                        }
+                    }                    
                 }
                 else 
                 {
@@ -506,20 +551,31 @@ namespace SiguaSportsApp
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (result == DialogResult.Yes)
                     {
+                        letra1 = false; numero1 = false; numero2 = false; numero3 = false; dinero2 = false;
                         validar();
                         if (letra1 && numero1 && numero2 && numero3 && dinero2)
                         {
-                            try
+                            if (cb_ProveedoresPRB.SelectedIndex != -1)
                             {
-                                con.cmd = new SqlCommand("UPDATE Productos set existencia = (Select existencia from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') + '" + txtcantidad.Text.ToString() + "' where cod_producto = '" + txtcodigoproducto.Text.ToString() + "'", con.sc);
-                                con.AbrirConexion();
-                                con.cmd.ExecuteNonQuery();
-                                con.CerrarConexion();
-                                datos.CargarDatosTablas(dgvProductos, query);
+                                try
+                                {
+                                    con.cmd = new SqlCommand("UPDATE Productos set existencia = (Select existencia from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') + '" + txtcantidad.Text.ToString() + "' where cod_producto = '" + txtcodigoproducto.Text.ToString() + "'", con.sc);
+                                    con.AbrirConexion();
+                                    con.cmd.ExecuteNonQuery();
+                                    con.CerrarConexion();
+                                    datos.CargarDatosTablas(dgvProductos, query);
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("ERROR " + ex);
+                                }
+
+                                Insertar();
                             }
-                            catch (Exception ex)
+                            else
                             {
-                                MessageBox.Show("ERROR " + ex);
+                                if(cb_ProveedoresPRB.SelectedIndex == -1)
+                                    ErrorProvider.SetError(cb_ProveedoresPRB, "Seleccione una opcion.");
                             }
                         }
                     }
@@ -529,6 +585,7 @@ namespace SiguaSportsApp
             {
                 MessageBox.Show("ERROR");
             }
+
             txtcodigoproducto.Text = "";
             txtnombre.Text = "";
             txtmarca.Text = "";

@@ -105,6 +105,8 @@ namespace SiguaSportsApp
             this.siguaSportsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.siguaSportsDataSet = new SiguaSportsApp.SiguaSportsDataSet();
             this.proveedoresTableAdapter = new SiguaSportsApp.SiguaSportsDataSetTableAdapters.ProveedoresTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtp_Compra = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
@@ -795,6 +797,8 @@ namespace SiguaSportsApp
             // tpProductos
             // 
             this.tpProductos.AutoScroll = true;
+            this.tpProductos.Controls.Add(this.dtp_Compra);
+            this.tpProductos.Controls.Add(this.label3);
             this.tpProductos.Controls.Add(this.cb_ProveedoresPRB);
             this.tpProductos.Controls.Add(this.btnAgregarProducto);
             this.tpProductos.Controls.Add(this.lblCategoria);
@@ -835,7 +839,7 @@ namespace SiguaSportsApp
             this.expandir_menu.SetDecoration(this.cb_ProveedoresPRB, BunifuAnimatorNS.DecorationType.None);
             this.cb_ProveedoresPRB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ProveedoresPRB.FormattingEnabled = true;
-            this.cb_ProveedoresPRB.Location = new System.Drawing.Point(992, 11);
+            this.cb_ProveedoresPRB.Location = new System.Drawing.Point(1010, 11);
             this.cb_ProveedoresPRB.Name = "cb_ProveedoresPRB";
             this.cb_ProveedoresPRB.Size = new System.Drawing.Size(231, 24);
             this.cb_ProveedoresPRB.TabIndex = 60;
@@ -903,7 +907,7 @@ namespace SiguaSportsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.txtFacturaCompra, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtFacturaCompra, BunifuAnimatorNS.DecorationType.None);
-            this.txtFacturaCompra.Location = new System.Drawing.Point(992, 55);
+            this.txtFacturaCompra.Location = new System.Drawing.Point(1010, 55);
             this.txtFacturaCompra.Margin = new System.Windows.Forms.Padding(4);
             this.txtFacturaCompra.Name = "txtFacturaCompra";
             this.txtFacturaCompra.Size = new System.Drawing.Size(86, 22);
@@ -1221,6 +1225,33 @@ namespace SiguaSportsApp
             // 
             this.proveedoresTableAdapter.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.expandir_menu.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(877, 98);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 24);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Fecha Compra:";
+            // 
+            // dtp_Compra
+            // 
+            this.expandir_menu.SetDecoration(this.dtp_Compra, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.dtp_Compra, BunifuAnimatorNS.DecorationType.None);
+            this.dtp_Compra.Location = new System.Drawing.Point(1010, 98);
+            this.dtp_Compra.MaxDate = new System.DateTime(2020, 11, 23, 0, 0, 0, 0);
+            this.dtp_Compra.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtp_Compra.Name = "dtp_Compra";
+            this.dtp_Compra.Size = new System.Drawing.Size(282, 22);
+            this.dtp_Compra.TabIndex = 62;
+            this.dtp_Compra.Value = new System.DateTime(2020, 11, 23, 0, 0, 0, 0);
+            // 
             // FormRegistroBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1342,5 +1373,7 @@ namespace SiguaSportsApp
         private System.Windows.Forms.Label lblNombreContacto;
         private System.Windows.Forms.Label lblNombreProveedor;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DateTimePicker dtp_Compra;
+        private System.Windows.Forms.Label label3;
     }
 }
