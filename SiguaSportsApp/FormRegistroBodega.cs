@@ -25,6 +25,8 @@ namespace SiguaSportsApp
             datos.CargarDatosTablas(dgvProveedores, query1);
             datos.CargarDatosCombo(cb_ProveedoresPRB, qCombo);
             datos.CargarDatosCombo(cb_Categoria, qCombo1);
+            dtp_Compra.MaxDate = DateTime.Today;
+      
         }
 
         string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', color,  ' ', marca) Descripcion, " +
@@ -44,11 +46,8 @@ namespace SiguaSportsApp
         bool letra2 = false;
         bool letra3 = false;
         bool letra4 = false;
-        bool numero2 = false;
         bool numero1 = false;
         bool numero3 = false;
-        bool numero4 = false;
-        bool numero5 = false;
         bool dinero1 = false;
         bool dinero2 = false;
 
@@ -65,8 +64,11 @@ namespace SiguaSportsApp
             else
             {
                 letra1 = true;
-            }
+            }            
+        }
 
+        public void validar2()
+        {
             if (validacion.Espacio_Blanco(ErrorProvider, txtcantidad) || validacion.Solo_Numeros(ErrorProvider, txtcantidad))
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtcantidad))
@@ -80,16 +82,6 @@ namespace SiguaSportsApp
                 numero1 = true;
             }
 
-            if (validacion.Espacio_Blanco(ErrorProvider, txtcodigoproducto))
-            {
-                if (validacion.Espacio_Blanco(ErrorProvider, txtcodigoproducto))
-                    ErrorProvider.SetError(txtcodigoproducto, "No se puede dejar en blanco.");
-            }
-            else
-            {
-                numero2 = true;
-            }
-
             if (validacion.Espacio_Blanco(ErrorProvider, txtFacturaCompra))
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtFacturaCompra))
@@ -98,23 +90,10 @@ namespace SiguaSportsApp
             else
             {
                 numero3 = true;
-            }
-
-            if (validacion.Espacio_Blanco(ErrorProvider, txtprecio) || validacion.Solo_Numeros1(ErrorProvider, txtprecio))
-            {
-                if (validacion.Espacio_Blanco(ErrorProvider, txtprecio))
-                    ErrorProvider.SetError(txtprecio, "No se puede dejar en blanco.");
-                else
-                if (validacion.Solo_Numeros1(ErrorProvider, txtprecio))
-                    ErrorProvider.SetError(txtprecio, "Solo se permiten numeros.");
-            }
-            else
-            {
-                dinero2 = true;
-            }
+            }            
         }
 
-        public void validar2()
+        public void validar3()
         {
             if (validacion.Espacio_Blanco(ErrorProvider, txtnombre) || validacion.Solo_Letras(ErrorProvider, txtnombre))
             {
@@ -155,6 +134,19 @@ namespace SiguaSportsApp
                 letra4 = true;
             }
 
+            if (validacion.Espacio_Blanco(ErrorProvider, txtprecio) || validacion.Solo_Numeros1(ErrorProvider, txtprecio))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider, txtprecio))
+                    ErrorProvider.SetError(txtprecio, "No se puede dejar en blanco.");
+                else
+                if (validacion.Solo_Numeros1(ErrorProvider, txtprecio))
+                    ErrorProvider.SetError(txtprecio, "Solo se permiten numeros.");
+            }
+            else
+            {
+                dinero1 = true;
+            }
+
             if (validacion.Espacio_Blanco(ErrorProvider, txtPrecioVenta) || validacion.Solo_Numeros1(ErrorProvider, txtPrecioVenta))
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtPrecioVenta))
@@ -165,7 +157,7 @@ namespace SiguaSportsApp
             }
             else
             {
-                dinero1 = true;
+                dinero2 = true;
             }
         }
 
@@ -441,15 +433,15 @@ namespace SiguaSportsApp
         private void btnAgregarProducto_Click_1(object sender, EventArgs e)
         {
             string nMensaje = "";
+            letra1 = false;
             validar();
             if (letra1)
             {
-                letra1 = false;
+                con.sql = string.Format("if exists(select cod_producto from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') begin select 'Ya existe el producto. Desea actualizar la cantidad en existencia?' Mensaje end else begin select 'Nuevo producto' Mensaje end");
+                con.cmd = new SqlCommand(con.sql, con.sc);
                 try
                 {
-                    con.AbrirConexion();
-                    con.sql = string.Format("if exists(select cod_producto from Productos where cod_producto = '" + txtcodigoproducto.Text.ToString() + "') begin select 'Ya existe el producto. Desea actualizar la cantidad en existencia?' Mensaje end else begin select 'Nuevo producto' Mensaje end");
-                    con.cmd = new SqlCommand(con.sql, con.sc);
+                    con.AbrirConexion();                    
                     SqlDataReader mensaje = con.cmd.ExecuteReader();
                     if (mensaje.Read())
                     {
@@ -469,21 +461,17 @@ namespace SiguaSportsApp
                     txtColor.Enabled = true;
                     txtPrecioVenta.Enabled = true;
 
-                    validar();
+                    letra2 = false; letra3 = false; letra4 = false; numero1 = false; numero3 = false; dinero1 = false; dinero2 = false;
                     validar2();
-                    if (letra1 && letra2 && letra3 && letra4 && numero1 && numero2 && numero3 && numero4 && numero5 && dinero1 && dinero2)
+                    validar3();
+                    if (letra2 && letra3 && letra4 && numero1 && numero3 && dinero1 && dinero2)
                     {
                         if (cb_Categoria.SelectedIndex != -1 && cb_ProveedoresPRB.SelectedIndex != -1)
-                        {
-
-                            letra1 = false; letra2 = false; letra3 = false; letra4 = false; numero1 = false; numero2 = false; numero3 = false; numero4 = false; numero5 = false; dinero1 = false; dinero2 = false;
-
-                            con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '" + cb_ProveedoresPRB.SelectedItem.ToString() + "'");
+                        {                                               
+                            con.sql = string.Format("select cod_proveedor from Proveedores pr where nombre = '"+cb_ProveedoresPRB.SelectedItem.ToString()+"'");
                             con.cmd = new SqlCommand(con.sql, con.sc);
-
                             try
                             {
-
                                 con.AbrirConexion();
                                 SqlDataReader lector = con.cmd.ExecuteReader();
                                 if (lector.Read())
@@ -497,7 +485,7 @@ namespace SiguaSportsApp
                                 MessageBox.Show("ERROR " + ex);
                             }
 
-                            con.sql = string.Format("select cod_categoria from Categorias where descripcion = '" + cb_Categoria.SelectedItem.ToString() + "'");
+                            con.sql = string.Format("select cod_categoria from Categorias where descripcion = '"+cb_Categoria.SelectedItem.ToString()+"'");
                             con.cmd = new SqlCommand(con.sql, con.sc);
                             try
                             {
@@ -515,12 +503,10 @@ namespace SiguaSportsApp
                             }
 
                             //INSERT tabla de Productos
-                            con.cmd = new SqlCommand("INSERT INTO Productos(cod_producto, nombre, precioVenta, " +
-                            "precioCompra, color, marca, estado, existencia, cod_categoria, cod_proveedor) " +
-                            "values('" + txtcodigoproducto.Text.ToString() + "', '" + txtnombre.Text.ToString() + "', " +
-                            "'" + txtPrecioVenta.Text.ToString() + "','" + txtprecio.Text.ToString() + "','" + txtColor.Text.ToString() + "'," +
-                            "'" + txtmarca.Text.ToString() + "','" + txtcantidad.Text.ToString() + "'," +
-                            "'" + categoria + "','" + proveedor + "')", con.sc);
+                            con.cmd = new SqlCommand("INSERT INTO Productos(cod_producto, nombre, precioVenta, precioCompra, color, marca, existencia, cod_categoria, " +
+                                "cod_proveedor) values('" + txtcodigoproducto.Text.ToString() + "', '" + txtnombre.Text.ToString() + "', " +
+                                "'" + txtPrecioVenta.Text.ToString() + "','" + txtprecio.Text.ToString() + "','" + txtColor.Text.ToString() + "'," +
+                                "'" + txtmarca.Text.ToString() + "','"+txtcantidad.Text.ToString()+"', '" + categoria + "','" + proveedor + "')", con.sc);
                             try
                             {
                                 con.AbrirConexion();
@@ -535,15 +521,28 @@ namespace SiguaSportsApp
                             datos.CargarDatosTablas(dgvProductos, query);
 
                             Insertar();
+                            txtcodigoproducto.Text = "";
+                            txtnombre.Text = "";
+                            txtmarca.Text = "";
+                            txtColor.Text = "";
+                            txtcantidad.Text = "";
+                            txtprecio.Text = "";
+                            txtPrecioVenta.Text = "";
+                            cb_Categoria.SelectedIndex = -1;
+                            cb_ProveedoresPRB.SelectedIndex = -1;
                         }
                         else
                         {
-                            if (cb_ProveedoresPRB.SelectedIndex != -1)
-                                ErrorProvider.SetError(cb_Categoria, "Seleccione una opcion.");
-                            if (cb_Categoria.SelectedIndex != -1)
+                            if (cb_ProveedoresPRB.SelectedIndex == -1)
                                 ErrorProvider.SetError(cb_ProveedoresPRB, "Seleccione una opcion.");
+                            if (cb_Categoria.SelectedIndex == -1)
+                                ErrorProvider.SetError(cb_Categoria, "Seleccione una opcion.");
                         }
-                    }                    
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR validacion 1 y 2");
+                    }                   
                 }
                 else 
                 {
@@ -551,9 +550,9 @@ namespace SiguaSportsApp
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (result == DialogResult.Yes)
                     {
-                        letra1 = false; numero1 = false; numero2 = false; numero3 = false; dinero2 = false;
-                        validar();
-                        if (letra1 && numero1 && numero2 && numero3 && dinero2)
+                        numero1 = false; numero3 = false;
+                        validar2();
+                        if (numero1 && numero3)
                         {
                             if (cb_ProveedoresPRB.SelectedIndex != -1)
                             {
@@ -571,6 +570,14 @@ namespace SiguaSportsApp
                                 }
 
                                 Insertar();
+                                txtcodigoproducto.Text = "";
+                                txtnombre.Text = "";
+                                txtmarca.Text = "";
+                                txtColor.Text = "";
+                                txtcantidad.Text = "";
+                                txtprecio.Text = "";
+                                txtPrecioVenta.Text = "";
+                                cb_Categoria.SelectedIndex = -1;
                             }
                             else
                             {
@@ -584,16 +591,7 @@ namespace SiguaSportsApp
             else
             {
                 MessageBox.Show("ERROR");
-            }
-
-            txtcodigoproducto.Text = "";
-            txtnombre.Text = "";
-            txtmarca.Text = "";
-            txtColor.Text = "";
-            txtcantidad.Text = "";
-            txtprecio.Text = "";
-            txtPrecioVenta.Text = "";
-            cb_Categoria.SelectedIndex = -1;
+            }            
         }
     }
 }
