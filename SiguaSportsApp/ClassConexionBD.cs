@@ -24,7 +24,7 @@ namespace SiguaSportsApp
 
         //ARREGLAR CONEXION
         //string conexion = "Data Source = IP,Port; Network Library = DBMSSOCN; Initial Catalog = dbase; User ID=id; Password = password"
-        //string conexion = "Server=(NombreServidor),(PuertoTCP/IP);DataBase=(NombreBase); User Id=(Usuario); Password=(Password)"
+        // esta es la conexion tcp/ip -- string conexion = "Server=LAPTOP-2R8MIJL4,49500;DataBase=SiguaSports; User Id=AccesoLocal; Password=admin123";
 
         //***NO CAMBIEN LA CONEXION, COMENTENLA Y AGREGUEN OTRA LINEA DE COMANDOS ***
         string conexion = "Data Source = .; Initial Catalog = SiguaSports; " + "Integrated Security = true";
