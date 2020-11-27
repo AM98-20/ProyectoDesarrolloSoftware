@@ -24,12 +24,12 @@ namespace SiguaSportsApp
 
         //ARREGLAR CONEXION
         //string conexion = "Data Source = IP,Port; Network Library = DBMSSOCN; Initial Catalog = dbase; User ID=id; Password = password"
+        //string conexion = "Server=(NombreServidor),(PuertoTCP/IP);DataBase=(NombreBase); User Id=(Usuario); Password=(Password)"
 
         //***NO CAMBIEN LA CONEXION, COMENTENLA Y AGREGUEN OTRA LINEA DE COMANDOS ***
         string conexion = "Data Source = .; Initial Catalog = SiguaSports; " + "Integrated Security = true";
 
         //conexion de jhonatan
-
         //string conexion = "Data Source = DESKTOP-B5ROQPH\\SQLEXPRESS; Initial Catalog = SiguaSports; " + "Integrated Security = true";
 
         public ClassConexionBD()
