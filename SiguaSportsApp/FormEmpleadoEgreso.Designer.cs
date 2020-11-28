@@ -80,7 +80,6 @@
             this.dgvEgreso.Location = new System.Drawing.Point(299, 70);
             this.dgvEgreso.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEgreso.Name = "dgvEgreso";
-            this.dgvEgreso.ReadOnly = true;
             this.dgvEgreso.RowHeadersVisible = false;
             this.dgvEgreso.RowHeadersWidth = 51;
             this.dgvEgreso.Size = new System.Drawing.Size(1253, 535);

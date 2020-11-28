@@ -32,7 +32,7 @@ namespace SiguaSportsApp
                 btn_reportes.Hide();
             }
 
-            conexion.CargarDatosTablas(dgvHistorial, query);
+            conexion.CargarDatosTablas(dgv_Historial, query);
             txtDevolucion.Text = conexion.DevolucionCodigo();
             txtvendedor.Text = conexion.Nombre_empleado;
             btn_Buscar.Visible = true;
@@ -135,7 +135,7 @@ namespace SiguaSportsApp
 
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
-            
+            WindowState = FormWindowState.Minimized;
         }
 
         private void btn_restaurar_Click(object sender, EventArgs e)
@@ -204,14 +204,15 @@ namespace SiguaSportsApp
                 {
                     conexion.cmd = new SqlCommand("if exists(Select cod_prducto from VentaDetalle " +
                         "where num_factura = '"+mtb_Factura.Text.ToString()+"' and cod_prducto = '"+txtCodProd.Text.ToString()+"') " +
-                        "begin select CONCAT(p.nombre, ' ', p.color, ' ', p.marca) Descripcion, cod_prducto, precioVenta, cantidad, " +
+                        "begin select CONCAT(p.nombre, ' ', p.color, ' ', p.marca) Descripcion, cod_prducto, vd.precioVenta, cantidad, " +
                         "descuentoPorcentaje, impuestoPorcentaje from VentaDetalle vd inner join Ventas v " +
-                        "on vd.num_factura = v.num_factura where vd.num_factura = '"+mtb_Factura.Text.ToString()+ "' and cod_prducto = '" + txtCodProd.Text.ToString() + "' end", conexion.sc);
+                        "on vd.num_factura = v.num_factura inner join Productos p on p.cod_producto = vd.cod_prducto " +
+                        "where vd.num_factura = '"+mtb_Factura.Text.ToString()+ "' and cod_prducto = '" + txtCodProd.Text.ToString() + "' end", conexion.sc);
                     conexion.AbrirConexion();
                     SqlDataReader lector = conexion.cmd.ExecuteReader();
                     if (lector.Read())
                     {
-                        string[] row =  new string[] { lector["cod_producto"].ToString(), lector["Descripcion"].ToString(), 
+                        string[] row =  new string[] { lector["cod_prducto"].ToString(), lector["Descripcion"].ToString(), 
                             lector["precioVenta"].ToString(), txtCantidad.Text.ToString(), txtMotivo.Text.ToString()};
                         dgvDevoluciones.Rows.Add(row);
                         tran.PorcentajeDes = double.Parse(lector["descuentoPorcentaje"].ToString());
@@ -225,7 +226,7 @@ namespace SiguaSportsApp
 
                     foreach (DataGridViewRow row in dgvDevoluciones.Rows)
                     {
-                        tran.Subtotal += (double)row.Cells["Precio"].Value * (double)row.Cells["Cantidad"].Value;                        
+                        tran.Subtotal += double.Parse(row.Cells["columna_precio"].Value.ToString()) * double.Parse(row.Cells["columna_cantidad"].Value.ToString());                        
                     }
                     tran.CalculoDescuento();
                     tran.CalculoImpuesto();
@@ -259,13 +260,13 @@ namespace SiguaSportsApp
                     conexion.CerrarConexion();
 
                     conexion.cmd = new SqlCommand("INSERT INTO DevolucionDetalle(num_devolucion, cod_producto, cantidad, motivo, cod_estado) " +
-                        "values('" + txtDevolucion.Text.ToString() + "','@codProd','@cantidad','@motivo','1')", conexion.sc);
+                        "values('" + txtDevolucion.Text.ToString() + "',@codProd,@cantidad,@motivo,'1')", conexion.sc);
                     foreach (DataGridViewRow row in dgvDevoluciones.Rows)
                     {
                         conexion.cmd.Parameters.Clear();
 
                         conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columna_producto"].Value));
-                        conexion.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columna_catidad"].Value));
+                        conexion.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columna_cantidad"].Value));
                         conexion.cmd.Parameters.AddWithValue("@motivo", Convert.ToString(row.Cells["columna_motivo"].Value));
                         conexion.AbrirConexion();
                         conexion.cmd.ExecuteNonQuery();
@@ -353,11 +354,6 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

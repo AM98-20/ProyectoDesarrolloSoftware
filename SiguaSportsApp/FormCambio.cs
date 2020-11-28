@@ -109,17 +109,25 @@ namespace SiguaSportsApp
                     con.CerrarConexion();
                     //Revision de Form de cambios
                     con.cmd = new SqlCommand("INSERT INTO DevolucionDetalle(num_devolucion, cod_producto, cantidad, motivo, cod_estado, cod_producto_cambio) " +
-                        "values('" + txtDevolucion.Text.ToString() + "','@codProd','@cantidad','@motivo','2', '@codProd')", con.sc);
+                        "values('" + txtDevolucion.Text.ToString() + "',@codProd,@cantidad,@motivo,'2', @codProd)", con.sc);
                     foreach (DataGridViewRow row in dgvCambio.Rows)
                     {
                         con.cmd.Parameters.Clear();
 
                         con.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columna_codigo"].Value));
-                        con.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columna_cantidad"].Value));
+                        con.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columna_cantidad"].Value.ToString()));
                         con.cmd.Parameters.AddWithValue("@motivo", Convert.ToString(row.Cells["columna_codCambio"].Value));
-                        con.AbrirConexion();
-                        con.cmd.ExecuteNonQuery();
-                        con.CerrarConexion();
+                        try
+                        {
+                            con.AbrirConexion();
+                            con.cmd.ExecuteNonQuery();
+                            con.CerrarConexion();
+                        }
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show("ERROR: " + ex);
+                        }
+
                     }
 
                     DialogResult result = MessageBox.Show("Se ingresara devulta al inventario?", "Inventario", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
@@ -213,6 +221,7 @@ namespace SiguaSportsApp
                         txtCantidad.Enabled = true;
                         btn_Buscar.Visible = false;
                         btn_Agregar.Visible = true;
+                        mtb_Factura.Enabled = false;
                     }
                     else
                     {
@@ -236,15 +245,16 @@ namespace SiguaSportsApp
                 {
                     con.cmd = new SqlCommand("if exists(Select cod_prducto from VentaDetalle " +
                         "where num_factura = '" + mtb_Factura.Text.ToString() + "' and cod_prducto = '" + txtCodProd.Text.ToString() + "') " +
-                        "begin select CONCAT(p.nombre, ' ', p.color, ' ', p.marca) Descripcion, cod_prducto, precioVenta, cantidad, " +
+                        "begin select CONCAT(p.nombre, ' ', p.color, ' ', p.marca) Descripcion, cod_prducto, vd.precioVenta, cantidad, " +
                         "descuentoPorcentaje, impuestoPorcentaje from VentaDetalle vd inner join Ventas v " +
-                        "on vd.num_factura = v.num_factura where vd.num_factura = '"+mtb_Factura.Text.ToString()+ "' and cod_prducto = '" + txtCodProd.Text.ToString() + "' end", con.sc);
+                        "on vd.num_factura = v.num_factura inner join Productos p on p.cod_producto = vd.cod_prducto " +
+                        "where vd.num_factura = '" + mtb_Factura.Text.ToString()+ "' and cod_prducto = '" + txtCodProd.Text.ToString() + "' end", con.sc);
                     con.AbrirConexion();
                     SqlDataReader lector = con.cmd.ExecuteReader();
                     if (lector.Read())
                     {
-                        string[] row = new string[] { lector["cod_producto"].ToString(), lector["Descripcion"].ToString(),
-                            lector["precioVenta"].ToString(), txtCantidad.Text.ToString(), txtMotivo.Text.ToString(), lector["cod_producto"].ToString()};
+                        string[] row = new string[] { lector["cod_prducto"].ToString(), lector["Descripcion"].ToString(),
+                            lector["precioVenta"].ToString(), txtCantidad.Text.ToString(), txtMotivo.Text.ToString(), lector["cod_prducto"].ToString()};
                         dgvCambio.Rows.Add(row);
                         tran.PorcentajeDes = double.Parse(lector["descuentoPorcentaje"].ToString());
                         tran.PorcentajeImp = double.Parse(lector["impuestoPorcentaje"].ToString());
@@ -325,16 +335,6 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblCodProd_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

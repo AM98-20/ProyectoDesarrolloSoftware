@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCambio));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
             this.txtMotivo = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -53,11 +53,6 @@
             this.txtISV = new System.Windows.Forms.TextBox();
             this.lblISV = new System.Windows.Forms.Label();
             this.dgvCambio = new System.Windows.Forms.DataGridView();
-            this.columna_codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columna_codCambio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodProd = new System.Windows.Forms.TextBox();
             this.lblCodProd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -87,6 +82,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.columna_codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columna_codCambio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCambio)).BeginInit();
@@ -125,7 +126,7 @@
             this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.btnConfirmar.Location = new System.Drawing.Point(1160, 85);
+            this.btnConfirmar.Location = new System.Drawing.Point(1160, 73);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(111, 28);
@@ -142,7 +143,7 @@
             this.Expandir_menu.SetDecoration(this.lblTotal, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.lblTotal, BunifuAnimatorNS.DecorationType.None);
             this.lblTotal.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(816, 119);
+            this.lblTotal.Location = new System.Drawing.Point(816, 107);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(54, 24);
@@ -156,7 +157,7 @@
             this.contraer_menu.SetDecoration(this.txtTotal, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.txtTotal, BunifuAnimatorNS.DecorationType.None);
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(900, 121);
+            this.txtTotal.Location = new System.Drawing.Point(900, 109);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
@@ -223,7 +224,7 @@
             this.panel2.Location = new System.Drawing.Point(293, 65);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1306, 57);
+            this.panel2.Size = new System.Drawing.Size(1298, 57);
             this.panel2.TabIndex = 57;
             // 
             // dtp_Fecha
@@ -232,7 +233,7 @@
             this.contraer_menu.SetDecoration(this.dtp_Fecha, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.dtp_Fecha, BunifuAnimatorNS.DecorationType.None);
             this.dtp_Fecha.Enabled = false;
-            this.dtp_Fecha.Location = new System.Drawing.Point(1027, 16);
+            this.dtp_Fecha.Location = new System.Drawing.Point(1019, 16);
             this.dtp_Fecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_Fecha.Name = "dtp_Fecha";
             this.dtp_Fecha.Size = new System.Drawing.Size(265, 22);
@@ -245,7 +246,7 @@
             this.Expandir_menu.SetDecoration(this.lblfecha, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.lblfecha, BunifuAnimatorNS.DecorationType.None);
             this.lblfecha.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.Location = new System.Drawing.Point(961, 14);
+            this.lblfecha.Location = new System.Drawing.Point(953, 14);
             this.lblfecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(57, 24);
@@ -259,7 +260,7 @@
             this.Expandir_menu.SetDecoration(this.lblvendedor, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.lblvendedor, BunifuAnimatorNS.DecorationType.None);
             this.lblvendedor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvendedor.Location = new System.Drawing.Point(409, 16);
+            this.lblvendedor.Location = new System.Drawing.Point(405, 16);
             this.lblvendedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblvendedor.Name = "lblvendedor";
             this.lblvendedor.Size = new System.Drawing.Size(88, 24);
@@ -273,7 +274,7 @@
             this.contraer_menu.SetDecoration(this.txtvendedor, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.txtvendedor, BunifuAnimatorNS.DecorationType.None);
             this.txtvendedor.Enabled = false;
-            this.txtvendedor.Location = new System.Drawing.Point(515, 15);
+            this.txtvendedor.Location = new System.Drawing.Point(511, 15);
             this.txtvendedor.Margin = new System.Windows.Forms.Padding(4);
             this.txtvendedor.Name = "txtvendedor";
             this.txtvendedor.Size = new System.Drawing.Size(411, 22);
@@ -289,7 +290,7 @@
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.btnCancelar.Location = new System.Drawing.Point(1160, 48);
+            this.btnCancelar.Location = new System.Drawing.Point(1160, 36);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(111, 28);
@@ -316,10 +317,10 @@
             this.panel4.Controls.Add(this.txtTotal);
             this.contraer_menu.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.panel4.Location = new System.Drawing.Point(507, 636);
+            this.panel4.Location = new System.Drawing.Point(294, 647);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1297, 164);
+            this.panel4.Size = new System.Drawing.Size(1297, 141);
             this.panel4.TabIndex = 59;
             // 
             // txtDes
@@ -329,7 +330,7 @@
             this.contraer_menu.SetDecoration(this.txtDes, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.txtDes, BunifuAnimatorNS.DecorationType.None);
             this.txtDes.Enabled = false;
-            this.txtDes.Location = new System.Drawing.Point(900, 54);
+            this.txtDes.Location = new System.Drawing.Point(900, 42);
             this.txtDes.Margin = new System.Windows.Forms.Padding(4);
             this.txtDes.Name = "txtDes";
             this.txtDes.ReadOnly = true;
@@ -344,7 +345,7 @@
             this.Expandir_menu.SetDecoration(this.lblDes, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.lblDes, BunifuAnimatorNS.DecorationType.None);
             this.lblDes.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDes.Location = new System.Drawing.Point(776, 52);
+            this.lblDes.Location = new System.Drawing.Point(776, 40);
             this.lblDes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDes.Name = "lblDes";
             this.lblDes.Size = new System.Drawing.Size(95, 24);
@@ -358,7 +359,7 @@
             this.Expandir_menu.SetDecoration(this.lblSub, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.lblSub, BunifuAnimatorNS.DecorationType.None);
             this.lblSub.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSub.Location = new System.Drawing.Point(789, 22);
+            this.lblSub.Location = new System.Drawing.Point(789, 10);
             this.lblSub.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSub.Name = "lblSub";
             this.lblSub.Size = new System.Drawing.Size(81, 24);
@@ -372,7 +373,7 @@
             this.contraer_menu.SetDecoration(this.txtSub, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.txtSub, BunifuAnimatorNS.DecorationType.None);
             this.txtSub.Enabled = false;
-            this.txtSub.Location = new System.Drawing.Point(900, 23);
+            this.txtSub.Location = new System.Drawing.Point(900, 11);
             this.txtSub.Margin = new System.Windows.Forms.Padding(4);
             this.txtSub.Name = "txtSub";
             this.txtSub.ReadOnly = true;
@@ -387,7 +388,7 @@
             this.contraer_menu.SetDecoration(this.txtISV, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.txtISV, BunifuAnimatorNS.DecorationType.None);
             this.txtISV.Enabled = false;
-            this.txtISV.Location = new System.Drawing.Point(900, 85);
+            this.txtISV.Location = new System.Drawing.Point(900, 73);
             this.txtISV.Margin = new System.Windows.Forms.Padding(4);
             this.txtISV.Name = "txtISV";
             this.txtISV.ReadOnly = true;
@@ -402,7 +403,7 @@
             this.Expandir_menu.SetDecoration(this.lblISV, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.lblISV, BunifuAnimatorNS.DecorationType.None);
             this.lblISV.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblISV.Location = new System.Drawing.Point(828, 85);
+            this.lblISV.Location = new System.Drawing.Point(828, 73);
             this.lblISV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblISV.Name = "lblISV";
             this.lblISV.Size = new System.Drawing.Size(42, 24);
@@ -421,6 +422,7 @@
             this.dgvCambio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columna_codigo,
             this.columna_descripcion,
+            this.columna_precio,
             this.columna_cantidad,
             this.columna_motivo,
             this.columna_codCambio});
@@ -428,49 +430,14 @@
             this.contraer_menu.SetDecoration(this.dgvCambio, BunifuAnimatorNS.DecorationType.None);
             this.dgvCambio.Enabled = false;
             this.dgvCambio.GridColor = System.Drawing.Color.White;
-            this.dgvCambio.Location = new System.Drawing.Point(303, 249);
+            this.dgvCambio.Location = new System.Drawing.Point(304, 250);
             this.dgvCambio.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCambio.Name = "dgvCambio";
             this.dgvCambio.ReadOnly = true;
             this.dgvCambio.RowHeadersVisible = false;
             this.dgvCambio.RowHeadersWidth = 51;
-            this.dgvCambio.Size = new System.Drawing.Size(1708, 395);
+            this.dgvCambio.Size = new System.Drawing.Size(1282, 395);
             this.dgvCambio.TabIndex = 64;
-            // 
-            // columna_codigo
-            // 
-            this.columna_codigo.HeaderText = "Producto";
-            this.columna_codigo.MinimumWidth = 6;
-            this.columna_codigo.Name = "columna_codigo";
-            this.columna_codigo.ReadOnly = true;
-            // 
-            // columna_descripcion
-            // 
-            this.columna_descripcion.HeaderText = "Descripción";
-            this.columna_descripcion.MinimumWidth = 6;
-            this.columna_descripcion.Name = "columna_descripcion";
-            this.columna_descripcion.ReadOnly = true;
-            // 
-            // columna_cantidad
-            // 
-            this.columna_cantidad.HeaderText = "Cantidad";
-            this.columna_cantidad.MinimumWidth = 6;
-            this.columna_cantidad.Name = "columna_cantidad";
-            this.columna_cantidad.ReadOnly = true;
-            // 
-            // columna_motivo
-            // 
-            this.columna_motivo.HeaderText = "Motivo";
-            this.columna_motivo.MinimumWidth = 6;
-            this.columna_motivo.Name = "columna_motivo";
-            this.columna_motivo.ReadOnly = true;
-            // 
-            // columna_codCambio
-            // 
-            this.columna_codCambio.HeaderText = "Código Producto";
-            this.columna_codCambio.MinimumWidth = 6;
-            this.columna_codCambio.Name = "columna_codCambio";
-            this.columna_codCambio.ReadOnly = true;
             // 
             // txtCodProd
             // 
@@ -499,7 +466,6 @@
             this.lblCodProd.Size = new System.Drawing.Size(141, 24);
             this.lblCodProd.TabIndex = 65;
             this.lblCodProd.Text = "Código Producto";
-            this.lblCodProd.Click += new System.EventHandler(this.lblCodProd_Click);
             // 
             // panel1
             // 
@@ -516,7 +482,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1591, 65);
             this.panel1.TabIndex = 67;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label5
             // 
@@ -640,8 +605,8 @@
             this.btn_logueo.BorderRadius = 0;
             this.btn_logueo.ButtonText = "             CERRAR SESIÓN";
             this.btn_logueo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contraer_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
             this.btn_logueo.DisabledColor = System.Drawing.Color.Gray;
             this.btn_logueo.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_logueo.Iconimage = global::SiguaSportsApp.Properties.Resources.logout__1_;
@@ -678,8 +643,8 @@
             this.btn_Administracion.BorderRadius = 0;
             this.btn_Administracion.ButtonText = "        ADMINISTRACIÓN";
             this.btn_Administracion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contraer_menu.SetDecoration(this.btn_Administracion, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.btn_Administracion, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.btn_Administracion, BunifuAnimatorNS.DecorationType.None);
             this.btn_Administracion.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Administracion.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Administracion.Iconimage = global::SiguaSportsApp.Properties.Resources.ceo;
@@ -716,8 +681,8 @@
             this.btn_Devoluciones.BorderRadius = 0;
             this.btn_Devoluciones.ButtonText = "        DEVOLUCIONES";
             this.btn_Devoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contraer_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
             this.btn_Devoluciones.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Devoluciones.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Devoluciones.Iconimage = global::SiguaSportsApp.Properties.Resources.return_on_investment;
@@ -754,8 +719,8 @@
             this.btn_Ventas.BorderRadius = 0;
             this.btn_Ventas.ButtonText = "         VENTAS";
             this.btn_Ventas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contraer_menu.SetDecoration(this.btn_Ventas, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.btn_Ventas, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.btn_Ventas, BunifuAnimatorNS.DecorationType.None);
             this.btn_Ventas.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Ventas.Iconcolor = System.Drawing.Color.Transparent;
             this.btn_Ventas.Iconimage = global::SiguaSportsApp.Properties.Resources.sales;
@@ -787,8 +752,8 @@
             // LineaSidebar
             // 
             this.LineaSidebar.BackColor = System.Drawing.Color.Transparent;
-            this.contraer_menu.SetDecoration(this.LineaSidebar, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.LineaSidebar, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.LineaSidebar, BunifuAnimatorNS.DecorationType.None);
             this.LineaSidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.LineaSidebar.LineThickness = 1;
             this.LineaSidebar.Location = new System.Drawing.Point(4, 49);
@@ -864,22 +829,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation1;
+            animation7.AnimateOnlyDifferences = true;
+            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
+            animation7.LeafCoeff = 0F;
+            animation7.MaxTime = 1F;
+            animation7.MinTime = 0F;
+            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
+            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
+            animation7.MosaicSize = 0;
+            animation7.Padding = new System.Windows.Forms.Padding(0);
+            animation7.RotateCoeff = 0F;
+            animation7.RotateLimit = 0F;
+            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
+            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
+            animation7.TimeCoeff = 0F;
+            animation7.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation7;
             // 
             // btn_Agregar
             // 
@@ -914,8 +879,8 @@
             // 
             // mtb_Factura
             // 
-            this.contraer_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
             this.Expandir_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.mtb_Factura, BunifuAnimatorNS.DecorationType.None);
             this.mtb_Factura.Location = new System.Drawing.Point(471, 132);
             this.mtb_Factura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtb_Factura.Mask = "000-000-00-0000000";
@@ -968,26 +933,68 @@
             // 
             this.Expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.Expandir_menu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.Expandir_menu.DefaultAnimation = animation2;
+            animation8.AnimateOnlyDifferences = true;
+            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
+            animation8.LeafCoeff = 0F;
+            animation8.MaxTime = 1F;
+            animation8.MinTime = 0F;
+            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
+            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
+            animation8.MosaicSize = 0;
+            animation8.Padding = new System.Windows.Forms.Padding(0);
+            animation8.RotateCoeff = 0F;
+            animation8.RotateLimit = 0F;
+            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
+            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
+            animation8.TimeCoeff = 0F;
+            animation8.TransparencyCoeff = 0F;
+            this.Expandir_menu.DefaultAnimation = animation8;
             // 
             // ErrorProvider
             // 
             this.ErrorProvider.ContainerControl = this;
+            // 
+            // columna_codigo
+            // 
+            this.columna_codigo.HeaderText = "Producto";
+            this.columna_codigo.MinimumWidth = 6;
+            this.columna_codigo.Name = "columna_codigo";
+            this.columna_codigo.ReadOnly = true;
+            // 
+            // columna_descripcion
+            // 
+            this.columna_descripcion.HeaderText = "Descripción";
+            this.columna_descripcion.MinimumWidth = 6;
+            this.columna_descripcion.Name = "columna_descripcion";
+            this.columna_descripcion.ReadOnly = true;
+            // 
+            // columna_precio
+            // 
+            this.columna_precio.HeaderText = "Precio de Venta";
+            this.columna_precio.MinimumWidth = 6;
+            this.columna_precio.Name = "columna_precio";
+            this.columna_precio.ReadOnly = true;
+            // 
+            // columna_cantidad
+            // 
+            this.columna_cantidad.HeaderText = "Cantidad";
+            this.columna_cantidad.MinimumWidth = 6;
+            this.columna_cantidad.Name = "columna_cantidad";
+            this.columna_cantidad.ReadOnly = true;
+            // 
+            // columna_motivo
+            // 
+            this.columna_motivo.HeaderText = "Motivo";
+            this.columna_motivo.MinimumWidth = 6;
+            this.columna_motivo.Name = "columna_motivo";
+            this.columna_motivo.ReadOnly = true;
+            // 
+            // columna_codCambio
+            // 
+            this.columna_codCambio.HeaderText = "Código Producto";
+            this.columna_codCambio.MinimumWidth = 6;
+            this.columna_codCambio.Name = "columna_codCambio";
+            this.columna_codCambio.ReadOnly = true;
             // 
             // FormCambio
             // 
@@ -1097,6 +1104,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columna_precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_motivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_codCambio;

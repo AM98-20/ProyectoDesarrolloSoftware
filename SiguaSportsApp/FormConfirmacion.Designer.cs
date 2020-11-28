@@ -49,9 +49,8 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(199, 138);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.ReadOnly = true;
             this.txtUsuario.Size = new System.Drawing.Size(168, 22);
             this.txtUsuario.TabIndex = 33;
             // 
@@ -70,9 +69,8 @@
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.Location = new System.Drawing.Point(199, 198);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.ReadOnly = true;
             this.txtContraseña.Size = new System.Drawing.Size(168, 22);
             this.txtContraseña.TabIndex = 35;
             // 
@@ -95,7 +93,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.btnConfirmar.Location = new System.Drawing.Point(257, 293);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(111, 28);
             this.btnConfirmar.TabIndex = 36;
@@ -112,7 +110,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.btnCancelar.Location = new System.Drawing.Point(41, 293);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(111, 28);
             this.btnCancelar.TabIndex = 37;
@@ -138,7 +136,7 @@
             this.top.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.top.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(11)))));
             this.top.Location = new System.Drawing.Point(0, 0);
-            this.top.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.top.Margin = new System.Windows.Forms.Padding(4);
             this.top.Name = "top";
             this.top.Quality = 10;
             this.top.Size = new System.Drawing.Size(428, 41);
@@ -162,7 +160,7 @@
             this.btn_salir.BackColor = System.Drawing.Color.Transparent;
             this.btn_salir.Image = global::SiguaSportsApp.Properties.Resources.close;
             this.btn_salir.Location = new System.Drawing.Point(383, 0);
-            this.btn_salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(40, 37);
             this.btn_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
