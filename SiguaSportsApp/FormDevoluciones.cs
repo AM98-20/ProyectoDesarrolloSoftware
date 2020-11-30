@@ -21,33 +21,26 @@ namespace SiguaSportsApp
 
         ClassDatosTablas conexion = new ClassDatosTablas();
         string query = "SELECT B.nombre[Producto] , A.cantidad[Cantidad] , A.motivo[Motivo] ,C.fecha_devolucion[Fecha de Devolución], A.cod_producto_cambio [Producto Cambio]" +
-                                         "FROM DevolucionDetalle A " +
-                                         "INNER JOIN Productos B ON A.cod_producto = B.cod_producto " +
-                                         "INNER JOIN Devoluciones C ON A.num_devolucion = C.num_devolucion";
+                                         "FROM DevolucionDetalle A INNER JOIN Productos B ON A.cod_producto = B.cod_producto " +
+                                         "INNER JOIN Devoluciones C ON A.num_devolucion = C.num_devolucion where cod_estado = '1'";
         private void FromDevoluciones_Load(object sender, EventArgs e)
         {
-            if (tran.CodigoPuesto == 3)
-            {
-                btn_Registro_bodega.Hide();
-                btn_reportes.Hide();
-            }
-
             conexion.CargarDatosTablas(dgv_Historial, query);
             txtDevolucion.Text = conexion.DevolucionCodigo();
             txtvendedor.Text = conexion.Nombre_empleado;
             btn_Buscar.Visible = true;
-            btn_Agregar.Visible = false;
             tran.Subtotal = 0.00;
             tran.Descuento = 0.00;
             tran.Impuesto = 0.00;
-            tran.TotalDevolucion = 0.00;
-        }
+            tran.TotalDevolucion = 0.00;          
+        }        
 
         ClassValidacion validacion = new ClassValidacion();
         ClassDatosTransaccion tran = new ClassDatosTransaccion();
         ClassConexionBD con = new ClassConexionBD();
 
-        bool letra1 = false;
+        
+
         bool letra2 = false;
         bool factura = false;
 
@@ -69,15 +62,6 @@ namespace SiguaSportsApp
 
         public void validar()
         {
-            if (validacion.Espacio_Blanco(ErrorProvider, txtCodProd))
-            {
-                if (validacion.Espacio_Blanco(ErrorProvider, txtCodProd))
-                    ErrorProvider.SetError(txtCodProd, "No se puede dejar en blanco");
-            }
-            else
-            {
-                letra1 = true;
-            }
 
             if (validacion.Espacio_Blanco(ErrorProvider, txtMotivo) || validacion.Solo_Letras(ErrorProvider, txtMotivo))
             {
@@ -156,35 +140,40 @@ namespace SiguaSportsApp
 
                 if (Mensaje == "Existe")
                 {
-                    try
-                    {
-                        conexion.cmd = new SqlCommand("select DATEDIFF(DAY, fecha_Venta, GETDATE()) Dias " +
-                            "from Ventas where num_factura = '" + mtb_Factura.Text.ToString() + "'", conexion.sc);
-                        conexion.AbrirConexion();
-                        SqlDataReader read = conexion.cmd.ExecuteReader();
-                        if (read.Read())
+                    validar();
+                    if (letra2) {
+                        try
                         {
-                            Dias = int.Parse(read["Dias"].ToString());
+                            conexion.cmd = new SqlCommand("select DATEDIFF(DAY, fecha_Venta, GETDATE()) Dias " +
+                                "from Ventas where num_factura = '" + mtb_Factura.Text.ToString() + "'", conexion.sc);
+                            conexion.AbrirConexion();
+                            SqlDataReader read = conexion.cmd.ExecuteReader();
+                            if (read.Read())
+                            {
+                                Dias = int.Parse(read["Dias"].ToString());
+                            }
+                            conexion.CerrarConexion();
                         }
-                        conexion.CerrarConexion();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR " + ex);
-                    }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ERROR " + ex);
+                        }
 
-                    if (Dias < 3)
-                    {
-                        txtCantidad.Enabled = true;
-                        txtCodProd.Enabled = true;
-                        txtMotivo.Enabled = true;
-                        btn_Buscar.Visible = false;
-                        btn_Agregar.Visible = true;
-                        mtb_Factura.Enabled = false;
-                    }
-                    else
-                    {
-                        MessageBox.Show("La fecha de venta excedio la fecha limite de devolucion.", "Limite excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (Dias < 3)
+                        {
+                            btn_Buscar.Visible = false;
+                            mtb_Factura.Enabled = false;
+                            dgvDevoluciones.Enabled = true;
+                            /////////////////
+                            string query1 = "SELECT cod_prducto Producto, CONCAT(p.nombre, ' ', p.marca, ' ', p.color) Descripción, cantidad [Cantidad Vendida], vd.precioVenta Precio " +
+                                    "FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura inner join Productos p on vd.cod_prducto = p.cod_producto " +
+                                    "where v.num_factura = '" + mtb_Factura.Text.ToString() + "'";
+                            conexion.CargarDatosTablas(dgvDevoluciones, query1);
+                        }
+                        else
+                        {
+                            MessageBox.Show("La fecha de venta excedio la fecha limite de devolucion.", "Limite excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
                 else
@@ -192,52 +181,6 @@ namespace SiguaSportsApp
                     MessageBox.Show("Error, no se encontro la factura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }                               
             }            
-        }
-
-        private void btn_Agregar_Click(object sender, EventArgs e)
-        {
-            letra2 = false; letra1 = false;
-            validar();
-            if (letra1 && letra2)
-            {                
-                try
-                {
-                    conexion.cmd = new SqlCommand("if exists(Select cod_prducto from VentaDetalle " +
-                        "where num_factura = '"+mtb_Factura.Text.ToString()+"' and cod_prducto = '"+txtCodProd.Text.ToString()+"') " +
-                        "begin select CONCAT(p.nombre, ' ', p.color, ' ', p.marca) Descripcion, cod_prducto, vd.precioVenta, cantidad, " +
-                        "descuentoPorcentaje, impuestoPorcentaje from VentaDetalle vd inner join Ventas v " +
-                        "on vd.num_factura = v.num_factura inner join Productos p on p.cod_producto = vd.cod_prducto " +
-                        "where vd.num_factura = '"+mtb_Factura.Text.ToString()+ "' and cod_prducto = '" + txtCodProd.Text.ToString() + "' end", conexion.sc);
-                    conexion.AbrirConexion();
-                    SqlDataReader lector = conexion.cmd.ExecuteReader();
-                    if (lector.Read())
-                    {
-                        string[] row =  new string[] { lector["cod_prducto"].ToString(), lector["Descripcion"].ToString(), 
-                            lector["precioVenta"].ToString(), txtCantidad.Text.ToString(), txtMotivo.Text.ToString()};
-                        dgvDevoluciones.Rows.Add(row);
-                        tran.PorcentajeDes = double.Parse(lector["descuentoPorcentaje"].ToString());
-                        tran.PorcentajeImp = double.Parse(lector["impuestoPorcentaje"].ToString());
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se encontro el producto en la venta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    conexion.CerrarConexion();
-
-                    foreach (DataGridViewRow row in dgvDevoluciones.Rows)
-                    {
-                        tran.Subtotal += double.Parse(row.Cells["columna_precio"].Value.ToString()) * double.Parse(row.Cells["columna_cantidad"].Value.ToString());                        
-                    }
-                    tran.CalculoDescuento();
-                    tran.CalculoImpuesto();
-                    tran.CalculoTotal();
-                    txttotal.Text = tran.TotalDevolucion.ToString();
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("ERROR "+ex);
-                }
-            }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -265,9 +208,9 @@ namespace SiguaSportsApp
                     {
                         conexion.cmd.Parameters.Clear();
 
-                        conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columna_producto"].Value));
-                        conexion.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columna_cantidad"].Value));
-                        conexion.cmd.Parameters.AddWithValue("@motivo", Convert.ToString(row.Cells["columna_motivo"].Value));
+                        conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["Producto"].Value));
+                        conexion.cmd.Parameters.AddWithValue("@cantidad", nud_Cantidad.Value.ToString());
+                        conexion.cmd.Parameters.AddWithValue("@motivo", txtDevolucion.Text.ToString());
                         conexion.AbrirConexion();
                         conexion.cmd.ExecuteNonQuery();
                         conexion.CerrarConexion();
@@ -281,19 +224,23 @@ namespace SiguaSportsApp
                         {
                             conexion.cmd.Parameters.Clear();
 
-                            conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columna_producto"].Value));
-                            conexion.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columna_cantidad"].Value));
+                            conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["Producto"].Value));
+                            conexion.cmd.Parameters.AddWithValue("@cantidad",nud_Cantidad.Value.ToString());
                             conexion.AbrirConexion();
                             conexion.cmd.ExecuteNonQuery();
                             conexion.CerrarConexion();
                         }
-                    }
-
+                    }                   
+                    this.Hide();
+                    FormVentas ven = new FormVentas();
+                    ven.ShowDialog();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult men = MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (men == DialogResult.OK)
+                        return;
                 }
             }
         }
@@ -354,6 +301,32 @@ namespace SiguaSportsApp
             FormIngreso ing = new FormIngreso();
             ing.ShowDialog();
             this.Close();
+        }
+
+        private void dgvDevoluciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txttotal.Text = "";
+            tran.Subtotal = 0.00;
+            int index = dgvDevoluciones.CurrentCell.RowIndex;
+            for (int i = 0; i < dgvDevoluciones.Rows.Count; i++)
+            {
+                if (i != index)
+                    dgvDevoluciones.Rows.RemoveAt(i);
+            }
+
+            letra2 = false;
+            validar();
+            if (letra2)
+            {
+                foreach (DataGridViewRow row in dgvDevoluciones.Rows)
+                {
+                    tran.Subtotal += double.Parse(row.Cells["Precio"].Value.ToString()) * double.Parse(nud_Cantidad.Value.ToString());
+                }
+                tran.CalculoDescuento();
+                tran.CalculoImpuesto();
+                tran.CalculoTotal();
+                txttotal.Text = tran.TotalDevolucion.ToString();
+            }
         }
     }
 }

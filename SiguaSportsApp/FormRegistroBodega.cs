@@ -25,12 +25,11 @@ namespace SiguaSportsApp
             datos.CargarDatosTablas(dgvProveedores, query1);
             datos.CargarDatosCombo(cb_ProveedoresPRB, qCombo);
             datos.CargarDatosCombo(cb_Categoria, qCombo1);
-            dtp_Compra.MaxDate = DateTime.Today;
-      
+            dtp_Compra.MaxDate = DateTime.Today;            
         }
 
         string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', color,  ' ', marca) Descripcion, " +
-            "precioCompra [Precio de Compra], precioVenta [Precio de Venta], c.descripcion Categoria, pr.nombre Proveedor " +
+            "precioCompra [Precio de Compra], precioVenta [Precio de Venta], c.descripcion Categoria, p.existencia Existencia, pr.nombre Proveedor " +
             "FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
             "inner join Categorias c on p.cod_categoria = c.cod_categoria";
         string query1 = "Select cod_proveedor Codigo, nombre Nombre, direccion Direccion, telefono Telefono, correo Correo, " +
@@ -247,20 +246,34 @@ namespace SiguaSportsApp
         {
             //INSERT a tabla de compras y detalles
 
-            //Compra
-            con.cmd = new SqlCommand("INSERT INTO Compras(cod_compra, fecha_compra, descuentoPorcentaje, impuestoPorcentaje, cod_empleado, cod_proveedor) " +
-                "values('" + txtFacturaCompra.Text.ToString() + "','" + dtp_Compra.Value.ToShortDateString() + "','0.00'," +
-                "'0.15','" + con.Cod_empleado + "','" + proveedor + "')", con.sc);
-            try
+            //Verificar Compra
+            con.cmd = new SqlCommand("if exists(SELECT cod_compra FROM Compras where cod_compra = '"+txtFacturaCompra.Text.ToString()+"') begin Select 'Existe' Mensaje End", con.sc);           
+            
+            con.AbrirConexion();
+            SqlDataReader rd = con.cmd.ExecuteReader();
+            if (rd.Read())
             {
-                con.AbrirConexion();
-                con.cmd.ExecuteNonQuery();
-                con.CerrarConexion();
+                string mensaje = rd["Mensaje"].ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("ERROR: " + ex);
+                //Compra
+                con.cmd = new SqlCommand("INSERT INTO Compras(cod_compra, fecha_compra, descuentoPorcentaje, impuestoPorcentaje, cod_empleado, cod_proveedor) " +
+                    "values('" + txtFacturaCompra.Text.ToString() + "','" + dtp_Compra.Value.ToShortDateString() + "','0.00'," +
+                    "'0.15','" + con.Cod_empleado + "','" + proveedor + "')", con.sc);
+                try
+                {
+                    con.AbrirConexion();
+                    con.cmd.ExecuteNonQuery();
+                    con.CerrarConexion();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: " + ex);
+                }
             }
+            con.CerrarConexion();
+           
             //Detalle
             con.cmd = new SqlCommand("INSERT INTO CompraDetalle(cod_compra,cod_producto, cantidad, precioCompra) " +
                 "values('" + txtFacturaCompra.Text.ToString() + "','" + txtcodigoproducto.Text.ToString() + "','" + txtcantidad.Text.ToString() + "','" + txtprecio.Text.ToString() + "')", con.sc);

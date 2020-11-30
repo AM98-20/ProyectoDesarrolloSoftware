@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInventarioBodega));
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -130,7 +130,8 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.txtBuscar, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtBuscar, BunifuAnimatorNS.DecorationType.None);
             this.txtBuscar.Location = new System.Drawing.Point(1210, 97);
@@ -242,8 +243,6 @@
             // 
             // SideBar
             // 
-            this.SideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.SideBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SideBar.BackgroundImage")));
             this.SideBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -257,15 +256,16 @@
             this.SideBar.Controls.Add(this.label1);
             this.expandir_menu.SetDecoration(this.SideBar, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.SideBar, BunifuAnimatorNS.DecorationType.None);
+            this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.SideBar.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.SideBar.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.SideBar.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(11)))));
-            this.SideBar.Location = new System.Drawing.Point(13, 0);
+            this.SideBar.Location = new System.Drawing.Point(0, 0);
             this.SideBar.Margin = new System.Windows.Forms.Padding(4);
             this.SideBar.Name = "SideBar";
             this.SideBar.Quality = 10;
-            this.SideBar.Size = new System.Drawing.Size(272, 720);
+            this.SideBar.Size = new System.Drawing.Size(272, 723);
             this.SideBar.TabIndex = 0;
             // 
             // btn_Devoluciones
@@ -274,7 +274,7 @@
             this.btn_Devoluciones.BackColor = System.Drawing.Color.Transparent;
             this.btn_Devoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Devoluciones.BorderRadius = 0;
-            this.btn_Devoluciones.ButtonText = "            DEVOLUCIONES";
+            this.btn_Devoluciones.ButtonText = "              DEVOLUCIONES";
             this.btn_Devoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contraer_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_Devoluciones, BunifuAnimatorNS.DecorationType.None);
@@ -300,7 +300,7 @@
             this.btn_Devoluciones.selected = false;
             this.btn_Devoluciones.Size = new System.Drawing.Size(299, 52);
             this.btn_Devoluciones.TabIndex = 61;
-            this.btn_Devoluciones.Text = "            DEVOLUCIONES";
+            this.btn_Devoluciones.Text = "              DEVOLUCIONES";
             this.btn_Devoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Devoluciones.Textcolor = System.Drawing.Color.White;
             this.btn_Devoluciones.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,7 +313,7 @@
             this.btn_logueo.BackColor = System.Drawing.Color.Transparent;
             this.btn_logueo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_logueo.BorderRadius = 0;
-            this.btn_logueo.ButtonText = "            CERRAR SESIÓN";
+            this.btn_logueo.ButtonText = "              CERRAR SESIÓN";
             this.btn_logueo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contraer_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_logueo, BunifuAnimatorNS.DecorationType.None);
@@ -330,7 +330,7 @@
             this.btn_logueo.IconVisible = true;
             this.btn_logueo.IconZoom = 85D;
             this.btn_logueo.IsTab = false;
-            this.btn_logueo.Location = new System.Drawing.Point(8, 656);
+            this.btn_logueo.Location = new System.Drawing.Point(8, 659);
             this.btn_logueo.Margin = new System.Windows.Forms.Padding(5);
             this.btn_logueo.Name = "btn_logueo";
             this.btn_logueo.Normalcolor = System.Drawing.Color.Transparent;
@@ -339,7 +339,7 @@
             this.btn_logueo.selected = false;
             this.btn_logueo.Size = new System.Drawing.Size(293, 52);
             this.btn_logueo.TabIndex = 11;
-            this.btn_logueo.Text = "            CERRAR SESIÓN";
+            this.btn_logueo.Text = "              CERRAR SESIÓN";
             this.btn_logueo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_logueo.Textcolor = System.Drawing.Color.White;
             this.btn_logueo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,7 +351,7 @@
             this.btn_reportes.BackColor = System.Drawing.Color.Transparent;
             this.btn_reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_reportes.BorderRadius = 0;
-            this.btn_reportes.ButtonText = "            REPORTES";
+            this.btn_reportes.ButtonText = "              REPORTES";
             this.btn_reportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contraer_menu.SetDecoration(this.btn_reportes, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_reportes, BunifuAnimatorNS.DecorationType.None);
@@ -377,7 +377,7 @@
             this.btn_reportes.selected = false;
             this.btn_reportes.Size = new System.Drawing.Size(309, 52);
             this.btn_reportes.TabIndex = 10;
-            this.btn_reportes.Text = "            REPORTES";
+            this.btn_reportes.Text = "              REPORTES";
             this.btn_reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_reportes.Textcolor = System.Drawing.Color.White;
             this.btn_reportes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -389,7 +389,7 @@
             this.btn_Administracion.BackColor = System.Drawing.Color.Transparent;
             this.btn_Administracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Administracion.BorderRadius = 0;
-            this.btn_Administracion.ButtonText = "           ADMINISTRACIÓN";
+            this.btn_Administracion.ButtonText = "             ADMINISTRACIÓN";
             this.btn_Administracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contraer_menu.SetDecoration(this.btn_Administracion, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_Administracion, BunifuAnimatorNS.DecorationType.None);
@@ -415,7 +415,7 @@
             this.btn_Administracion.selected = false;
             this.btn_Administracion.Size = new System.Drawing.Size(309, 52);
             this.btn_Administracion.TabIndex = 8;
-            this.btn_Administracion.Text = "           ADMINISTRACIÓN";
+            this.btn_Administracion.Text = "             ADMINISTRACIÓN";
             this.btn_Administracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Administracion.Textcolor = System.Drawing.Color.White;
             this.btn_Administracion.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -427,7 +427,7 @@
             this.btn_Registro_bodega.BackColor = System.Drawing.Color.Transparent;
             this.btn_Registro_bodega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Registro_bodega.BorderRadius = 0;
-            this.btn_Registro_bodega.ButtonText = "          REGISTRO";
+            this.btn_Registro_bodega.ButtonText = "             REGISTRO";
             this.btn_Registro_bodega.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contraer_menu.SetDecoration(this.btn_Registro_bodega, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_Registro_bodega, BunifuAnimatorNS.DecorationType.None);
@@ -453,7 +453,7 @@
             this.btn_Registro_bodega.selected = false;
             this.btn_Registro_bodega.Size = new System.Drawing.Size(333, 52);
             this.btn_Registro_bodega.TabIndex = 7;
-            this.btn_Registro_bodega.Text = "          REGISTRO";
+            this.btn_Registro_bodega.Text = "             REGISTRO";
             this.btn_Registro_bodega.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Registro_bodega.Textcolor = System.Drawing.Color.White;
             this.btn_Registro_bodega.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -507,22 +507,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation1;
             // 
             // btn_menu
             // 
@@ -598,7 +598,8 @@
             // 
             // boton_buscar
             // 
-            this.boton_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.boton_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.boton_buscar, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.boton_buscar, BunifuAnimatorNS.DecorationType.None);
             this.boton_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -613,7 +614,8 @@
             // 
             // btn_restaurar_dos
             // 
-            this.btn_restaurar_dos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_restaurar_dos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.contraer_menu.SetDecoration(this.btn_restaurar_dos, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.btn_restaurar_dos, BunifuAnimatorNS.DecorationType.None);
             this.btn_restaurar_dos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -630,22 +632,22 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation2;
             // 
             // radio
             // 

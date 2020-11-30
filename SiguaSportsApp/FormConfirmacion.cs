@@ -61,10 +61,12 @@ namespace SiguaSportsApp
                     if (confirmacion.CodigoPuesto == 1)
                     {
                         tran.CodConf = 2;
+                        this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Acceso no autorizado.", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        this.Hide();
                     }              
                 }
             }

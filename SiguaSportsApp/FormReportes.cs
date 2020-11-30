@@ -22,34 +22,13 @@ namespace SiguaSportsApp
         {
             dtpFecha1.MaxDate = DateTime.Today.AddDays(-1);
             dtpFecha2.MaxDate = DateTime.Today;
+            datos.CargarDatosTablas(dgv_ReporteDiario, query);
         }
         ClassConexionBD con = new ClassConexionBD();
+        ClassDatosTablas datos = new ClassDatosTablas();
 
-        private void bnt_Buscar_Click(object sender, EventArgs e)
-        {
-            //revisar
-            con.da = new SqlDataAdapter("WITH ReporteFinanciero AS (SELECT " +
-                "[Mes]						= MONTH(fecha_Venta)," +
-                "[Ventas Brutas]			= SUM(vd.precioVenta * vd.cantidad), " +
-                "[Ventas Brutas Mes Pasado]	= LAG(SUM(vd.precioVenta * vd.cantidad)) OVER (ORDER BY MONTH(fecha_Venta)) " +
-                "FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura " +
-                "where fecha_Venta between '"+dtpFecha1.Value.ToShortDateString()+"' and '"+dtpFecha2.Value.ToShortDateString()+"' " +
-                "GROUP BY MONTH(fecha_Venta)) " +
-                "SELECT [Mes],[Ventas Brutas],[Ventas Brutas Mes Pasado],[Crecimiento Mensual] = 100.0 * ([Ventas Brutas] - [Ventas Brutas Mes Pasado])/ [Ventas Brutas Mes Pasado]FROM [ReporteFinanciero] " +
-                "ORDER BY [Mes]", con.sc);
-            try
-            {
-                con.AbrirConexion();
-                con.dt = new DataTable();
-                con.da.Fill(con.dt);
-                dgvReporteFinanciero.DataSource = con.dt;
-                con.CerrarConexion();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR: " + ex);
-            }
-        }
+        string query = "SELECT case when v.num_factura is null then 'Total' else v.num_factura end Factura, SUM(vd.cantidad * vd.precioVenta)Total " +
+            "FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura WHERE v.fecha_Venta = GETDATE() GROUP BY v.num_factura WITH ROLLUP ";
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
@@ -133,9 +112,29 @@ namespace SiguaSportsApp
             boton_max.Visible = true;
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void bnt_Buscar_Click(object sender, EventArgs e)
         {
-          
+            con.da = new SqlDataAdapter("WITH ReporteFinanciero AS (SELECT " +
+                "[Mes]						= MONTH(fecha_Venta)," +
+                "[Ventas Brutas]			= SUM(vd.precioVenta * vd.cantidad), " +
+                "[Ventas Brutas Mes Pasado]	= LAG(SUM(vd.precioVenta * vd.cantidad)) OVER (ORDER BY MONTH(fecha_Venta)) " +
+                "FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura " +
+                "where fecha_Venta between '" + dtpFecha1.Value.ToShortDateString() + "' and '" + dtpFecha2.Value.ToShortDateString() + "' " +
+                "GROUP BY MONTH(fecha_Venta)) " +
+                "SELECT [Mes],[Ventas Brutas],[Ventas Brutas Mes Pasado],[Crecimiento Mensual] = 100.0 * ([Ventas Brutas] - [Ventas Brutas Mes Pasado])/ [Ventas Brutas Mes Pasado]FROM [ReporteFinanciero] " +
+                "ORDER BY [Mes]", con.sc);
+            try
+            {
+                con.AbrirConexion();
+                con.dt = new DataTable();
+                con.da.Fill(con.dt);
+                dgvReporteFinanciero.DataSource = con.dt;
+                con.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex);
+            }
         }
-    }
-}
+    }//Form
+}//Class

@@ -26,7 +26,7 @@ namespace SiguaSportsApp
             }
             catch (Exception error)
             {
-                MessageBox.Show("No se pudieron cargar los datos: " + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudieron cargar los datos: " + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
             }
         }
 

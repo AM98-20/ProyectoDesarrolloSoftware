@@ -19,7 +19,7 @@ namespace SiguaSportsApp
             InitializeComponent();
         }
         string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', precioVenta, ' ', precioCompra, ' ', color,  ' ', marca) Descripcion, " +
-                "c.descripcion Categoria, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
+                "c.descripcion Categoria, p.existencia Existencia, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
                 "inner join Categorias c on p.cod_categoria = c.cod_categoria";
         private void FormInventarioBodega_Load(object sender, EventArgs e)
         {

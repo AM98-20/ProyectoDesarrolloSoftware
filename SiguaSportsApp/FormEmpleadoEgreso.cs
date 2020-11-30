@@ -139,5 +139,25 @@ namespace SiguaSportsApp
             btn_restaurar.Visible = false;
             btn_maximizar.Visible = true;
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (SideBar.Width == 204)
+            {
+                SideBar.Visible = false;
+                SideBar.Width = 52;
+                contenedor_menu.Width = 82;
+                linea_sidebar.Width = 48;
+                contraer_menu.Show(SideBar);
+            }
+            else
+            {
+                SideBar.Visible = false;
+                SideBar.Width = 204;
+                contenedor_menu.Width = 222;
+                linea_sidebar.Width = 198;
+                expandir_menu.Show(SideBar);
+            }
+        }
     }
 }
