@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportes));
             BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportes));
             BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,20 +55,22 @@
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.boton_restaurar = new System.Windows.Forms.PictureBox();
-            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tc_Reportes = new System.Windows.Forms.TabControl();
-            this.tp_Mensual = new System.Windows.Forms.TabPage();
             this.tp_Diario = new System.Windows.Forms.TabPage();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.dgv_ReporteDiario = new System.Windows.Forms.DataGridView();
+            this.tp_Mensual = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.dgvReporteFinanciero = new System.Windows.Forms.DataGridView();
             this.bnt_Buscar = new System.Windows.Forms.Button();
             this.dtpFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_ReporteDiario = new System.Windows.Forms.DataGridView();
-            this.lbl_Titulo = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.dgv_ReporteDevoluciones = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boton_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_min)).BeginInit();
@@ -84,10 +86,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_restaurar)).BeginInit();
             this.tc_Reportes.SuspendLayout();
-            this.tp_Mensual.SuspendLayout();
             this.tp_Diario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReporteFinanciero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDiario)).BeginInit();
+            this.tp_Mensual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporteFinanciero)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDevoluciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegresar
@@ -508,32 +511,6 @@
             this.boton_restaurar.TabStop = false;
             this.boton_restaurar.Click += new System.EventHandler(this.boton_restaurar_Click);
             // 
-            // expandir_menu
-            // 
-            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.expandir_menu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation4;
-            // 
-            // radio
-            // 
-            this.radio.ElipseRadius = 5;
-            this.radio.TargetControl = this.SideBar;
-            // 
             // tc_Reportes
             // 
             this.tc_Reportes.Controls.Add(this.tp_Diario);
@@ -546,6 +523,55 @@
             this.tc_Reportes.SelectedIndex = 0;
             this.tc_Reportes.Size = new System.Drawing.Size(1291, 723);
             this.tc_Reportes.TabIndex = 53;
+            // 
+            // tp_Diario
+            // 
+            this.tp_Diario.Controls.Add(this.textBox1);
+            this.tp_Diario.Controls.Add(this.dgv_ReporteDevoluciones);
+            this.tp_Diario.Controls.Add(this.lbl_Titulo);
+            this.tp_Diario.Controls.Add(this.dgv_ReporteDiario);
+            this.expandir_menu.SetDecoration(this.tp_Diario, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.tp_Diario, BunifuAnimatorNS.DecorationType.None);
+            this.tp_Diario.Location = new System.Drawing.Point(4, 25);
+            this.tp_Diario.Name = "tp_Diario";
+            this.tp_Diario.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_Diario.Size = new System.Drawing.Size(1283, 694);
+            this.tp_Diario.TabIndex = 1;
+            this.tp_Diario.Text = "Reporte Diario";
+            this.tp_Diario.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Titulo
+            // 
+            this.lbl_Titulo.AutoSize = true;
+            this.contraer_menu.SetDecoration(this.lbl_Titulo, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.lbl_Titulo, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_Titulo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Titulo.Location = new System.Drawing.Point(47, 24);
+            this.lbl_Titulo.Name = "lbl_Titulo";
+            this.lbl_Titulo.Size = new System.Drawing.Size(169, 24);
+            this.lbl_Titulo.TabIndex = 47;
+            this.lbl_Titulo.Text = "Reporte Diario";
+            // 
+            // dgv_ReporteDiario
+            // 
+            this.dgv_ReporteDiario.AllowUserToAddRows = false;
+            this.dgv_ReporteDiario.AllowUserToDeleteRows = false;
+            this.dgv_ReporteDiario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_ReporteDiario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ReporteDiario.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_ReporteDiario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.expandir_menu.SetDecoration(this.dgv_ReporteDiario, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.dgv_ReporteDiario, BunifuAnimatorNS.DecorationType.None);
+            this.dgv_ReporteDiario.Enabled = false;
+            this.dgv_ReporteDiario.Location = new System.Drawing.Point(4, 92);
+            this.dgv_ReporteDiario.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_ReporteDiario.Name = "dgv_ReporteDiario";
+            this.dgv_ReporteDiario.RowHeadersVisible = false;
+            this.dgv_ReporteDiario.RowHeadersWidth = 51;
+            this.dgv_ReporteDiario.Size = new System.Drawing.Size(1276, 593);
+            this.dgv_ReporteDiario.TabIndex = 46;
             // 
             // tp_Mensual
             // 
@@ -566,19 +592,17 @@
             this.tp_Mensual.Text = "Reporte Mensual";
             this.tp_Mensual.UseVisualStyleBackColor = true;
             // 
-            // tp_Diario
+            // label6
             // 
-            this.tp_Diario.Controls.Add(this.lbl_Titulo);
-            this.tp_Diario.Controls.Add(this.dgv_ReporteDiario);
-            this.expandir_menu.SetDecoration(this.tp_Diario, BunifuAnimatorNS.DecorationType.None);
-            this.contraer_menu.SetDecoration(this.tp_Diario, BunifuAnimatorNS.DecorationType.None);
-            this.tp_Diario.Location = new System.Drawing.Point(4, 25);
-            this.tp_Diario.Name = "tp_Diario";
-            this.tp_Diario.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Diario.Size = new System.Drawing.Size(1283, 694);
-            this.tp_Diario.TabIndex = 1;
-            this.tp_Diario.Text = "Reporte Diario";
-            this.tp_Diario.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.contraer_menu.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(38, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(196, 24);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Reporte Mensual";
             // 
             // dgvReporteFinanciero
             // 
@@ -667,51 +691,61 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Desde:";
             // 
-            // dgv_ReporteDiario
+            // expandir_menu
             // 
-            this.dgv_ReporteDiario.AllowUserToAddRows = false;
-            this.dgv_ReporteDiario.AllowUserToDeleteRows = false;
-            this.dgv_ReporteDiario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.expandir_menu.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation4;
+            // 
+            // radio
+            // 
+            this.radio.ElipseRadius = 5;
+            this.radio.TargetControl = this.SideBar;
+            // 
+            // dgv_ReporteDevoluciones
+            // 
+            this.dgv_ReporteDevoluciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_ReporteDiario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_ReporteDiario.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_ReporteDiario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.expandir_menu.SetDecoration(this.dgv_ReporteDiario, BunifuAnimatorNS.DecorationType.None);
-            this.contraer_menu.SetDecoration(this.dgv_ReporteDiario, BunifuAnimatorNS.DecorationType.None);
-            this.dgv_ReporteDiario.Enabled = false;
-            this.dgv_ReporteDiario.Location = new System.Drawing.Point(4, 52);
-            this.dgv_ReporteDiario.Margin = new System.Windows.Forms.Padding(4);
-            this.dgv_ReporteDiario.Name = "dgv_ReporteDiario";
-            this.dgv_ReporteDiario.ReadOnly = true;
-            this.dgv_ReporteDiario.RowHeadersVisible = false;
-            this.dgv_ReporteDiario.RowHeadersWidth = 51;
-            this.dgv_ReporteDiario.Size = new System.Drawing.Size(1276, 633);
-            this.dgv_ReporteDiario.TabIndex = 46;
+            this.dgv_ReporteDevoluciones.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_ReporteDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.expandir_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.dgv_ReporteDevoluciones.Enabled = false;
+            this.dgv_ReporteDevoluciones.Location = new System.Drawing.Point(1040, 6);
+            this.dgv_ReporteDevoluciones.Name = "dgv_ReporteDevoluciones";
+            this.dgv_ReporteDevoluciones.RowHeadersVisible = false;
+            this.dgv_ReporteDevoluciones.RowHeadersWidth = 51;
+            this.dgv_ReporteDevoluciones.RowTemplate.Height = 24;
+            this.dgv_ReporteDevoluciones.Size = new System.Drawing.Size(240, 82);
+            this.dgv_ReporteDevoluciones.TabIndex = 48;
             // 
-            // lbl_Titulo
+            // textBox1
             // 
-            this.lbl_Titulo.AutoSize = true;
-            this.contraer_menu.SetDecoration(this.lbl_Titulo, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.lbl_Titulo, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_Titulo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(33, 19);
-            this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(169, 24);
-            this.lbl_Titulo.TabIndex = 47;
-            this.lbl_Titulo.Text = "Reporte Diario";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.contraer_menu.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 24);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Reporte Mensual";
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contraer_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(889, 18);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(145, 67);
+            this.textBox1.TabIndex = 49;
+            this.textBox1.Text = "Reporte devoluciones y cambios";
             // 
             // FormReportes
             // 
@@ -756,12 +790,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_restaurar)).EndInit();
             this.tc_Reportes.ResumeLayout(false);
-            this.tp_Mensual.ResumeLayout(false);
-            this.tp_Mensual.PerformLayout();
             this.tp_Diario.ResumeLayout(false);
             this.tp_Diario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReporteFinanciero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDiario)).EndInit();
+            this.tp_Mensual.ResumeLayout(false);
+            this.tp_Mensual.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporteFinanciero)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDevoluciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -805,5 +840,7 @@
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.DataGridView dgv_ReporteDiario;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgv_ReporteDevoluciones;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

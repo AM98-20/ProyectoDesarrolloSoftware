@@ -58,26 +58,6 @@ namespace SiguaSportsApp
             tabla.CargarDatosTablas(dgvEgreso, query);
         }
 
-        private void btn_menu_Click(object sender, EventArgs e)
-        {
-            if (SideBar.Width == 204)
-            {
-                SideBar.Visible = false;
-                SideBar.Width = 52;
-                contenedor_menu.Width = 82;
-                linea_sidebar.Width = 48;
-                contraer_menu.Show(SideBar);
-            }
-            else
-            {
-                SideBar.Visible = false;
-                SideBar.Width = 204;
-                contenedor_menu.Width = 222;
-                linea_sidebar.Width = 198;
-                expandir_menu.Show(SideBar);
-            }
-        }
-
         private void btn_Administracion_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -140,7 +120,7 @@ namespace SiguaSportsApp
             btn_maximizar.Visible = true;
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void btn_menu_Click_1(object sender, EventArgs e)
         {
             if (SideBar.Width == 204)
             {

@@ -47,28 +47,25 @@
             this.linea_sidebar = new Bunifu.Framework.UI.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_menu = new System.Windows.Forms.PictureBox();
             this.contraer_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel9 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.boton_min = new System.Windows.Forms.PictureBox();
             this.boton_salir = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_menu = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEgreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             this.panel9.SuspendLayout();
@@ -76,7 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEgreso
@@ -430,20 +427,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_menu
-            // 
-            this.contraer_menu.SetDecoration(this.btn_menu, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.btn_menu, BunifuAnimatorNS.DecorationType.None);
-            this.btn_menu.Image = global::SiguaSportsApp.Properties.Resources.menu;
-            this.btn_menu.Location = new System.Drawing.Point(31, 14);
-            this.btn_menu.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(40, 37);
-            this.btn_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_menu.TabIndex = 27;
-            this.btn_menu.TabStop = false;
-            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
-            // 
             // contraer_menu
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
@@ -464,19 +447,6 @@
             animation3.TimeCoeff = 0F;
             animation3.TransparencyCoeff = 0F;
             this.contraer_menu.DefaultAnimation = animation3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.contraer_menu.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(79, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 29);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "MENÚ";
             // 
             // btn_restaurar
             // 
@@ -521,36 +491,10 @@
             this.label5.TabIndex = 35;
             this.label5.Text = "Empleado Egreso";
             // 
-            // expandir_menu
-            // 
-            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.expandir_menu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation4;
-            // 
-            // radio
-            // 
-            this.radio.ElipseRadius = 5;
-            this.radio.TargetControl = this.SideBar;
-            // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.label3);
-            this.panel9.Controls.Add(this.pictureBox4);
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Controls.Add(this.btn_menu);
             this.panel9.Controls.Add(this.label4);
             this.panel9.Controls.Add(this.boton_min);
             this.panel9.Controls.Add(this.boton_salir);
@@ -635,32 +579,58 @@
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
-            // label3
+            // expandir_menu
             // 
-            this.label3.AutoSize = true;
-            this.contraer_menu.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(71, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 29);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "MENÚ";
+            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.expandir_menu.Cursor = null;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation4;
             // 
-            // pictureBox4
+            // radio
             // 
-            this.contraer_menu.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox4.Image = global::SiguaSportsApp.Properties.Resources.menu;
-            this.pictureBox4.Location = new System.Drawing.Point(23, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 36;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.radio.ElipseRadius = 5;
+            this.radio.TargetControl = this.SideBar;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.contraer_menu.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(74, 19);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 29);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "MENÚ";
+            // 
+            // btn_menu
+            // 
+            this.contraer_menu.SetDecoration(this.btn_menu, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.btn_menu, BunifuAnimatorNS.DecorationType.None);
+            this.btn_menu.Image = global::SiguaSportsApp.Properties.Resources.menu;
+            this.btn_menu.Location = new System.Drawing.Point(26, 15);
+            this.btn_menu.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Size = new System.Drawing.Size(40, 37);
+            this.btn_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_menu.TabIndex = 36;
+            this.btn_menu.TabStop = false;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click_1);
             // 
             // FormEmpleadoEgreso
             // 
@@ -669,18 +639,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1565, 788);
             this.Controls.Add(this.panel9);
-            this.Controls.Add(this.SideBar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_maximizar);
             this.Controls.Add(this.btn_restaurar);
             this.Controls.Add(this.btn_minimizar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_menu);
-            this.Controls.Add(this.contenedor_menu);
             this.Controls.Add(this.dgvEgreso);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.SideBar);
+            this.Controls.Add(this.contenedor_menu);
             this.expandir_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -696,7 +664,6 @@
             this.SideBar.ResumeLayout(false);
             this.SideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             this.panel9.ResumeLayout(false);
@@ -705,7 +672,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -725,13 +692,11 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_Registro_bodega;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Administracion;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Inventario_bodega;
-        private System.Windows.Forms.PictureBox btn_menu;
         private BunifuAnimatorNS.BunifuTransition expandir_menu;
         private BunifuAnimatorNS.BunifuTransition contraer_menu;
         private Bunifu.Framework.UI.BunifuElipse radio;
         private System.Windows.Forms.PictureBox btn_maximizar;
         private System.Windows.Forms.PictureBox btn_salir;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btn_minimizar;
         private System.Windows.Forms.PictureBox btn_restaurar;
         private System.Windows.Forms.Label label5;
@@ -741,7 +706,7 @@
         private System.Windows.Forms.PictureBox boton_salir;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox btn_menu;
     }
 }

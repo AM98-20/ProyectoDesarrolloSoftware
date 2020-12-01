@@ -23,12 +23,15 @@ namespace SiguaSportsApp
             dtpFecha1.MaxDate = DateTime.Today.AddDays(-1);
             dtpFecha2.MaxDate = DateTime.Today;
             datos.CargarDatosTablas(dgv_ReporteDiario, query);
+            datos.CargarDatosTablas(dgv_ReporteDevoluciones, devolucion);
         }
         ClassConexionBD con = new ClassConexionBD();
         ClassDatosTablas datos = new ClassDatosTablas();
 
         string query = "SELECT case when v.num_factura is null then 'Total' else v.num_factura end Factura, SUM(vd.cantidad * vd.precioVenta)Total " +
             "FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura WHERE v.fecha_Venta = GETDATE() GROUP BY v.num_factura WITH ROLLUP ";
+        string devolucion = "SELECT Case when dd.cod_estado = '1' then 'Devolucion' else 'Cambio' end Estado, COUNT(*) Cantidad FROM Devoluciones d " +
+            "inner join DevolucionDetalle dd on d.num_devolucion = dd.num_devolucion where fecha_devolucion = GETDATE() group by dd.cod_estado order by Estado ";
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
