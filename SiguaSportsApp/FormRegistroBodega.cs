@@ -20,7 +20,6 @@ namespace SiguaSportsApp
         private void FormRegistroBodega_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'siguaSportsDataSet.Proveedores' table. You can move, or remove it, as needed.
-            this.proveedoresTableAdapter.Fill(this.siguaSportsDataSet.Proveedores);
             datos.CargarDatosTablas(dgvProductos, query);
             datos.CargarDatosTablas(dgvProveedores, query1);
             datos.CargarDatosCombo(cb_ProveedoresPRB, qCombo);

@@ -22,6 +22,7 @@ namespace SiguaSportsApp
         {
             txtfactura.Text = con.FacturaVenta();
             txtvendedor.Text = con.Nombre_empleado;
+            datos.NumFactura = txtfactura.Text.ToString();
         }
 
         ClassDatosTablas datosTablas = new ClassDatosTablas();

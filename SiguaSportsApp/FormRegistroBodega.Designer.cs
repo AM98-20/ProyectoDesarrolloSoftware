@@ -31,8 +31,8 @@ namespace SiguaSportsApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistroBodega));
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -100,13 +100,9 @@ namespace SiguaSportsApp
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblcantidad = new System.Windows.Forms.Label();
             this.tcRegistro = new System.Windows.Forms.TabControl();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siguaSportsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siguaSportsDataSet = new SiguaSportsApp.SiguaSportsDataSet();
-            this.proveedoresTableAdapter = new SiguaSportsApp.SiguaSportsDataSetTableAdapters.ProveedoresTableAdapter();
-            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
@@ -123,9 +119,6 @@ namespace SiguaSportsApp
             this.tpProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.tcRegistro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siguaSportsDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siguaSportsDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // ErrorProvider
@@ -460,22 +453,22 @@ namespace SiguaSportsApp
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation2;
             // 
             // btn_menu
             // 
@@ -1206,41 +1199,6 @@ namespace SiguaSportsApp
             this.tcRegistro.Size = new System.Drawing.Size(1320, 706);
             this.tcRegistro.TabIndex = 22;
             // 
-            // expandir_menu
-            // 
-            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.expandir_menu.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation3;
-            // 
-            // radio
-            // 
-            this.radio.ElipseRadius = 5;
-            this.radio.TargetControl = this;
-            // 
-            // siguaSportsDataSet
-            // 
-            this.siguaSportsDataSet.DataSetName = "SiguaSportsDataSet";
-            this.siguaSportsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proveedoresTableAdapter
-            // 
-            this.proveedoresTableAdapter.ClearBeforeFill = true;
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1252,6 +1210,32 @@ namespace SiguaSportsApp
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1331, 21);
             this.panel3.TabIndex = 29;
+            // 
+            // expandir_menu
+            // 
+            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.expandir_menu.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation1;
+            // 
+            // radio
+            // 
+            this.radio.ElipseRadius = 5;
+            this.radio.TargetControl = this;
             // 
             // FormRegistroBodega
             // 
@@ -1294,9 +1278,6 @@ namespace SiguaSportsApp
             this.tpProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.tcRegistro.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siguaSportsDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siguaSportsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1325,10 +1306,6 @@ namespace SiguaSportsApp
         private Bunifu.Framework.UI.BunifuFlatButton btn_Administracion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource proveedoresBindingSource;
-        private System.Windows.Forms.BindingSource siguaSportsDataSetBindingSource;
-        private SiguaSportsDataSet siguaSportsDataSet;
-        private SiguaSportsDataSetTableAdapters.ProveedoresTableAdapter proveedoresTableAdapter;
         private System.Windows.Forms.TabControl tcRegistro;
         private System.Windows.Forms.TabPage tpProductos;
         private System.Windows.Forms.ComboBox cb_ProveedoresPRB;

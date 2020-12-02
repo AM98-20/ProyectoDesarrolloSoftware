@@ -44,6 +44,7 @@
             this.btn_salir = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -56,9 +57,10 @@
             // 
             this.chkMostrar.AutoSize = true;
             this.chkMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMostrar.Location = new System.Drawing.Point(112, 315);
+            this.chkMostrar.Location = new System.Drawing.Point(149, 388);
+            this.chkMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkMostrar.Name = "chkMostrar";
-            this.chkMostrar.Size = new System.Drawing.Size(74, 21);
+            this.chkMostrar.Size = new System.Drawing.Size(89, 24);
             this.chkMostrar.TabIndex = 27;
             this.chkMostrar.TabStop = false;
             this.chkMostrar.Text = "Mostrar";
@@ -72,9 +74,10 @@
             this.btningresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btningresar.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btningresar.ForeColor = System.Drawing.Color.Black;
-            this.btningresar.Location = new System.Drawing.Point(112, 350);
+            this.btningresar.Location = new System.Drawing.Point(149, 431);
+            this.btningresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btningresar.Name = "btningresar";
-            this.btningresar.Size = new System.Drawing.Size(75, 23);
+            this.btningresar.Size = new System.Drawing.Size(100, 28);
             this.btningresar.TabIndex = 3;
             this.btningresar.Text = "Ingresar";
             this.btningresar.UseVisualStyleBackColor = false;
@@ -85,9 +88,10 @@
             this.lblContrasenaOlvidada.AutoSize = true;
             this.lblContrasenaOlvidada.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasenaOlvidada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.lblContrasenaOlvidada.Location = new System.Drawing.Point(40, 410);
+            this.lblContrasenaOlvidada.Location = new System.Drawing.Point(53, 505);
+            this.lblContrasenaOlvidada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContrasenaOlvidada.Name = "lblContrasenaOlvidada";
-            this.lblContrasenaOlvidada.Size = new System.Drawing.Size(203, 16);
+            this.lblContrasenaOlvidada.Size = new System.Drawing.Size(260, 20);
             this.lblContrasenaOlvidada.TabIndex = 25;
             this.lblContrasenaOlvidada.Text = "¿Olvidó su contraseña? Presione aquí";
             this.lblContrasenaOlvidada.Click += new System.EventHandler(this.lblContrasenaOlvidada_Click_1);
@@ -97,18 +101,20 @@
             this.txtcontraseñalogin.AccessibleDescription = "Ingrese su contraseña";
             this.txtcontraseñalogin.AccessibleName = "Password";
             this.txtcontraseñalogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcontraseñalogin.Location = new System.Drawing.Point(73, 288);
+            this.txtcontraseñalogin.Location = new System.Drawing.Point(97, 354);
+            this.txtcontraseñalogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcontraseñalogin.Name = "txtcontraseñalogin";
-            this.txtcontraseñalogin.Size = new System.Drawing.Size(153, 13);
+            this.txtcontraseñalogin.Size = new System.Drawing.Size(204, 15);
             this.txtcontraseñalogin.TabIndex = 2;
             this.txtcontraseñalogin.TextChanged += new System.EventHandler(this.txtcontraseñalogin_TextChanged_1);
             // 
             // txtUsuario
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Location = new System.Drawing.Point(73, 198);
+            this.txtUsuario.Location = new System.Drawing.Point(97, 244);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(153, 13);
+            this.txtUsuario.Size = new System.Drawing.Size(204, 15);
             this.txtUsuario.TabIndex = 1;
             // 
             // ErrorProvider
@@ -118,18 +124,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.panel1.Location = new System.Drawing.Point(37, 216);
+            this.panel1.Location = new System.Drawing.Point(49, 266);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 1);
+            this.panel1.Size = new System.Drawing.Size(319, 1);
             this.panel1.TabIndex = 29;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SiguaSportsApp.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(37, 278);
+            this.pictureBox3.Location = new System.Drawing.Point(49, 342);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 31;
             this.pictureBox3.TabStop = false;
@@ -138,9 +146,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::SiguaSportsApp.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 187);
+            this.pictureBox2.Location = new System.Drawing.Point(49, 230);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
@@ -158,9 +167,10 @@
             this.TOP.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.TOP.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(11)))));
             this.TOP.Location = new System.Drawing.Point(0, 0);
+            this.TOP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TOP.Name = "TOP";
             this.TOP.Quality = 10;
-            this.TOP.Size = new System.Drawing.Size(320, 33);
+            this.TOP.Size = new System.Drawing.Size(427, 41);
             this.TOP.TabIndex = 28;
             // 
             // label1
@@ -169,9 +179,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 7);
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(73, 25);
             this.label1.TabIndex = 30;
             this.label1.Text = "LOGIN";
             // 
@@ -179,9 +190,10 @@
             // 
             this.btn_salir.BackColor = System.Drawing.Color.Transparent;
             this.btn_salir.Image = global::SiguaSportsApp.Properties.Resources.close;
-            this.btn_salir.Location = new System.Drawing.Point(287, 0);
+            this.btn_salir.Location = new System.Drawing.Point(383, 0);
+            this.btn_salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(30, 30);
+            this.btn_salir.Size = new System.Drawing.Size(40, 37);
             this.btn_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_salir.TabIndex = 29;
             this.btn_salir.TabStop = false;
@@ -190,27 +202,46 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.panel2.Location = new System.Drawing.Point(37, 308);
+            this.panel2.Location = new System.Drawing.Point(49, 379);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 1);
+            this.panel2.Size = new System.Drawing.Size(319, 1);
             this.panel2.TabIndex = 32;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SiguaSportsApp.Properties.Resources._869bc446_c29f_4183_8a33_8393fdb17213;
-            this.pictureBox1.Location = new System.Drawing.Point(73, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(97, 48);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 170);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(13, 431);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Ingresar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormIngreso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(320, 490);
+            this.ClientSize = new System.Drawing.Size(427, 603);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
@@ -224,7 +255,7 @@
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormIngreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormIngreso_Load);
@@ -255,6 +286,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
