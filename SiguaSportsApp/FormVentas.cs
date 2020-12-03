@@ -23,6 +23,8 @@ namespace SiguaSportsApp
             txtfactura.Text = con.FacturaVenta();
             txtvendedor.Text = con.Nombre_empleado;
             datos.NumFactura = txtfactura.Text.ToString();
+            datos.FechaTransaccion = dtp_FechaVenta.Value.ToShortDateString();
+            datos.IdVendedor = datos.Cod_empleado;
         }
 
         ClassDatosTablas datosTablas = new ClassDatosTablas();
@@ -114,6 +116,8 @@ namespace SiguaSportsApp
                     txtDescuento.Text = datos.Descuento.ToString();
                     txtImpuesto.Text = datos.Impuesto.ToString();
                     txttotal.Text = datos.Total.ToString();
+                    txtcodigoproducto.Text = "";
+                    txtcantidad.Text = "";
                 }
                 else
                 {
@@ -123,10 +127,7 @@ namespace SiguaSportsApp
             else
             {
                 MessageBox.Show(""+nMensaje+" el producto en inventario.", "Producto Inexistente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            txtcodigoproducto.Text = "";
-            txtcantidad.Text = "";
+            }            
         }
 
         private void btn_maximizar_Click(object sender, EventArgs e)
@@ -200,10 +201,10 @@ namespace SiguaSportsApp
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
-        {
+        {            
             DialogResult result = MessageBox.Show("Desea finalizar la compra?", "Finalizar Compra", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result== DialogResult.Yes)
-            {
+            {               
                 try
                 {
                     con.cmd = new SqlCommand("INSERT INTO Ventas(num_factura, cod_empleado, descuentoPorcentaje, impuestoPorcentaje, fecha_Venta) " +
@@ -256,18 +257,20 @@ namespace SiguaSportsApp
                     {
                     MessageBox.Show("ERROR " + ex, "ERROR");
                     }
-                }                
-                txtcodigoproducto.Text = "";
-                txtcantidad.Text = "";
-                dgvventas.Rows.Clear();
+                }
+
+                FromWindow reporte = new FromWindow();
+                reporte.ShowDialog();
+                
                 FormVentas ven = new FormVentas();
                 ven.ShowDialog();
             }
             else
-            {
+            {                
                 txtcantidad.Text = "";
                 txtcodigoproducto.Text = "";
                 dgvventas.Rows.Clear();
+                return;
             }
         }
 

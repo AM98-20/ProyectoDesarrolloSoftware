@@ -135,11 +135,5 @@ namespace SiguaSportsApp
         {
             Application.Exit();
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            FromWindow win = new FromWindow();
-            win.ShowDialog();
-        }
     }
 }

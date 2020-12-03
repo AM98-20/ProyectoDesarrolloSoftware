@@ -9,14 +9,14 @@ namespace SiguaSportsApp
 {
     class ClassDatosTransaccion : ClassConexionBD
     {
-        private static double subtotal;
-        private static double descuento;
-        private static double impuesto;
-        private static double total;
+        private static double subtotal = 0;
+        private static double descuento = 0;
+        private static double impuesto = 0;
+        private static double total = 0;
         private static double totalDevolucion;
-        private static string fechaTransaccion;
-        private static string numFactura;
-        private static string idVendedor;
+        private static string fechaTransaccion = DateTime.Today.ToShortDateString();
+        private static string numFactura = "000-001-01-0000012";
+        private static string idVendedor  = "DBADMIN";
 
         private static string codigo;
         private static string descripcion;

@@ -60,7 +60,6 @@ namespace SiguaSportsApp
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.boton_salir = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
@@ -79,7 +78,6 @@ namespace SiguaSportsApp
             this.btn_menu = new System.Windows.Forms.PictureBox();
             this.btn_salir = new System.Windows.Forms.PictureBox();
             this.btn_AgregarProd = new System.Windows.Forms.Button();
-            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtp_FechaVenta = new System.Windows.Forms.DateTimePicker();
             this.lblfecha = new System.Windows.Forms.Label();
@@ -87,11 +85,12 @@ namespace SiguaSportsApp
             this.lblvendedor = new System.Windows.Forms.Label();
             this.txtfactura = new System.Windows.Forms.TextBox();
             this.lblfactura = new System.Windows.Forms.Label();
+            this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.boton_salir = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
@@ -101,6 +100,7 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).BeginInit();
             this.SuspendLayout();
             // 
             // lbltotal
@@ -453,21 +453,6 @@ namespace SiguaSportsApp
             this.label6.Size = new System.Drawing.Size(86, 29);
             this.label6.TabIndex = 39;
             this.label6.Text = "Ventas";
-            // 
-            // boton_salir
-            // 
-            this.boton_salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.contraer_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
-            this.boton_salir.Image = global::SiguaSportsApp.Properties.Resources.close;
-            this.boton_salir.Location = new System.Drawing.Point(1474, 14);
-            this.boton_salir.Margin = new System.Windows.Forms.Padding(4);
-            this.boton_salir.Name = "boton_salir";
-            this.boton_salir.Size = new System.Drawing.Size(40, 37);
-            this.boton_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.boton_salir.TabIndex = 41;
-            this.boton_salir.TabStop = false;
-            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
             // 
             // btn_minimizar
             // 
@@ -830,27 +815,6 @@ namespace SiguaSportsApp
             this.btn_AgregarProd.UseVisualStyleBackColor = false;
             this.btn_AgregarProd.Click += new System.EventHandler(this.btn_AgregarProd_Click);
             // 
-            // expandir_menu
-            // 
-            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.expandir_menu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation1;
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -953,6 +917,42 @@ namespace SiguaSportsApp
             this.lblfactura.TabIndex = 2;
             this.lblfactura.Text = "Factura";
             // 
+            // expandir_menu
+            // 
+            this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.expandir_menu.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation1;
+            // 
+            // boton_salir
+            // 
+            this.boton_salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.contraer_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
+            this.boton_salir.Image = global::SiguaSportsApp.Properties.Resources.close;
+            this.boton_salir.Location = new System.Drawing.Point(1474, 14);
+            this.boton_salir.Margin = new System.Windows.Forms.Padding(4);
+            this.boton_salir.Name = "boton_salir";
+            this.boton_salir.Size = new System.Drawing.Size(40, 37);
+            this.boton_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.boton_salir.TabIndex = 41;
+            this.boton_salir.TabStop = false;
+            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
+            // 
             // FormVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -990,7 +990,6 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
@@ -1002,6 +1001,7 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1047,7 +1047,6 @@ namespace SiguaSportsApp
         private System.Windows.Forms.Button btn_AgregarProd;
         private System.Windows.Forms.PictureBox btn_restaurar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_logueo;
-        private System.Windows.Forms.PictureBox boton_salir;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn columna_precio;
@@ -1061,5 +1060,6 @@ namespace SiguaSportsApp
         private System.Windows.Forms.Label lblvendedor;
         private System.Windows.Forms.TextBox txtfactura;
         private System.Windows.Forms.Label lblfactura;
+        private System.Windows.Forms.PictureBox boton_salir;
     }
 }
