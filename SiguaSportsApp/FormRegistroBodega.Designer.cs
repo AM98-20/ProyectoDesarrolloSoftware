@@ -931,6 +931,7 @@ namespace SiguaSportsApp
             this.txtFacturaCompra.Name = "txtFacturaCompra";
             this.txtFacturaCompra.Size = new System.Drawing.Size(80, 22);
             this.txtFacturaCompra.TabIndex = 10;
+            this.txtFacturaCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // txtColor
             // 
@@ -960,6 +961,7 @@ namespace SiguaSportsApp
             this.txtPrecioVenta.Size = new System.Drawing.Size(72, 22);
             this.txtPrecioVenta.TabIndex = 8;
             this.txtPrecioVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // txtmarca
             // 
@@ -999,6 +1001,7 @@ namespace SiguaSportsApp
             this.txtprecio.Size = new System.Drawing.Size(72, 22);
             this.txtprecio.TabIndex = 7;
             this.txtprecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // txtnombre
             // 
@@ -1026,6 +1029,7 @@ namespace SiguaSportsApp
             this.txtcantidad.Size = new System.Drawing.Size(35, 22);
             this.txtcantidad.TabIndex = 5;
             this.txtcantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // lblFactura
             // 

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportes));
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@
             this.boton_restaurar = new System.Windows.Forms.PictureBox();
             this.tc_Reportes = new System.Windows.Forms.TabControl();
             this.tp_Diario = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgv_ReporteDevoluciones = new System.Windows.Forms.DataGridView();
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.dgv_ReporteDiario = new System.Windows.Forms.DataGridView();
             this.tp_Mensual = new System.Windows.Forms.TabPage();
@@ -69,8 +71,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.radio = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.dgv_ReporteDevoluciones = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boton_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boton_min)).BeginInit();
@@ -87,10 +87,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.boton_restaurar)).BeginInit();
             this.tc_Reportes.SuspendLayout();
             this.tp_Diario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDevoluciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDiario)).BeginInit();
             this.tp_Mensual.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteFinanciero)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDevoluciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegresar
@@ -396,22 +396,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation1;
             // 
             // btn_menu
             // 
@@ -539,6 +539,36 @@
             this.tp_Diario.TabIndex = 1;
             this.tp_Diario.Text = "Reporte Diario";
             this.tp_Diario.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contraer_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(841, 18);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(145, 67);
+            this.textBox1.TabIndex = 49;
+            this.textBox1.Text = "Reporte devoluciones y cambios";
+            // 
+            // dgv_ReporteDevoluciones
+            // 
+            this.dgv_ReporteDevoluciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_ReporteDevoluciones.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_ReporteDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.expandir_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.contraer_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
+            this.dgv_ReporteDevoluciones.Enabled = false;
+            this.dgv_ReporteDevoluciones.Location = new System.Drawing.Point(1040, 6);
+            this.dgv_ReporteDevoluciones.Name = "dgv_ReporteDevoluciones";
+            this.dgv_ReporteDevoluciones.RowHeadersVisible = false;
+            this.dgv_ReporteDevoluciones.RowHeadersWidth = 51;
+            this.dgv_ReporteDevoluciones.RowTemplate.Height = 24;
+            this.dgv_ReporteDevoluciones.Size = new System.Drawing.Size(240, 82);
+            this.dgv_ReporteDevoluciones.TabIndex = 48;
             // 
             // lbl_Titulo
             // 
@@ -695,57 +725,27 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation2;
             // 
             // radio
             // 
             this.radio.ElipseRadius = 5;
             this.radio.TargetControl = this.SideBar;
-            // 
-            // dgv_ReporteDevoluciones
-            // 
-            this.dgv_ReporteDevoluciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_ReporteDevoluciones.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgv_ReporteDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.expandir_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
-            this.contraer_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
-            this.dgv_ReporteDevoluciones.Enabled = false;
-            this.dgv_ReporteDevoluciones.Location = new System.Drawing.Point(1040, 6);
-            this.dgv_ReporteDevoluciones.Name = "dgv_ReporteDevoluciones";
-            this.dgv_ReporteDevoluciones.RowHeadersVisible = false;
-            this.dgv_ReporteDevoluciones.RowHeadersWidth = 51;
-            this.dgv_ReporteDevoluciones.RowTemplate.Height = 24;
-            this.dgv_ReporteDevoluciones.Size = new System.Drawing.Size(240, 82);
-            this.dgv_ReporteDevoluciones.TabIndex = 48;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contraer_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(889, 18);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 67);
-            this.textBox1.TabIndex = 49;
-            this.textBox1.Text = "Reporte devoluciones y cambios";
             // 
             // FormReportes
             // 
@@ -792,11 +792,11 @@
             this.tc_Reportes.ResumeLayout(false);
             this.tp_Diario.ResumeLayout(false);
             this.tp_Diario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDevoluciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDiario)).EndInit();
             this.tp_Mensual.ResumeLayout(false);
             this.tp_Mensual.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteFinanciero)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReporteDevoluciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

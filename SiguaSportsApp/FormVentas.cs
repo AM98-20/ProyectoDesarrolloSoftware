@@ -33,6 +33,7 @@ namespace SiguaSportsApp
         ClassConexionBD con = new ClassConexionBD();
         bool letra1 = false;
         bool numero2 = false;
+        bool positivo = false;
 
         public void validar()
         {
@@ -96,7 +97,7 @@ namespace SiguaSportsApp
             if (nMensaje == "Existe") {
                 numero2 = false; letra1 = false;
                 validar();
-                if (numero2 && letra1)
+                if (numero2 && letra1 )
                 {
                     datosTablas.AgregarDatos(txtcodigoproducto.Text.ToString(), int.Parse(txtcantidad.Text.ToString()));
                     dgvventas.Rows.Add(datos.Codigo, datos.Descripcion, datos.Precio, datos.Cantidad.ToString(), (datos.Precio * datos.Cantidad).ToString());
@@ -277,6 +278,14 @@ namespace SiguaSportsApp
         private void boton_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

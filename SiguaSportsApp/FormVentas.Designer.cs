@@ -60,6 +60,7 @@ namespace SiguaSportsApp
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.boton_salir = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
@@ -86,11 +87,11 @@ namespace SiguaSportsApp
             this.txtfactura = new System.Windows.Forms.TextBox();
             this.lblfactura = new System.Windows.Forms.Label();
             this.expandir_menu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.boton_salir = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
@@ -100,7 +101,6 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).BeginInit();
             this.SuspendLayout();
             // 
             // lbltotal
@@ -179,6 +179,7 @@ namespace SiguaSportsApp
             this.txtcantidad.Size = new System.Drawing.Size(45, 22);
             this.txtcantidad.TabIndex = 22;
             this.txtcantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // lblcantidad
             // 
@@ -453,6 +454,21 @@ namespace SiguaSportsApp
             this.label6.Size = new System.Drawing.Size(86, 29);
             this.label6.TabIndex = 39;
             this.label6.Text = "Ventas";
+            // 
+            // boton_salir
+            // 
+            this.boton_salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.contraer_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
+            this.expandir_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
+            this.boton_salir.Image = global::SiguaSportsApp.Properties.Resources.close;
+            this.boton_salir.Location = new System.Drawing.Point(1474, 14);
+            this.boton_salir.Margin = new System.Windows.Forms.Padding(4);
+            this.boton_salir.Name = "boton_salir";
+            this.boton_salir.Size = new System.Drawing.Size(40, 37);
+            this.boton_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.boton_salir.TabIndex = 41;
+            this.boton_salir.TabStop = false;
+            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
             // 
             // btn_minimizar
             // 
@@ -938,21 +954,6 @@ namespace SiguaSportsApp
             animation1.TransparencyCoeff = 0F;
             this.expandir_menu.DefaultAnimation = animation1;
             // 
-            // boton_salir
-            // 
-            this.boton_salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.contraer_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
-            this.expandir_menu.SetDecoration(this.boton_salir, BunifuAnimatorNS.DecorationType.None);
-            this.boton_salir.Image = global::SiguaSportsApp.Properties.Resources.close;
-            this.boton_salir.Location = new System.Drawing.Point(1474, 14);
-            this.boton_salir.Margin = new System.Windows.Forms.Padding(4);
-            this.boton_salir.Name = "boton_salir";
-            this.boton_salir.Size = new System.Drawing.Size(40, 37);
-            this.boton_salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.boton_salir.TabIndex = 41;
-            this.boton_salir.TabStop = false;
-            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
-            // 
             // FormVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -990,6 +991,7 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
@@ -1001,7 +1003,6 @@ namespace SiguaSportsApp
             ((System.ComponentModel.ISupportInitialize)(this.btn_salir)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boton_salir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

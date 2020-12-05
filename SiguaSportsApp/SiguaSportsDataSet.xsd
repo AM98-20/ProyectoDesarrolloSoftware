@@ -156,7 +156,7 @@ SELECT num_factura, cod_prducto, cantidad, precioVenta FROM VentaDetalle WHERE (
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VentasTableAdapter" GeneratorDataComponentClassName="VentasTableAdapter" Name="Ventas" UserDataComponentName="VentasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SiguaSportsConnectionString (Settings)" DbObjectName="SiguaSports.dbo.VentaDetalle" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SiguaSportsConnectionString (Settings)" DbObjectName="SiguaSports.dbo.VentaDetalle" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="Venta" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="Venta" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="Venta" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT vd.cod_prducto Código, (p.nombre + ' ' + p.color + ' ' +p.marca) Descripción, vd.cantidad Cantidad, CAST(ROUND(vd.precioVenta, 2) AS DECIMAL(18,2)) Precio, CAST(ROUND((vd.precioVenta * cantidad), 2) AS DECIMAL(18,2)) Subtotal 
@@ -184,7 +184,7 @@ where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join Ven
   <xs:element name="SiguaSportsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SiguaSportsDataSet" msprop:Generator_UserDSName="SiguaSportsDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Productos" msprop:Generator_TableClassName="ProductosDataTable" msprop:Generator_TableVarName="tableProductos" msprop:Generator_RowChangedName="ProductosRowChanged" msprop:Generator_TablePropName="Productos" msprop:Generator_RowDeletingName="ProductosRowDeleting" msprop:Generator_RowChangingName="ProductosRowChanging" msprop:Generator_RowEvHandlerName="ProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductosRowDeleted" msprop:Generator_RowClassName="ProductosRow" msprop:Generator_UserTableName="Productos" msprop:Generator_RowEvArgName="ProductosRowChangeEvent">
+        <xs:element name="Productos" msprop:Generator_TableClassName="ProductosDataTable" msprop:Generator_TableVarName="tableProductos" msprop:Generator_TablePropName="Productos" msprop:Generator_RowDeletingName="ProductosRowDeleting" msprop:Generator_RowChangingName="ProductosRowChanging" msprop:Generator_RowEvHandlerName="ProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductosRowDeleted" msprop:Generator_UserTableName="Productos" msprop:Generator_RowChangedName="ProductosRowChanged" msprop:Generator_RowEvArgName="ProductosRowChangeEvent" msprop:Generator_RowClassName="ProductosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_producto" msprop:Generator_ColumnVarNameInTable="columncod_producto" msprop:Generator_ColumnPropNameInRow="cod_producto" msprop:Generator_ColumnPropNameInTable="cod_productoColumn" msprop:Generator_UserColumnName="cod_producto">
@@ -235,7 +235,7 @@ where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join Ven
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VentaDetalle" msprop:Generator_TableClassName="VentaDetalleDataTable" msprop:Generator_TableVarName="tableVentaDetalle" msprop:Generator_RowChangedName="VentaDetalleRowChanged" msprop:Generator_TablePropName="VentaDetalle" msprop:Generator_RowDeletingName="VentaDetalleRowDeleting" msprop:Generator_RowChangingName="VentaDetalleRowChanging" msprop:Generator_RowEvHandlerName="VentaDetalleRowChangeEventHandler" msprop:Generator_RowDeletedName="VentaDetalleRowDeleted" msprop:Generator_RowClassName="VentaDetalleRow" msprop:Generator_UserTableName="VentaDetalle" msprop:Generator_RowEvArgName="VentaDetalleRowChangeEvent">
+        <xs:element name="VentaDetalle" msprop:Generator_TableClassName="VentaDetalleDataTable" msprop:Generator_TableVarName="tableVentaDetalle" msprop:Generator_TablePropName="VentaDetalle" msprop:Generator_RowDeletingName="VentaDetalleRowDeleting" msprop:Generator_RowChangingName="VentaDetalleRowChanging" msprop:Generator_RowEvHandlerName="VentaDetalleRowChangeEventHandler" msprop:Generator_RowDeletedName="VentaDetalleRowDeleted" msprop:Generator_UserTableName="VentaDetalle" msprop:Generator_RowChangedName="VentaDetalleRowChanged" msprop:Generator_RowEvArgName="VentaDetalleRowChangeEvent" msprop:Generator_RowClassName="VentaDetalleRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="num_factura" msprop:Generator_ColumnVarNameInTable="columnnum_factura" msprop:Generator_ColumnPropNameInRow="num_factura" msprop:Generator_ColumnPropNameInTable="num_facturaColumn" msprop:Generator_UserColumnName="num_factura">
@@ -257,7 +257,7 @@ where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join Ven
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ventas" msprop:Generator_TableClassName="VentasDataTable" msprop:Generator_TableVarName="tableVentas" msprop:Generator_RowChangedName="VentasRowChanged" msprop:Generator_TablePropName="Ventas" msprop:Generator_RowDeletingName="VentasRowDeleting" msprop:Generator_RowChangingName="VentasRowChanging" msprop:Generator_RowEvHandlerName="VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasRowDeleted" msprop:Generator_RowClassName="VentasRow" msprop:Generator_UserTableName="Ventas" msprop:Generator_RowEvArgName="VentasRowChangeEvent">
+        <xs:element name="Ventas" msprop:Generator_TableClassName="VentasDataTable" msprop:Generator_TableVarName="tableVentas" msprop:Generator_TablePropName="Ventas" msprop:Generator_RowDeletingName="VentasRowDeleting" msprop:Generator_RowChangingName="VentasRowChanging" msprop:Generator_RowEvHandlerName="VentasRowChangeEventHandler" msprop:Generator_RowDeletedName="VentasRowDeleted" msprop:Generator_UserTableName="Ventas" msprop:Generator_RowChangedName="VentasRowChanged" msprop:Generator_RowEvArgName="VentasRowChangeEvent" msprop:Generator_RowClassName="VentasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
@@ -294,7 +294,7 @@ where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join Ven
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_VentaDetalle_Productos" msdata:parent="Productos" msdata:child="VentaDetalle" msdata:parentkey="cod_producto" msdata:childkey="cod_prducto" msprop:Generator_UserChildTable="VentaDetalle" msprop:Generator_ChildPropName="GetVentaDetalleRows" msprop:Generator_UserRelationName="FK_VentaDetalle_Productos" msprop:Generator_RelationVarName="relationFK_VentaDetalle_Productos" msprop:Generator_UserParentTable="Productos" msprop:Generator_ParentPropName="ProductosRow" />
+      <msdata:Relationship name="FK_VentaDetalle_Productos" msdata:parent="Productos" msdata:child="VentaDetalle" msdata:parentkey="cod_producto" msdata:childkey="cod_prducto" msprop:Generator_UserChildTable="VentaDetalle" msprop:Generator_ChildPropName="GetVentaDetalleRows" msprop:Generator_UserRelationName="FK_VentaDetalle_Productos" msprop:Generator_ParentPropName="ProductosRow" msprop:Generator_RelationVarName="relationFK_VentaDetalle_Productos" msprop:Generator_UserParentTable="Productos" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

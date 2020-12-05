@@ -2874,6 +2874,17 @@ where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join Ven
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SiguaSportsDataSet.VentasDataTable Venta() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            SiguaSportsDataSet.VentasDataTable dataTable = new SiguaSportsDataSet.VentasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
     }
     
     /// <summary>

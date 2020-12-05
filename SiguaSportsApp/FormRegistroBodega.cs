@@ -605,5 +605,13 @@ namespace SiguaSportsApp
                 MessageBox.Show("ERROR");
             }            
         }
+
+        private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
