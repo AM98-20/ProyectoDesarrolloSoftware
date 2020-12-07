@@ -18,9 +18,9 @@ namespace SiguaSportsApp
         {
             InitializeComponent();
         }
-        string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', precioVenta, ' ', precioCompra, ' ', color,  ' ', marca) Descripcion, " +
-                "c.descripcion Categoria, p.existencia Existencia, pr.nombre Proveedor FROM Productos p inner join Proveedores pr on p.cod_proveedor = pr.cod_proveedor " +
-                "inner join Categorias c on p.cod_categoria = c.cod_categoria";
+        string query = "SELECT cod_producto Codigo, CONCAT(p.nombre, ' ', color,  ' ', marca) Descripcion, " +
+            "precioCompra [Precio de Compra], precioVenta [Precio de Venta], c.descripcion Categoria, p.existencia Existencia " +
+            "FROM Productos p inner join Categorias c on p.cod_categoria = c.cod_categoria";
         private void FormInventarioBodega_Load(object sender, EventArgs e)
         {
             if (datos.CodigoPuesto == 3)
@@ -187,8 +187,8 @@ namespace SiguaSportsApp
 
         private void btn_restaurar_dos_Click(object sender, EventArgs e)
         {
-            datos.CargarDatosTablas(dgvProductos, query);
-            txtBuscar.Text = " ";
+            txtBuscar.Text = "";
+            datos.CargarDatosTablas(dgvProductos, query);            
         }
     }
 }

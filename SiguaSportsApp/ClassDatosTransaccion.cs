@@ -13,10 +13,10 @@ namespace SiguaSportsApp
         private static double descuento = 0;
         private static double impuesto = 0;
         private static double total = 0;
-        private static double totalDevolucion;
+        private static double totalDevolucion = 0;
         private static string fechaTransaccion = DateTime.Today.ToShortDateString();
-        private static string numFactura = "000-001-01-0000012";
-        private static string idVendedor  = "DBADMIN";
+        private static string numFactura = "";
+        private static string idVendedor  = "";
 
         private static string codigo;
         private static string descripcion;
@@ -68,6 +68,11 @@ namespace SiguaSportsApp
         {
             total = subtotal - descuento + impuesto;
             totalDevolucion = total;
+        }
+
+        public void CalculoTotalDevolucion()
+        {           
+            totalDevolucion = subtotal + descuento - impuesto;
         }
     }
 }

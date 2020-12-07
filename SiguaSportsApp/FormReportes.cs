@@ -87,6 +87,7 @@ namespace SiguaSportsApp
 
         private void btn_Inventario_bodega_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormInventarioBodega inven_bode = new FormInventarioBodega();
             inven_bode.ShowDialog();
             this.Close();

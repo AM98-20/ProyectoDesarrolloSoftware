@@ -33,7 +33,6 @@ namespace SiguaSportsApp
         ClassConexionBD con = new ClassConexionBD();
         bool letra1 = false;
         bool numero2 = false;
-        bool positivo = false;
 
         public void validar()
         {
@@ -74,7 +73,10 @@ namespace SiguaSportsApp
             DialogResult result = MessageBox.Show("Desea cancelar la compra?", "Confirmacion",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if(result == DialogResult.Yes)
             {
-                dgvventas.Rows.Clear();
+                this.Hide();
+                FormVentas ven = new FormVentas();
+                ven.ShowDialog();
+                this.Close();
             }
         }
 
@@ -101,7 +103,7 @@ namespace SiguaSportsApp
                 {
                     datosTablas.AgregarDatos(txtcodigoproducto.Text.ToString(), int.Parse(txtcantidad.Text.ToString()));
                     dgvventas.Rows.Add(datos.Codigo, datos.Descripcion, datos.Precio, datos.Cantidad.ToString(), (datos.Precio * datos.Cantidad).ToString());
-
+                    datos.Subtotal = 0;
                     foreach (DataGridViewRow row in dgvventas.Rows)
                     {
                         double precio = (double)row.Cells["columna_precio"].Value;

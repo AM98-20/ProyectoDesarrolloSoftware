@@ -2858,7 +2858,7 @@ SELECT num_factura, cod_prducto, cantidad, precioVenta FROM VentaDetalle WHERE (
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT vd.cod_prducto Código, (p.nombre + ' ' + p.color + ' ' +p.marca) Descripción, vd.cantidad Cantidad, CAST(ROUND(vd.precioVenta, 2) AS DECIMAL(18,2)) Precio, CAST(ROUND((vd.precioVenta * cantidad), 2) AS DECIMAL(18,2)) Subtotal 
 FROM VentaDetalle vd inner join Productos p on p.cod_producto = vd.cod_prducto 
-where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura order by v.fecha_Venta desc)";
+where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura order by v.num_factura desc)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2873,17 +2873,6 @@ where vd.num_factura = (SELECT top 1 vd.num_factura FROM Ventas v inner join Ven
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SiguaSportsDataSet.VentasDataTable Venta() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            SiguaSportsDataSet.VentasDataTable dataTable = new SiguaSportsDataSet.VentasDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
         }
     }
     

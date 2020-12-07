@@ -153,7 +153,7 @@ namespace SiguaSportsApp
         }
 
         private void btn_Buscar_Click_1(object sender, EventArgs e)
-        {
+        {            
             factura = false;
             validar1();
             if (factura)
@@ -165,6 +165,7 @@ namespace SiguaSportsApp
                 {
                     validar();
                     if (letra2) {
+                        nud_Cantidad.Enabled = true;
                         try
                         {
                             con.cmd = new SqlCommand("select DATEDIFF(DAY, fecha_Venta, GETDATE()) Dias " +
@@ -208,7 +209,7 @@ namespace SiguaSportsApp
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (dgvCambio.Rows.Count == 0)
+            if (dgv_ProdCambio.Rows.Count == 0)
                 MessageBox.Show("No hay datos seleccionados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
@@ -227,13 +228,13 @@ namespace SiguaSportsApp
                     //Revision de Form de cambios
                     con.cmd = new SqlCommand("INSERT INTO DevolucionDetalle(num_devolucion, cod_producto, cantidad, motivo, cod_estado, cod_producto_cambio) " +
                         "values('" + txtDevolucion.Text.ToString() + "',@codProd,@cantidad,@motivo,'2', @codProd)", con.sc);
-                    foreach (DataGridViewRow row in dgvCambio.Rows)
+                    foreach (DataGridViewRow row in dgv_ProdCambio.Rows)
                     {
                         con.cmd.Parameters.Clear();
 
-                        con.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["Producto"].Value));
-                        con.cmd.Parameters.AddWithValue("@cantidad", nud_Cantidad.Value.ToString());
-                        con.cmd.Parameters.AddWithValue("@motivo", txtMotivo.Text.ToString());
+                        con.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columnaCodigo"].Value));
+                        con.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columnaCantidad"].Value));
+                        con.cmd.Parameters.AddWithValue("@motivo", Convert.ToString(row.Cells["columnaMotivo"].Value));
                         try
                         {
                             con.AbrirConexion();
@@ -251,12 +252,12 @@ namespace SiguaSportsApp
                     if (result == DialogResult.Yes)
                     {
                         con.cmd = new SqlCommand("UPDATE Productos set existencia = existencia + @cantidad where cod_producto = @codProd", con.sc);
-                        foreach (DataGridViewRow row in dgvCambio.Rows)
+                        foreach (DataGridViewRow row in dgv_ProdCambio.Rows)
                         {
                             con.cmd.Parameters.Clear();
 
-                            con.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["Producto"].Value));
-                            con.cmd.Parameters.AddWithValue("@cantidad", nud_Cantidad.Value.ToString());
+                            con.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columnaCodigo"].Value));
+                            con.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columnaCantidad"].Value));
                             con.AbrirConexion();
                             con.cmd.ExecuteNonQuery();
                             con.CerrarConexion();
@@ -273,6 +274,7 @@ namespace SiguaSportsApp
                     DialogResult dr = MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     if (dr == DialogResult.OK)
                         return;
+                    ////////
                 }
             }
         }
@@ -287,12 +289,23 @@ namespace SiguaSportsApp
 
         private void dgvCambio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string[] arr;
+            tran.Total = 0.00;
             tran.TotalDevolucion = 0.00;
             int index = dgvCambio.CurrentCell.RowIndex;
+            DataGridViewRow sr = dgvCambio.Rows[index];
+            
             for (int i = 0; i < dgvCambio.Rows.Count; i++)
             {
-                if(i != index)
-                dgvCambio.Rows.RemoveAt(i);
+                if(i == index)
+                {
+                    arr = new[] {sr.Cells["Producto"].Value.ToString(), nud_Cantidad.Value.ToString(), txtMotivo.Text.ToString(), sr.Cells["Producto"].Value.ToString()};
+                    dgv_ProdCambio.Rows.Add(arr);
+                    dgv_ProdCambio.Visible = true;
+                    dgvCambio.Visible = false;
+                    dgvCambio.Rows.RemoveAt(i);
+                    btnAgregar.Visible = true;
+                }                
             }
             
             validar();
@@ -319,7 +332,20 @@ namespace SiguaSportsApp
             {
                 MessageBox.Show("Ingrese el motivo de devolucion y cambio.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        private void dgvCambio_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvCambio.CurrentCell.RowIndex;
+            DataGridViewRow sr = dgvCambio.Rows[index];
+            nud_Cantidad.Maximum = int.Parse(sr.Cells["Cantidad Vendida"].Value.ToString());
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            dgvCambio.Visible = true;
+            dgv_ProdCambio.Visible = false;
+            btnAgregar.Visible = false;
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation11 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReportes));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation12 = new BunifuAnimatorNS.Animation();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -396,22 +396,22 @@
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation1;
+            animation11.AnimateOnlyDifferences = true;
+            animation11.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.BlindCoeff")));
+            animation11.LeafCoeff = 0F;
+            animation11.MaxTime = 1F;
+            animation11.MinTime = 0F;
+            animation11.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicCoeff")));
+            animation11.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicShift")));
+            animation11.MosaicSize = 0;
+            animation11.Padding = new System.Windows.Forms.Padding(0);
+            animation11.RotateCoeff = 0F;
+            animation11.RotateLimit = 0F;
+            animation11.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.ScaleCoeff")));
+            animation11.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.SlideCoeff")));
+            animation11.TimeCoeff = 0F;
+            animation11.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation11;
             // 
             // btn_menu
             // 
@@ -542,32 +542,38 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contraer_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.textBox1, BunifuAnimatorNS.DecorationType.None);
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(841, 18);
+            this.textBox1.Location = new System.Drawing.Point(828, 24);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 67);
+            this.textBox1.Size = new System.Drawing.Size(145, 74);
             this.textBox1.TabIndex = 49;
             this.textBox1.Text = "Reporte devoluciones y cambios";
             // 
             // dgv_ReporteDevoluciones
             // 
+            this.dgv_ReporteDevoluciones.AllowUserToAddRows = false;
+            this.dgv_ReporteDevoluciones.AllowUserToDeleteRows = false;
             this.dgv_ReporteDevoluciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_ReporteDevoluciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ReporteDevoluciones.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_ReporteDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.expandir_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgv_ReporteDevoluciones, BunifuAnimatorNS.DecorationType.None);
-            this.dgv_ReporteDevoluciones.Enabled = false;
-            this.dgv_ReporteDevoluciones.Location = new System.Drawing.Point(1040, 6);
+            this.dgv_ReporteDevoluciones.Location = new System.Drawing.Point(979, 6);
             this.dgv_ReporteDevoluciones.Name = "dgv_ReporteDevoluciones";
+            this.dgv_ReporteDevoluciones.ReadOnly = true;
             this.dgv_ReporteDevoluciones.RowHeadersVisible = false;
             this.dgv_ReporteDevoluciones.RowHeadersWidth = 51;
             this.dgv_ReporteDevoluciones.RowTemplate.Height = 24;
-            this.dgv_ReporteDevoluciones.Size = new System.Drawing.Size(240, 82);
+            this.dgv_ReporteDevoluciones.Size = new System.Drawing.Size(301, 104);
             this.dgv_ReporteDevoluciones.TabIndex = 48;
             // 
             // lbl_Titulo
@@ -576,7 +582,7 @@
             this.contraer_menu.SetDecoration(this.lbl_Titulo, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.lbl_Titulo, BunifuAnimatorNS.DecorationType.None);
             this.lbl_Titulo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(47, 24);
+            this.lbl_Titulo.Location = new System.Drawing.Point(46, 74);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(169, 24);
             this.lbl_Titulo.TabIndex = 47;
@@ -595,12 +601,13 @@
             this.expandir_menu.SetDecoration(this.dgv_ReporteDiario, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dgv_ReporteDiario, BunifuAnimatorNS.DecorationType.None);
             this.dgv_ReporteDiario.Enabled = false;
-            this.dgv_ReporteDiario.Location = new System.Drawing.Point(4, 92);
+            this.dgv_ReporteDiario.Location = new System.Drawing.Point(4, 125);
             this.dgv_ReporteDiario.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_ReporteDiario.Name = "dgv_ReporteDiario";
+            this.dgv_ReporteDiario.ReadOnly = true;
             this.dgv_ReporteDiario.RowHeadersVisible = false;
             this.dgv_ReporteDiario.RowHeadersWidth = 51;
-            this.dgv_ReporteDiario.Size = new System.Drawing.Size(1276, 593);
+            this.dgv_ReporteDiario.Size = new System.Drawing.Size(1276, 560);
             this.dgv_ReporteDiario.TabIndex = 46;
             // 
             // tp_Mensual
@@ -725,22 +732,22 @@
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation2;
+            animation12.AnimateOnlyDifferences = true;
+            animation12.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.BlindCoeff")));
+            animation12.LeafCoeff = 0F;
+            animation12.MaxTime = 1F;
+            animation12.MinTime = 0F;
+            animation12.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.MosaicCoeff")));
+            animation12.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation12.MosaicShift")));
+            animation12.MosaicSize = 0;
+            animation12.Padding = new System.Windows.Forms.Padding(0);
+            animation12.RotateCoeff = 0F;
+            animation12.RotateLimit = 0F;
+            animation12.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.ScaleCoeff")));
+            animation12.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.SlideCoeff")));
+            animation12.TimeCoeff = 0F;
+            animation12.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation12;
             // 
             // radio
             // 

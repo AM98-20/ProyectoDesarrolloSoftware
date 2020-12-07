@@ -23,6 +23,10 @@ namespace SiguaSportsApp
         string query = "SELECT B.nombre[Producto] , A.cantidad[Cantidad] , A.motivo[Motivo] ,C.fecha_devolucion[Fecha de Devolución], A.cod_producto_cambio [Producto Cambio]" +
                                          "FROM DevolucionDetalle A INNER JOIN Productos B ON A.cod_producto = B.cod_producto " +
                                          "INNER JOIN Devoluciones C ON A.num_devolucion = C.num_devolucion where cod_estado = '1'";
+
+        double des = 0.0;
+        double imp = 0.0;
+
         private void FromDevoluciones_Load(object sender, EventArgs e)
         {
             conexion.CargarDatosTablas(dgv_Historial, query);
@@ -38,8 +42,7 @@ namespace SiguaSportsApp
         ClassValidacion validacion = new ClassValidacion();
         ClassDatosTransaccion tran = new ClassDatosTransaccion();
         ClassConexionBD con = new ClassConexionBD();
-
-        
+        ClassDatosTransaccion datos = new ClassDatosTransaccion();        
 
         bool letra2 = false;
         bool factura = false;
@@ -142,6 +145,7 @@ namespace SiguaSportsApp
                 {
                     validar();
                     if (letra2) {
+                        nud_Cantidad.Enabled = true;
                         try
                         {
                             conexion.cmd = new SqlCommand("select DATEDIFF(DAY, fecha_Venta, GETDATE()) Dias " +
@@ -169,6 +173,22 @@ namespace SiguaSportsApp
                                     "FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura inner join Productos p on vd.cod_prducto = p.cod_producto " +
                                     "where v.num_factura = '" + mtb_Factura.Text.ToString() + "'";
                             conexion.CargarDatosTablas(dgvDevoluciones, query1);
+
+                            con.cmd = new SqlCommand("SELECT v.descuentoPorcentaje Descuento, v.impuestoPorcentaje Impuesto FROM Ventas v inner join VentaDetalle vd on v.num_factura = vd.num_factura " +
+                                "inner join Productos p on vd.cod_prducto = p.cod_producto where v.num_factura = '" + mtb_Factura.Text.ToString() + "'", con.sc);
+                            try
+                            {
+                                SqlDataReader rd = con.cmd.ExecuteReader();
+                                if (rd.Read())
+                                {
+                                    tran.Descuento = tran.Subtotal * des;
+                                    tran.Impuesto = tran.Subtotal * imp;
+                                }
+                            }catch (Exception E)
+                            {
+                                MessageBox.Show(""+E);
+                            }
+                            
                         }
                         else
                         {
@@ -185,7 +205,7 @@ namespace SiguaSportsApp
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (dgvDevoluciones.Rows.Count == 0)
+            if (dgv_ProdDev.Rows.Count == 0)
                 MessageBox.Show("No hay datos seleccionados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
@@ -204,13 +224,14 @@ namespace SiguaSportsApp
 
                     conexion.cmd = new SqlCommand("INSERT INTO DevolucionDetalle(num_devolucion, cod_producto, cantidad, motivo, cod_estado) " +
                         "values('" + txtDevolucion.Text.ToString() + "',@codProd,@cantidad,@motivo,'1')", conexion.sc);
-                    foreach (DataGridViewRow row in dgvDevoluciones.Rows)
+                    foreach (DataGridViewRow row in dgv_ProdDev.Rows)
                     {
                         conexion.cmd.Parameters.Clear();
 
-                        conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["Producto"].Value));
-                        conexion.cmd.Parameters.AddWithValue("@cantidad", nud_Cantidad.Value.ToString());
-                        conexion.cmd.Parameters.AddWithValue("@motivo", txtDevolucion.Text.ToString());
+                        conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columnaCodigo"].Value));
+                        conexion.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columnaCantidad"].Value));
+                        conexion.cmd.Parameters.AddWithValue("@motivo", Convert.ToString(row.Cells["columnaMotivo"].Value));
+                        
                         conexion.AbrirConexion();
                         conexion.cmd.ExecuteNonQuery();
                         conexion.CerrarConexion();
@@ -220,12 +241,12 @@ namespace SiguaSportsApp
                     if (result == DialogResult.Yes)
                     {
                         conexion.cmd = new SqlCommand("UPDATE Productos set existencia = existencia + @cantidad where cod_producto = @codProd", conexion.sc);
-                        foreach (DataGridViewRow row in dgvDevoluciones.Rows)
+                        foreach (DataGridViewRow row in dgv_ProdDev.Rows)
                         {
                             conexion.cmd.Parameters.Clear();
 
-                            conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["Producto"].Value));
-                            conexion.cmd.Parameters.AddWithValue("@cantidad",nud_Cantidad.Value.ToString());
+                            conexion.cmd.Parameters.AddWithValue("@codProd", Convert.ToString(row.Cells["columnaCodigo"].Value));
+                            conexion.cmd.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["columnaCantidad"].Value));
                             conexion.AbrirConexion();
                             conexion.cmd.ExecuteNonQuery();
                             conexion.CerrarConexion();
@@ -241,6 +262,7 @@ namespace SiguaSportsApp
                     DialogResult men = MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     if (men == DialogResult.OK)
                         return;
+                    //////
                 }
             }
         }
@@ -305,28 +327,71 @@ namespace SiguaSportsApp
 
         private void dgvDevoluciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txttotal.Text = "";
-            tran.Subtotal = 0.00;
             int index = dgvDevoluciones.CurrentCell.RowIndex;
+            DataGridViewRow sr = dgvDevoluciones.Rows[index];
+            nud_Cantidad.Maximum = int.Parse(sr.Cells["Cantidad Vendida"].Value.ToString());
+        }
+
+        private void dgvDevoluciones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string[] arr;
+            tran.Total = 0.00;
+            tran.TotalDevolucion = 0.00;
+            int index = dgvDevoluciones.CurrentCell.RowIndex;
+            DataGridViewRow sr = dgvDevoluciones.Rows[index];
+            
             for (int i = 0; i < dgvDevoluciones.Rows.Count; i++)
             {
-                if (i != index)
+                if (i == index)
+                {                    
+                    arr = new[] { sr.Cells["Producto"].Value.ToString(), sr.Cells["Precio"].Value.ToString(), nud_Cantidad.Value.ToString(), txtMotivo.Text.ToString() };
+                    dgv_ProdDev.Rows.Add(arr);
+                    dgv_ProdDev.Visible = true;
+                    dgvDevoluciones.Visible = false;
                     dgvDevoluciones.Rows.RemoveAt(i);
+                    btnAgregar.Visible = true;
+                }
             }
 
-            letra2 = false;
             validar();
             if (letra2)
             {
-                foreach (DataGridViewRow row in dgvDevoluciones.Rows)
+                letra2 = false;
+                try
                 {
-                    tran.Subtotal += double.Parse(row.Cells["Precio"].Value.ToString()) * double.Parse(nud_Cantidad.Value.ToString());
+                    tran.Subtotal = 0.00;
+                    tran.Descuento = 0.00;
+                    tran.Impuesto = 0.00;
+                    tran.TotalDevolucion = 0.00;
+
+                    foreach (DataGridViewRow row in dgv_ProdDev.Rows)
+                    {
+                        double precio = double.Parse(row.Cells["columnaPrecio"].Value.ToString());
+                        int cantidad = int.Parse(row.Cells["columnaCantidad"].Value.ToString());
+                        double totalUnit = precio * cantidad;
+                        datos.Subtotal += totalUnit;
+                    }
+
+                    
+                    tran.CalculoTotalDevolucion();
+                    txttotal.Text = tran.TotalDevolucion.ToString();
                 }
-                tran.CalculoDescuento();
-                tran.CalculoImpuesto();
-                tran.CalculoTotal();
-                txttotal.Text = tran.TotalDevolucion.ToString();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR " + ex);
+                }
             }
+            else
+            {
+                MessageBox.Show("Ingrese el motivo de devolucion y cambio.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            dgvDevoluciones.Visible = true;
+            dgv_ProdDev.Visible = false;
+            btnAgregar.Visible = false;
         }
     }
 }
