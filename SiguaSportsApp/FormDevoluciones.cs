@@ -108,30 +108,6 @@ namespace SiguaSportsApp
             }
         }
 
-        private void btn_salir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_maximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            btn_maximizar.Visible = false;
-            btn_restaurar.Visible = true;
-        }
-
-        private void btn_minimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btn_restaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            btn_restaurar.Visible = false;
-            btn_maximizar.Visible = true;
-        }
-
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
             factura = false;
@@ -178,12 +154,14 @@ namespace SiguaSportsApp
                                 "inner join Productos p on vd.cod_prducto = p.cod_producto where v.num_factura = '" + mtb_Factura.Text.ToString() + "'", con.sc);
                             try
                             {
+                                con.AbrirConexion();
                                 SqlDataReader rd = con.cmd.ExecuteReader();
                                 if (rd.Read())
                                 {
                                     tran.Descuento = tran.Subtotal * des;
                                     tran.Impuesto = tran.Subtotal * imp;
                                 }
+                                con.CerrarConexion();
                             }catch (Exception E)
                             {
                                 MessageBox.Show(""+E);
@@ -259,22 +237,13 @@ namespace SiguaSportsApp
                 }
                 else
                 {
-                    DialogResult men = MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    if (men == DialogResult.OK)
-                        return;
-                    //////
+                    MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Hide();
+                    FormDevoluciones dev = new FormDevoluciones();
+                    dev.ShowDialog();
+                    this.Close();
                 }
             }
-        }
-
-        private void boton_salir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void boton_min_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void btn_Ventas_Click(object sender, EventArgs e)
@@ -392,6 +361,30 @@ namespace SiguaSportsApp
             dgvDevoluciones.Visible = true;
             dgv_ProdDev.Visible = false;
             btnAgregar.Visible = false;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            btn_maximizar.Visible = false;
+            btn_restaurar.Visible = true;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            btn_restaurar.Visible = false;
+            btn_maximizar.Visible = true;
         }
     }
 }

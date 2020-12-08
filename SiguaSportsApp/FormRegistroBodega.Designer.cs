@@ -813,7 +813,7 @@ namespace SiguaSportsApp
             this.tpProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpProductos.Name = "tpProductos";
             this.tpProductos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpProductos.Size = new System.Drawing.Size(1312, 677);
+            this.tpProductos.Size = new System.Drawing.Size(1323, 683);
             this.tpProductos.TabIndex = 0;
             this.tpProductos.Text = "Productos";
             this.tpProductos.UseVisualStyleBackColor = true;
@@ -828,7 +828,7 @@ namespace SiguaSportsApp
             this.dtp_Compra.MaxDate = new System.DateTime(2020, 11, 23, 0, 0, 0, 0);
             this.dtp_Compra.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtp_Compra.Name = "dtp_Compra";
-            this.dtp_Compra.Size = new System.Drawing.Size(244, 22);
+            this.dtp_Compra.Size = new System.Drawing.Size(255, 22);
             this.dtp_Compra.TabIndex = 62;
             this.dtp_Compra.Value = new System.DateTime(2020, 11, 23, 0, 0, 0, 0);
             // 
@@ -857,15 +857,16 @@ namespace SiguaSportsApp
             this.cb_ProveedoresPRB.FormattingEnabled = true;
             this.cb_ProveedoresPRB.Location = new System.Drawing.Point(1010, 11);
             this.cb_ProveedoresPRB.Name = "cb_ProveedoresPRB";
-            this.cb_ProveedoresPRB.Size = new System.Drawing.Size(231, 24);
+            this.cb_ProveedoresPRB.Size = new System.Drawing.Size(242, 24);
             this.cb_ProveedoresPRB.TabIndex = 60;
             // 
             // btnAgregarProducto
             // 
+            this.btnAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.expandir_menu.SetDecoration(this.btnAgregarProducto, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btnAgregarProducto, BunifuAnimatorNS.DecorationType.None);
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(999, 602);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(1076, 623);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(91, 37);
@@ -900,7 +901,7 @@ namespace SiguaSportsApp
             this.cb_Categoria.Location = new System.Drawing.Point(509, 102);
             this.cb_Categoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_Categoria.Name = "cb_Categoria";
-            this.cb_Categoria.Size = new System.Drawing.Size(175, 24);
+            this.cb_Categoria.Size = new System.Drawing.Size(186, 24);
             this.cb_Categoria.TabIndex = 56;
             // 
             // lblProveedorProd
@@ -927,7 +928,7 @@ namespace SiguaSportsApp
             this.txtFacturaCompra.Location = new System.Drawing.Point(1010, 55);
             this.txtFacturaCompra.Margin = new System.Windows.Forms.Padding(4);
             this.txtFacturaCompra.Name = "txtFacturaCompra";
-            this.txtFacturaCompra.Size = new System.Drawing.Size(231, 22);
+            this.txtFacturaCompra.Size = new System.Drawing.Size(242, 22);
             this.txtFacturaCompra.TabIndex = 10;
             this.txtFacturaCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
@@ -942,7 +943,7 @@ namespace SiguaSportsApp
             this.txtColor.Location = new System.Drawing.Point(509, 11);
             this.txtColor.Margin = new System.Windows.Forms.Padding(4);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(131, 22);
+            this.txtColor.Size = new System.Drawing.Size(142, 22);
             this.txtColor.TabIndex = 4;
             // 
             // txtPrecioVenta
@@ -956,7 +957,7 @@ namespace SiguaSportsApp
             this.txtPrecioVenta.Location = new System.Drawing.Point(780, 49);
             this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(89, 22);
+            this.txtPrecioVenta.Size = new System.Drawing.Size(100, 22);
             this.txtPrecioVenta.TabIndex = 8;
             this.txtPrecioVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
@@ -972,7 +973,7 @@ namespace SiguaSportsApp
             this.txtmarca.Location = new System.Drawing.Point(159, 100);
             this.txtmarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtmarca.Name = "txtmarca";
-            this.txtmarca.Size = new System.Drawing.Size(248, 22);
+            this.txtmarca.Size = new System.Drawing.Size(259, 22);
             this.txtmarca.TabIndex = 3;
             // 
             // txtcodigoproducto
@@ -984,7 +985,7 @@ namespace SiguaSportsApp
             this.txtcodigoproducto.Location = new System.Drawing.Point(159, 11);
             this.txtcodigoproducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtcodigoproducto.Name = "txtcodigoproducto";
-            this.txtcodigoproducto.Size = new System.Drawing.Size(248, 22);
+            this.txtcodigoproducto.Size = new System.Drawing.Size(259, 22);
             this.txtcodigoproducto.TabIndex = 1;
             // 
             // txtprecio
@@ -996,7 +997,7 @@ namespace SiguaSportsApp
             this.txtprecio.Location = new System.Drawing.Point(780, 11);
             this.txtprecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(89, 22);
+            this.txtprecio.Size = new System.Drawing.Size(100, 22);
             this.txtprecio.TabIndex = 7;
             this.txtprecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
@@ -1012,7 +1013,7 @@ namespace SiguaSportsApp
             this.txtnombre.Location = new System.Drawing.Point(159, 55);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(248, 22);
+            this.txtnombre.Size = new System.Drawing.Size(259, 22);
             this.txtnombre.TabIndex = 2;
             // 
             // txtcantidad
@@ -1024,7 +1025,7 @@ namespace SiguaSportsApp
             this.txtcantidad.Location = new System.Drawing.Point(509, 55);
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(131, 22);
+            this.txtcantidad.Size = new System.Drawing.Size(142, 22);
             this.txtcantidad.TabIndex = 5;
             this.txtcantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
@@ -1050,7 +1051,7 @@ namespace SiguaSportsApp
             this.expandir_menu.SetDecoration(this.btnCancelarProducto, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.btnCancelarProducto, BunifuAnimatorNS.DecorationType.None);
             this.btnCancelarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarProducto.Location = new System.Drawing.Point(881, 602);
+            this.btnCancelarProducto.Location = new System.Drawing.Point(949, 623);
             this.btnCancelarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarProducto.Name = "btnCancelarProducto";
             this.btnCancelarProducto.Size = new System.Drawing.Size(91, 37);
@@ -1078,7 +1079,7 @@ namespace SiguaSportsApp
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(1293, 445);
+            this.dgvProductos.Size = new System.Drawing.Size(1304, 471);
             this.dgvProductos.TabIndex = 48;
             // 
             // lblColor
@@ -1188,18 +1189,16 @@ namespace SiguaSportsApp
             // 
             // tcRegistro
             // 
-            this.tcRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tcRegistro.Controls.Add(this.tpProductos);
             this.tcRegistro.Controls.Add(this.tpProveedores);
             this.expandir_menu.SetDecoration(this.tcRegistro, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.tcRegistro, BunifuAnimatorNS.DecorationType.None);
-            this.tcRegistro.Location = new System.Drawing.Point(303, 83);
+            this.tcRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcRegistro.Location = new System.Drawing.Point(296, 86);
             this.tcRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tcRegistro.Name = "tcRegistro";
             this.tcRegistro.SelectedIndex = 0;
-            this.tcRegistro.Size = new System.Drawing.Size(1320, 706);
+            this.tcRegistro.Size = new System.Drawing.Size(1331, 712);
             this.tcRegistro.TabIndex = 22;
             // 
             // panel3
@@ -1246,12 +1245,12 @@ namespace SiguaSportsApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1627, 798);
+            this.Controls.Add(this.tcRegistro);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_menu);
             this.Controls.Add(this.contenedor_menu);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tcRegistro);
             this.Controls.Add(this.btn_restaurar);
             this.expandir_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);

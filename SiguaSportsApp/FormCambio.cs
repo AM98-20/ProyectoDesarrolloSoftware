@@ -271,10 +271,11 @@ namespace SiguaSportsApp
                 }
                 else
                 {
-                    DialogResult dr = MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    if (dr == DialogResult.OK)
-                        return;
-                    ////////
+                    MessageBox.Show("No se pudo confirmar. Llame a su supervisor.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Hide();
+                    FormDevoluciones dev = new FormDevoluciones();
+                    dev.ShowDialog();
+                    this.Close();
                 }
             }
         }
