@@ -60,7 +60,8 @@ namespace SiguaSportsApp
 
             if (flag == 1)
             {
-                MessageBox.Show("La consulta se realizo correctamente. Se elimino el empleado, permanecera en la tabla empleados historicos.", "Empleado Historico", MessageBoxButtons.OK, MessageBoxIcon.Information);                
+                MessageBox.Show("La consulta se realizo correctamente. Se elimino el empleado, permanecera en la tabla empleados historicos.", 
+                    "Empleado Historico", MessageBoxButtons.OK, MessageBoxIcon.Information);                
             }
             else
             {
@@ -95,23 +96,6 @@ namespace SiguaSportsApp
                 MessageBox.Show("ERROR");
             }
             CerrarConexion();            
-        }
-
-        public void ReporteFinanciero(DataGridView dgv, DateTimePicker fecha1, DateTimePicker fecha2)
-        {
-            AbrirConexion();
-            try
-            {                
-                da = new SqlDataAdapter("", sc);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgv.DataSource = dt;
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show("ERROR " + e, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            CerrarConexion();
         }
     }
 }

@@ -31,8 +31,8 @@ namespace SiguaSportsApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistroBodega));
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -452,22 +452,22 @@ namespace SiguaSportsApp
             // 
             this.contraer_menu.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.contraer_menu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.contraer_menu.DefaultAnimation = animation2;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.contraer_menu.DefaultAnimation = animation6;
             // 
             // btn_menu
             // 
@@ -535,33 +535,33 @@ namespace SiguaSportsApp
             this.tpProveedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpProveedores.Name = "tpProveedores";
             this.tpProveedores.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpProveedores.Size = new System.Drawing.Size(1312, 677);
+            this.tpProveedores.Size = new System.Drawing.Size(1323, 683);
             this.tpProveedores.TabIndex = 1;
             this.tpProveedores.Text = "Proveedores";
             this.tpProveedores.UseVisualStyleBackColor = true;
             // 
             // mtb_TelefonoCon
             // 
-            this.mtb_TelefonoCon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mtb_TelefonoCon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.expandir_menu.SetDecoration(this.mtb_TelefonoCon, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.mtb_TelefonoCon, BunifuAnimatorNS.DecorationType.None);
             this.mtb_TelefonoCon.Location = new System.Drawing.Point(981, 55);
             this.mtb_TelefonoCon.Mask = "0000-0000";
             this.mtb_TelefonoCon.Name = "mtb_TelefonoCon";
-            this.mtb_TelefonoCon.Size = new System.Drawing.Size(86, 22);
+            this.mtb_TelefonoCon.Size = new System.Drawing.Size(102, 22);
             this.mtb_TelefonoCon.TabIndex = 70;
             // 
             // mtb_TelefonoPro
             // 
-            this.mtb_TelefonoPro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mtb_TelefonoPro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.expandir_menu.SetDecoration(this.mtb_TelefonoPro, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.mtb_TelefonoPro, BunifuAnimatorNS.DecorationType.None);
             this.mtb_TelefonoPro.Location = new System.Drawing.Point(517, 9);
             this.mtb_TelefonoPro.Mask = "0000-0000";
             this.mtb_TelefonoPro.Name = "mtb_TelefonoPro";
-            this.mtb_TelefonoPro.Size = new System.Drawing.Size(84, 22);
+            this.mtb_TelefonoPro.Size = new System.Drawing.Size(111, 22);
             this.mtb_TelefonoPro.TabIndex = 69;
             // 
             // btnCancelar
@@ -616,20 +616,20 @@ namespace SiguaSportsApp
             // 
             // txtCorreoProveedor
             // 
-            this.txtCorreoProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCorreoProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtCorreoProveedor, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtCorreoProveedor, BunifuAnimatorNS.DecorationType.None);
             this.txtCorreoProveedor.Location = new System.Drawing.Point(517, 55);
             this.txtCorreoProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoProveedor.Name = "txtCorreoProveedor";
-            this.txtCorreoProveedor.Size = new System.Drawing.Size(215, 22);
+            this.txtCorreoProveedor.Size = new System.Drawing.Size(266, 22);
             this.txtCorreoProveedor.TabIndex = 5;
             // 
             // txtDireccionProveedor
             // 
-            this.txtDireccionProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccionProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtDireccionProveedor, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtDireccionProveedor, BunifuAnimatorNS.DecorationType.None);
             this.txtDireccionProveedor.Location = new System.Drawing.Point(160, 98);
@@ -640,8 +640,8 @@ namespace SiguaSportsApp
             // 
             // txtCodProveedor
             // 
-            this.txtCodProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtCodProveedor, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtCodProveedor, BunifuAnimatorNS.DecorationType.None);
             this.txtCodProveedor.Location = new System.Drawing.Point(160, 14);
@@ -652,8 +652,8 @@ namespace SiguaSportsApp
             // 
             // txtNombreContacto
             // 
-            this.txtNombreContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreContacto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtNombreContacto, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtNombreContacto, BunifuAnimatorNS.DecorationType.None);
             this.txtNombreContacto.Location = new System.Drawing.Point(981, 12);
@@ -664,14 +664,14 @@ namespace SiguaSportsApp
             // 
             // txtNombreProveedor
             // 
-            this.txtNombreProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtNombreProveedor, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtNombreProveedor, BunifuAnimatorNS.DecorationType.None);
             this.txtNombreProveedor.Location = new System.Drawing.Point(160, 55);
             this.txtNombreProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(192, 22);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(240, 22);
             this.txtNombreProveedor.TabIndex = 2;
             // 
             // lblCorreoProveedor
@@ -820,15 +820,15 @@ namespace SiguaSportsApp
             // 
             // dtp_Compra
             // 
-            this.dtp_Compra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_Compra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.expandir_menu.SetDecoration(this.dtp_Compra, BunifuAnimatorNS.DecorationType.None);
             this.contraer_menu.SetDecoration(this.dtp_Compra, BunifuAnimatorNS.DecorationType.None);
             this.dtp_Compra.Location = new System.Drawing.Point(1010, 98);
             this.dtp_Compra.MaxDate = new System.DateTime(2020, 11, 23, 0, 0, 0, 0);
             this.dtp_Compra.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dtp_Compra.Name = "dtp_Compra";
-            this.dtp_Compra.Size = new System.Drawing.Size(255, 22);
+            this.dtp_Compra.Size = new System.Drawing.Size(242, 22);
             this.dtp_Compra.TabIndex = 62;
             this.dtp_Compra.Value = new System.DateTime(2020, 11, 23, 0, 0, 0, 0);
             // 
@@ -849,8 +849,8 @@ namespace SiguaSportsApp
             // 
             // cb_ProveedoresPRB
             // 
-            this.cb_ProveedoresPRB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_ProveedoresPRB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.cb_ProveedoresPRB, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.cb_ProveedoresPRB, BunifuAnimatorNS.DecorationType.None);
             this.cb_ProveedoresPRB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -892,8 +892,8 @@ namespace SiguaSportsApp
             // 
             // cb_Categoria
             // 
-            this.cb_Categoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_Categoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.cb_Categoria, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.cb_Categoria, BunifuAnimatorNS.DecorationType.None);
             this.cb_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -921,8 +921,8 @@ namespace SiguaSportsApp
             // 
             // txtFacturaCompra
             // 
-            this.txtFacturaCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFacturaCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtFacturaCompra, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtFacturaCompra, BunifuAnimatorNS.DecorationType.None);
             this.txtFacturaCompra.Location = new System.Drawing.Point(1010, 55);
@@ -934,8 +934,8 @@ namespace SiguaSportsApp
             // 
             // txtColor
             // 
-            this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtColor.BackColor = System.Drawing.Color.White;
             this.contraer_menu.SetDecoration(this.txtColor, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtColor, BunifuAnimatorNS.DecorationType.None);
@@ -943,13 +943,13 @@ namespace SiguaSportsApp
             this.txtColor.Location = new System.Drawing.Point(509, 11);
             this.txtColor.Margin = new System.Windows.Forms.Padding(4);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(142, 22);
+            this.txtColor.Size = new System.Drawing.Size(131, 22);
             this.txtColor.TabIndex = 4;
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrecioVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPrecioVenta.BackColor = System.Drawing.Color.White;
             this.contraer_menu.SetDecoration(this.txtPrecioVenta, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtPrecioVenta, BunifuAnimatorNS.DecorationType.None);
@@ -957,15 +957,15 @@ namespace SiguaSportsApp
             this.txtPrecioVenta.Location = new System.Drawing.Point(780, 49);
             this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecioVenta.Size = new System.Drawing.Size(89, 22);
             this.txtPrecioVenta.TabIndex = 8;
             this.txtPrecioVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // txtmarca
             // 
-            this.txtmarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtmarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtmarca.BackColor = System.Drawing.Color.White;
             this.contraer_menu.SetDecoration(this.txtmarca, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtmarca, BunifuAnimatorNS.DecorationType.None);
@@ -973,39 +973,39 @@ namespace SiguaSportsApp
             this.txtmarca.Location = new System.Drawing.Point(159, 100);
             this.txtmarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtmarca.Name = "txtmarca";
-            this.txtmarca.Size = new System.Drawing.Size(259, 22);
+            this.txtmarca.Size = new System.Drawing.Size(248, 22);
             this.txtmarca.TabIndex = 3;
             // 
             // txtcodigoproducto
             // 
-            this.txtcodigoproducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcodigoproducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtcodigoproducto, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtcodigoproducto, BunifuAnimatorNS.DecorationType.None);
             this.txtcodigoproducto.Location = new System.Drawing.Point(159, 11);
             this.txtcodigoproducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtcodigoproducto.Name = "txtcodigoproducto";
-            this.txtcodigoproducto.Size = new System.Drawing.Size(259, 22);
+            this.txtcodigoproducto.Size = new System.Drawing.Size(248, 22);
             this.txtcodigoproducto.TabIndex = 1;
             // 
             // txtprecio
             // 
-            this.txtprecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtprecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtprecio, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtprecio, BunifuAnimatorNS.DecorationType.None);
             this.txtprecio.Location = new System.Drawing.Point(780, 11);
             this.txtprecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(100, 22);
+            this.txtprecio.Size = new System.Drawing.Size(89, 22);
             this.txtprecio.TabIndex = 7;
             this.txtprecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // txtnombre
             // 
-            this.txtnombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtnombre.BackColor = System.Drawing.Color.White;
             this.contraer_menu.SetDecoration(this.txtnombre, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtnombre, BunifuAnimatorNS.DecorationType.None);
@@ -1013,19 +1013,19 @@ namespace SiguaSportsApp
             this.txtnombre.Location = new System.Drawing.Point(159, 55);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(259, 22);
+            this.txtnombre.Size = new System.Drawing.Size(248, 22);
             this.txtnombre.TabIndex = 2;
             // 
             // txtcantidad
             // 
-            this.txtcantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.contraer_menu.SetDecoration(this.txtcantidad, BunifuAnimatorNS.DecorationType.None);
             this.expandir_menu.SetDecoration(this.txtcantidad, BunifuAnimatorNS.DecorationType.None);
             this.txtcantidad.Location = new System.Drawing.Point(509, 55);
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(142, 22);
+            this.txtcantidad.Size = new System.Drawing.Size(131, 22);
             this.txtcantidad.TabIndex = 5;
             this.txtcantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
@@ -1217,22 +1217,22 @@ namespace SiguaSportsApp
             // 
             this.expandir_menu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.expandir_menu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.expandir_menu.DefaultAnimation = animation1;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.expandir_menu.DefaultAnimation = animation5;
             // 
             // radio
             // 

@@ -12,7 +12,10 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\kevin\Desktop\Probando\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +25,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -47,31 +50,29 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EB370E12C886FE9B0AC50263B539AB7DDB5B0592</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SiguaSportsApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -179,7 +180,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SiguaSportsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FormAdministracion.resx">
       <DependentUpon>FormAdministracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,7 +230,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -240,6 +239,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SiguaSportsApp_TemporaryKey.pfx" />
     <None Include="SiguaSportsDataSet.xsc">
       <DependentUpon>SiguaSportsDataSet.xsd</DependentUpon>
     </None>
@@ -322,19 +322,61 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <PackageReference Include="Microsoft.Data.SqlClient">
+      <Version>2.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.SqlClient.SNI">
+      <Version>2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client">
+      <Version>4.24.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <Version>6.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Logging">
+      <Version>6.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Protocols">
+      <Version>6.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <Version>6.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens">
+      <Version>6.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>150.1427.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Management.SqlParser">
+      <Version>160.20216.14</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects">
+      <Version>161.44091.28</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Types">
+      <Version>14.0.1016.290</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts">
+      <Version>10.0.19041.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>6.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.WindowsRuntime">
+      <Version>4.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.WindowsRuntime.UI.Xaml">
+      <Version>4.7.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="869bc446-c29f-4183-8a33-8393fdb17213.ico" />
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,18 +5,18 @@
     <Setting Name="SiguaSportsConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;Integrated Security=True;User ID=sa;Connect Timeout=60000&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;User ID=AccesoLocal;Password=admin123&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;Integrated Security=True;User ID=sa;Connect Timeout=60000</Value>
+      <Value Profile="(Default)">Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;User ID=AccesoLocal;Password=admin123</Value>
     </Setting>
     <Setting Name="ConnectionReceipt" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=tcp:LAPTOP-2R8MIJL4,49500;Initial Catalog=SiguaSports;User ID=AccesoLocal;Password=admin123&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;User ID=AccesoLocal;Password=admin123&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=tcp:LAPTOP-2R8MIJL4,49500;Initial Catalog=SiguaSports;User ID=AccesoLocal;Password=admin123</Value>
+      <Value Profile="(Default)">Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;User ID=AccesoLocal;Password=admin123</Value>
     </Setting>
   </Settings>
 </SettingsFile>

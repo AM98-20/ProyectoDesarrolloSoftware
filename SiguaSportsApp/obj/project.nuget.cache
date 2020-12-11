@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "tJ7GMPuXPckJsJOIkWfEw+t6PX4SZIGFoa5IeAwioFWz5wJxSA0TB6tFWJCofYtHfZSFZHwvMXkBKxtkE0+8NQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kevin\\source\\repos\\AM98-20\\ProyectoDesarrolloSoftware\\SiguaSportsApp\\SiguaSportsApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.0\\microsoft.data.sqlclient.2.1.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.data.sqlclient.sni\\2.1.1\\microsoft.data.sqlclient.sni.2.1.1.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.identity.client\\4.24.0\\microsoft.identity.client.4.24.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.8.0\\microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.identitymodel.logging\\6.8.0\\microsoft.identitymodel.logging.6.8.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.8.0\\microsoft.identitymodel.protocols.6.8.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.8.0\\microsoft.identitymodel.protocols.openidconnect.6.8.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.reportingservices.reportviewercontrol.winforms\\150.1427.0\\microsoft.reportingservices.reportviewercontrol.winforms.150.1427.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.sqlserver.management.sqlparser\\160.20216.14\\microsoft.sqlserver.management.sqlparser.160.20216.14.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.sqlserver.sqlmanagementobjects\\161.44091.28\\microsoft.sqlserver.sqlmanagementobjects.161.44091.28.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.1016.290\\microsoft.sqlserver.types.14.0.1016.290.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.19041.1\\microsoft.windows.sdk.contracts.10.0.19041.1.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.runtime.windowsruntime\\4.7.0\\system.runtime.windowsruntime.4.7.0.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.7.0\\system.runtime.windowsruntime.ui.xaml.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -38,23 +38,6 @@ namespace SiguaSportsApp
         ClassDatosTablas datos = new ClassDatosTablas();
         ClassConexionBD con = new ClassConexionBD();
 
-        private void btnAgregarProducto_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                con.AbrirConexion();
-                con.da = new SqlDataAdapter("select * from Productos where nombre LIKE '%" + txtBuscar.Text + "%'", con.sc);
-                con.dt = new DataTable();
-                con.da.Fill(con.dt);
-                dgvProductos.DataSource = con.dt;
-                con.CerrarConexion();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR " + ex);
-            }
-        }
-
         private void btn_menu_Click(object sender, EventArgs e)
         {
             if (SideBar.Width == 204)
@@ -90,11 +73,6 @@ namespace SiguaSportsApp
             WindowState = FormWindowState.Maximized;
             btn_maximizar.Visible = false;
             boton_restaurar.Visible = true;
-        }
-
-        private void btn_restaurar_Click(object sender, EventArgs e)
-        {
-          
         }
 
         private void btn_Administracion_Click(object sender, EventArgs e)
@@ -161,34 +139,30 @@ namespace SiguaSportsApp
             WindowState = FormWindowState.Minimized;
         }
 
-        private void boton_buscar_Click(object sender, EventArgs e)
+        private void btn_restaurar_dos_Click(object sender, EventArgs e)
         {
+            txtBuscar.Text = "";
+            datos.CargarDatosTablas(dgvProductos, query);            
+        }
 
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
             string parametro = txtBuscar.Text.ToString();
 
             try
             {
-                con.da = new SqlDataAdapter("SELECT P.cod_producto [Cod.Producto] , P.nombre [Descripción] , C.descripcion [Categoria] , PV.nombre [Proveedor]  " +
-                                      " FROM Productos P " +
-                                      " INNER JOIN Categorias C ON P.cod_categoria = C.cod_categoria " +
-                                      " INNER JOIN Proveedores PV ON P.cod_proveedor = PV.cod_proveedor " +
-                                      " WHERE P.cod_producto Like '%" + parametro + "%' ", con.sc);
+                con.da = new SqlDataAdapter("exec filtroProductos @texto = '"+parametro+"'", con.sc);
+                //aplicar  exec filtroProductos @texto = '"++"' 
+                //en key press event o text change
 
                 con.dt = new DataTable();
                 con.da.Fill(con.dt);
                 dgvProductos.DataSource = (con.dt);
             }
-            catch (Exception  error)
+            catch (Exception error)
             {
-
                 MessageBox.Show("Error al cargar datos" + error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }           
-        }
-
-        private void btn_restaurar_dos_Click(object sender, EventArgs e)
-        {
-            txtBuscar.Text = "";
-            datos.CargarDatosTablas(dgvProductos, query);            
+            }
         }
     }
 }

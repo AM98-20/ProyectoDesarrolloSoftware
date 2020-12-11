@@ -102,7 +102,7 @@
             this.cb_Genero.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_Genero.Items.AddRange(new object[] {
             "Femenino",
-            "Maculino"});
+            "Masculino"});
             this.cb_Genero.Location = new System.Drawing.Point(568, 478);
             this.cb_Genero.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Genero.Name = "cb_Genero";

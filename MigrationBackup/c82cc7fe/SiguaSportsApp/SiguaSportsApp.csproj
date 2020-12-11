@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.props" Condition="Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF5F6729-7239-4EB8-AE35-AA7CA7DF34C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SiguaSportsApp</RootNamespace>
+    <AssemblyName>SiguaSportsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=2.0.20168.4, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.2.1.0\lib\net46\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Sql.BatchParser, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.Data.Tools.Sql.BatchParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.24.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.24.0\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.8.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.8.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment, Version=1.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment.Types, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Assessment.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Common, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Dmf.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Assessment, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Collector, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.Collector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.CollectorEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.CollectorEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.HadrData, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.HadrData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.HadrModel, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.HadrModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.RegisteredServers, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.RegisteredServers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SmoMetadataProvider, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.SmoMetadataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SqlParser, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Management.SqlParser.160.20216.14\lib\net462\Microsoft.SqlServer.Management.SqlParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SqlScriptPublish, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.SqlScriptPublish.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEvent, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.XEvent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScoped, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.XEventDbScoped.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScopedEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Management.XEventEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PolicyEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.PolicyEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.RegSvrEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.RegSvrEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ServiceBrokerEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.ServiceBrokerEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo.Notebook, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.Smo.Notebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.WmiEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.44091.28\lib\net462\Microsoft.SqlServer.WmiEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.8.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassConexionBD.cs" />
+    <Compile Include="ClassConfirmacion.cs" />
+    <Compile Include="ClassDatosTablas.cs" />
+    <Compile Include="ClassDatosTransaccion.cs" />
+    <Compile Include="ClassEmpleados.cs" />
+    <Compile Include="ClassNuevoEmpleado.cs" />
+    <Compile Include="ClassValidacion.cs" />
+    <Compile Include="FormAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdministracion.Designer.cs">
+      <DependentUpon>FormAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfirmacion.Designer.cs">
+      <DependentUpon>FormConfirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleadoEgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleadoEgreso.Designer.cs">
+      <DependentUpon>FormEmpleadoEgreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleadoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleadoNuevo.Designer.cs">
+      <DependentUpon>FormEmpleadoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleadosHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleadosHistorial.Designer.cs">
+      <DependentUpon>FormEmpleadosHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngreso.Designer.cs">
+      <DependentUpon>FormIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInventarioBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventarioBodega.Designer.cs">
+      <DependentUpon>FormInventarioBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroBodega.Designer.cs">
+      <DependentUpon>FormRegistroBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas.Designer.cs">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCambio.Designer.cs">
+      <DependentUpon>FormCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDevoluciones.Designer.cs">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromWindow.Designer.cs">
+      <DependentUpon>FromWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiguaSportsDataSet.cs">
+      <DependentUpon>SiguaSportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SiguaSportsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiguaSportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormAdministracion.resx">
+      <DependentUpon>FormAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirmacion.resx">
+      <DependentUpon>FormConfirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleadoEgreso.resx">
+      <DependentUpon>FormEmpleadoEgreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleadoNuevo.resx">
+      <DependentUpon>FormEmpleadoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleadosHistorial.resx">
+      <DependentUpon>FormEmpleadosHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngreso.resx">
+      <DependentUpon>FormIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInventarioBodega.resx">
+      <DependentUpon>FormInventarioBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroBodega.resx">
+      <DependentUpon>FormRegistroBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas.resx">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCambio.resx">
+      <DependentUpon>FormCambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDevoluciones.resx">
+      <DependentUpon>FormDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromWindow.resx">
+      <DependentUpon>FromWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SiguaSportsDataSet.xsc">
+      <DependentUpon>SiguaSportsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SiguaSportsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SiguaSportsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SiguaSportsDataSet.xss">
+      <DependentUpon>SiguaSportsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-printer-tool-with-printed-paper-outlined-symbol_icon-icons.com_57772.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\869bc446-c29f-4183-8a33-8393fdb17213.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return-on-investment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.2.1.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Runtime.WindowsRuntime.4.7.0\build\net461\System.Runtime.WindowsRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Runtime.WindowsRuntime.4.7.0\build\net461\System.Runtime.WindowsRuntime.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.7.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.7.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Runtime.WindowsRuntime.4.7.0\build\net461\System.Runtime.WindowsRuntime.targets" Condition="Exists('..\packages\System.Runtime.WindowsRuntime.4.7.0\build\net461\System.Runtime.WindowsRuntime.targets')" />
+  <Import Project="..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.7.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets" Condition="Exists('..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.7.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets')" />
+  <Import Project="..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.targets" Condition="Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\build\Microsoft.Windows.SDK.Contracts.targets')" />
+</Project>

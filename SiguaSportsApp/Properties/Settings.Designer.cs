@@ -26,8 +26,8 @@ namespace SiguaSportsApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;Integrated Security=True;" +
-            "User ID=sa;Connect Timeout=60000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;User ID=AccesoLocal;Passw" +
+            "ord=admin123")]
         public string SiguaSportsConnectionString {
             get {
                 return ((string)(this["SiguaSportsConnectionString"]));
@@ -37,8 +37,8 @@ namespace SiguaSportsApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:LAPTOP-2R8MIJL4,49500;Initial Catalog=SiguaSports;User ID=AccesoL" +
-            "ocal;Password=admin123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-2R8MIJL4;Initial Catalog=SiguaSports;User ID=AccesoLocal;Passw" +
+            "ord=admin123")]
         public string ConnectionReceipt {
             get {
                 return ((string)(this["ConnectionReceipt"]));
